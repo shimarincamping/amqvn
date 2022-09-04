@@ -99,12 +99,12 @@ transform alpha_dissolve:
     on hide:
         linear 0.5 alpha 0
 screen countdown:
-     timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
-     bar value timeleft range timer_range xalign 0.5 yalign 0.93 xmaximum 1000 at alpha_dissolve 
-     zorder 99
+    timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown'), Jump(timer_jump)])
+    bar value timeleft range timer_range xalign 0.5 yalign 0.93 xmaximum 1000 at alpha_dissolve 
+    zorder 99
 screen countdown2:
-     timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown')])
-     bar value timeleft range timer_range xalign 0.5 yalign 0.1 xmaximum 1350 at alpha_dissolve 
+    timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown')])
+    bar value timeleft range timer_range xalign 0.5 yalign 0.1 xmaximum 1350 at alpha_dissolve 
 
 label start:
     $ globalpoints = 0
@@ -212,14 +212,14 @@ label start:
     call initgamenodd({"game201":["tsuki to laika to nosferatu", "irina: the vampire cosmonaut"]}, randsong=True) from _call_initgamenodd
     scene bg main with fade
     if gamepoints == 15:
-         show hib2 at right with moveinright
-         hib "I'm glad you got that at least, only 1921 left to go!"
-         hib "{cps=10}... to {cps=*0.5}... go {cps=*0.25}...{/cps}"
+        show hib2 at right with moveinright
+        hib "I'm glad you got that at least, only 1921 left to go!"
+        hib "{cps=10}... to {cps=*0.5}... go {cps=*0.25}...{/cps}"
     else:
-         show yuk3 at left with moveinleft
-         yuk "God, you're bad at this game aren't nya..."
-         yuk "Let's keep going though~ Only 1921 songs left!"
-         yuk "{cps=10}... songs {cps=*0.5}... left {cps=*0.25}...{/cps}"
+        show yuk3 at left with moveinleft
+        yuk "God, you're bad at this game aren't nya..."
+        yuk "Let's keep going though~ Only 1921 songs left!"
+        yuk "{cps=10}... songs {cps=*0.5}... left {cps=*0.25}...{/cps}"
     stop music fadeout 2.5
     $ renpy.pause(2.5, hard=True)
     scene black with Fade(2.0, 0.0, 2.0)
@@ -1667,7 +1667,7 @@ label indonesianamq:
         "indonesianamq6":["time patrol bon"],
         "indonesianamq7":["hanasaka tenshi tenten-kun"],
         "indonesianamq8":["chinzei hachirou tametomo"],
-        "indonesianamq9":["superbook","anime oyako gekijou","parent and child theatre","animated mother and child playhouse"],
+        "indonesianamq9":["superbook","anime oyako gekijou"],
         "indonesianamq10":["one punch man"]
     }, indonesia=True) from _call_initgamenodd_4
     "Total points: {b}[gamepoints] pts{/b}"
