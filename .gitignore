@@ -1,0 +1,6 @@
+.vscode
+AMQ/.vscode
+AMQ/log.txt
+AMQ/traceback.txt
+AMQ/game/saves/*
+AMQ/game/cache
