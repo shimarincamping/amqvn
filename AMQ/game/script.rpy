@@ -86,8 +86,8 @@ init python:
     Song('Onegai! Cinderella', 'audio/imas.mp3', 'audio/imas.beatmap.txt'), 
     Song('Make debut!', 'audio/umamusume.mp3', 'audio/umamusume.beatmap.txt')
     ]
-    config.has_quicksave = False
-    config.has_autosave = False
+    #config.has_quicksave = False
+    #config.has_autosave = False
 init:
     $ timer_range = 0
     $ timer_jump = 0
@@ -113,7 +113,7 @@ label start:
     narrator "Welcome to your worst nightmare"
     scene bg main
     play music "audio/amqtheme.mp3" fadeout 1.0 fadein 1.0
-    $ renpy.notify('Now playing: No Game No Life')
+    $ renpy.notify('♪ No Game No Life')
     show hib1 at right
     hib "God you're bad at this game"
     hide hib1
@@ -158,7 +158,7 @@ label start:
     j "Mm...?"
     show kom1 with moveinright
     play music "audio/bgm01.mp3" fadeout 1.0 fadein 1.0 volume 0.2
-    $ renpy.notify('Now playing: Tobidase! Machine Hiryuu')
+    $ renpy.notify('♪ Tobidase! Machine Hiryuu')
     kom "Greetings AMQ booli. 'Tis I, the great shrine maiden Komugi!"
     j "Whoa!!!"
     j "Wait, shouldn't you be at like, y'know a shrine?"
@@ -297,7 +297,7 @@ label start:
         noe "And I'll be supporting you all the way~"
     show smiz at right with moveinright:
     play music "audio/bgm02.mp3" fadeout 1.0 fadein 1.0 volume 0.2
-    $ renpy.notify('Now playing: Zombie Land Saga')
+    $ renpy.notify('♪ Zombie Land Saga')
     miz "Move outa here!"
     hide snoe
     hide smiz
@@ -344,7 +344,7 @@ label start:
         xalign 0.8
         yalign 1.05
     kom "Here I go..."
-    $ renpy.notify('Now playing: Kekkai Sensen & Beyond (Kamishiro)')
+    $ renpy.notify('♪ Kekkai Sensen & Beyond (Kamishiro)')
     play sound "audio/karaoke1.mp3" fadein 1.0 fadeout 1.0
     $ renpy.pause(5.0, hard=True)
     miz "{i}Oooh!{/i} I know this one!{p=5.0}{nw}"
@@ -354,7 +354,7 @@ label start:
     hide kom1 with moveoutright
     show miz1 at right behind mic1 with moveinright
     miz "Step aside and I'll show you guys how it's {i}really{/i} done~"
-    $ renpy.notify('Now playing: M3: Sono Kuroki Hagane (Daytona)')
+    $ renpy.notify('♪ M3: Sono Kuroki Hagane (Daytona)')
     play sound "audio/karaoke2.mp3" fadein 1.0 fadeout 1.0
     "{p=5.0}{nw}"
     kom "I guess this isn't too bad... {w=3.0}\n{size=-8}{i}Though mine was better... obviously...{/i}{/size}{p=5.0}{nw}"
@@ -367,7 +367,7 @@ label start:
     noe "Well, I'm not really the best at singing but I'll give this my best shot~✰"
     hide noe1
     show noe2 at right behind mic1
-    $ renpy.notify('Now playing: Yu-Gi-Oh! (Shuuka)')
+    $ renpy.notify('♪ Yu-Gi-Oh! (Shuuka)')
     play sound "audio/karaoke3.mp3" fadein 1.0 fadeout 1.0
     "{p=8.0}{nw}"
     miz "Who told you you couldn't sing, Noel? You're already waaaay better than Komugi here {p=5.0}{nw}"
@@ -391,7 +391,7 @@ label start:
     show miz1 at left behind mic2 with moveinleft:
         xzoom -1.0
     show kom1 at right behind mic1 with moveinright 
-    $ renpy.notify('Now playing: Sewayaki Kitsune no Senko-san (ChriS)')
+    $ renpy.notify('♪ Sewayaki Kitsune no Senko-san (ChriS)')
     play sound "audio/karaoke4.mp3" fadein 1.0 fadeout 1.0
     "{p=5.0}{nw}"
     noe "Time to get my glowsticks out cus this is :fire:{p=5.0}{nw}"
@@ -416,7 +416,7 @@ label start:
     show mic1:
         xalign 0.8
         yalign 1.05
-    $ renpy.notify('Now playing: Bakemonogatari (???)')
+    $ renpy.notify('♪ Bakemonogatari (???)')
     play sound "audio/karaoke5.mp3" fadein 1.0 fadeout 1.0
     narrator "{i}...And the karaoke room continues...{/i}{p=88.0}{nw}"
     stop sound fadeout 1.0
@@ -428,7 +428,7 @@ label start:
     miz "Sing something for us will ya?"
     kom "C'mon, can't be that bad amirite?"
     narrator "You take a deep breath{cps=3}......{/cps}"
-    $ renpy.notify('Now playing: Eromanga Sensei (Jack Parkson)')
+    $ renpy.notify('♪ Eromanga Sensei (Jack Parkson)')
     play sound "audio/karaoke6.mp3" fadein 1.0 fadeout 1.0
     show badsub:
         yalign 0.00
@@ -486,7 +486,7 @@ label start:
     $ renpy.pause(2.5, hard=True)
     "???" "I FINALLY FOUND YOU SHIINA GET OVER HERE!"
     play music "audio/bgm03.mp3" fadein 1.0 fadeout 1.0 volume 0.25
-    $ renpy.notify('Now playing: Gun X Sword')
+    $ renpy.notify('♪ Gun X Sword')
     show dayt at left with moveinleft:
         yalign 0.9
     j "Hold up! Who are you? Why are you after her!"
@@ -564,7 +564,7 @@ label start:
     show anoe1 at right with moveinright
     noe "Here we are!"
     play music "audio/bgm07.mp3" fadein 1.0 fadeout 1.0 volume 0.08
-    $ renpy.notify('Now playing: Gamers!')
+    $ renpy.notify('♪ Gamers!')
     noe "Isn't this great~? The fresh sweet smell of sweat, sweaty people, questionable pizza and a random kid's birthday party"
     noe "Of course {i}you've{/i} never been here though so let me show you around!"
     j "Eh- Shouldn't we wait for Komugi and Mizuki to arrive at least?"
@@ -601,7 +601,7 @@ label start:
     noe "See? Even someone like you can have fun outdoors, I knew you had it in ya mhm"
     "???" "So I heard there's a new god in town..."
     play music "audio/bgm06.mp3" fadein 1.0 fadeout 1.0 volume 0.2
-    $ renpy.notify('Now playing: Hakaima Sadamitsu')
+    $ renpy.notify('♪ Hakaima Sadamitsu')
     show rit1 at left with moveinleft
     rit "Ah, I've heard of ye alright... You're that Yolowolf something kid aren't cha?"
     j "Uhhh"
@@ -770,7 +770,7 @@ label start:
         yalign 0.4
         xalign 0.5
     play music "audio/bgm09.mp3" fadein 1.0 fadeout 1.0 volume 0.2
-    $ renpy.notify('Now playing: Mouretsu Pirates')
+    $ renpy.notify('♪ Mouretsu Pirates')
     mar "Who do you think ye are... steeping foot in MY WATERS?"
     hide pmar1
     show pmar2:
@@ -839,7 +839,7 @@ label start:
     "So... bright..."
     scene bg bedroom2 with fade
     play music "audio/bgm11.mp3" volume 0.2 fadein 1.0 fadeout 1.0
-    $ renpy.notify('Now playing: Comic Girls')
+    $ renpy.notify('♪ Comic Girls')
     "Just as the early morning sunlight filled the room through the windows beside me, I opened my eyes..."
     "Carried by a gentle breeze, a cherry blossom petal made its way onto the palm of my hand..."
     "Spring..."
@@ -851,7 +851,6 @@ label start:
     stop music fadeout 1.0
     $ renpy.pause(0.6, hard=True)
     scene black with fade
-    $ renpy.notify('Now playing: Akebi-chan no Sailor Fuku')
     $ renpy.movie_cutscene("newbeginning.webm")
     play sound "audio/bell.mp3"
     scene bg musicroom with Fade(3.0, 0.0, 3.0)
@@ -947,10 +946,9 @@ label start:
     noe "We have to save him..."
     noe "Before..."
     noe "{cps=*0.3}Before he becomes... an Inserts only player{/cps}"
+    scene black with fade
 
-    ## Rapid-Fire Sequence
-
-    # Final Nightmare
+    # Continue here for 0.1.9 content
 
     python:
         rhythm_game_scores_list = []
@@ -1337,7 +1335,7 @@ label gameshow:
     narrator "......"
     narrator ".........?"
     play music "audio/bgm04.mp3" fadein 1.0 fadeout 1.0 volume 0.2
-    $ renpy.notify('Now playing: Buzzer Beater')
+    $ renpy.notify('♪ Buzzer Beater')
     scene bg gameshow with fade
     show gsyuk at left with moveinleft
     gsyuk "And here we have our next contestant on... {b}Who Wants to Be An AMQ Booli?{/b}"
@@ -1364,7 +1362,7 @@ label gameshow:
     show gsyuk at right with moveinright
     gsyuk "Ready? Let's get this cursed show on the road~"
     play music "audio/bgm05.mp3" fadein 1.0 fadeout 1.0 volume 0.2
-    $ renpy.notify('Now playing: Nana Maru San Batsu')
+    $ renpy.notify('♪ Nana Maru San Batsu')
     while currentquestion <= numofquestions:
         $ questiontext = list(questions.keys())[currentquestion-1]
         $ option1 = list(questions.values())[currentquestion-1][0]
@@ -1866,7 +1864,7 @@ label ritsubattle:
         rit "..............."
         rit "I hope you didn't think that's all I had in me."
         play music "audio/bgm08.mp3" fadeout 1.0 fadein 1.0 volume 0.2
-        $ renpy.notify('Now playing: Boku no Hero Academia (OST)')
+        $ renpy.notify('♪ Boku no Hero Academia (OST)')
         rit "*friendship speech*"
         hide rit6
         show rit7 at right
@@ -1933,7 +1931,7 @@ label thirddream:
     centered "Someone please help me I'm running out of AMQ lore to plagiarise"
     scene bg ruins with fade
     play music "audio/bgm12.mp3" volume 0.15 fadein 1.0 fadeout 1.0
-    $ renpy.notify('Now playing: Hataage! Kemono Michi')
+    $ renpy.notify('♪ Hataage! Kemono Michi')
     "???" "And now... our next contender in the arena!!"
     show shik1 at right with moveinright
     hik "You're new to this whole thing right? Lemme tell you how everything works..."
