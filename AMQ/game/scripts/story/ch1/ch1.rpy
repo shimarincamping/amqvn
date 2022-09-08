@@ -1,0 +1,9 @@
+label ch1:
+    call ch1sc1
+    call ch1sc2
+    call ch1sc3
+    call ch1sc4
+    call ch1sc5
+    call ch1sc6
+    call ch1sc7
+    call ch1sc8
