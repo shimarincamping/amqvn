@@ -15,6 +15,8 @@ label initgamenodd(song_list, game_bg="bg ingame.jpg"):
         
         call screen noddinput
         $ answer = _return.lower().strip()
+        $ print(answer)
+        $ print("returned")
 
         if answer in song["answer"]:
             $ game_points += 15
