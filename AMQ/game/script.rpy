@@ -46,7 +46,7 @@ image anoe2 = im.Scale("noe sparkle arcade.webp", 550, 800)
 image anoe3 = im.Scale("noe think arcade.webp", 550, 800)
 image bnoe1 = im.Scale("noe brawler.webp", 550, 800)
 image mnoe = im.Scale("noe mizugi.webp", 550, 800)
-image mcnoe = im.Scale("noe censored.png", 550, 800)
+image mcnoe = im.Scale("noe censored.png", 535, 800)
 image yuk1 = im.Scale("yuk pumped.webp", 550, 800)
 image yuk2 = im.Scale("yuk yahoi.webp", 550, 800)
 image yuk3 = im.Scale("yuk fire.webp", 550, 800)
@@ -54,7 +54,7 @@ image gsyuk = im.Scale("yuk gameshow.png", 550, 800)
 image miz1 = im.Scale("miz happy.webp", 550, 800)
 image smiz = im.Scale("miz shrine.webp", 550, 800)
 image mmiz = im.Scale("miz mizugi.webp", 550, 800)
-image mcmiz = im.Scale("miz censored.png", 550, 800)
+image mcmiz = im.Scale("miz censored.png", 585, 810)
 image smizangry = im.Scale("miz shrineattack.webp", 550, 800)
 image shi1 = im.Scale("shi tehe.webp", 550, 800)
 image shi2 = im.Scale("shi sing.webp", 550, 800)
@@ -83,9 +83,9 @@ image shik1 = im.Scale("hik scholar.webp", 590, 800)
 image aka1 = im.Scale("aka appears.webp", 744, 960)
 image aka2 = im.Scale("aka sparkle.webp", 744, 960)
 image aka3 = im.Scale("aka mad.webp", 744, 960)
-image chi1 = im.Scale("chi shock.webp", 550, 800)
-image chi2 = im.Scale("chi smug.webp", 550, 800)
-image chi3 = im.Scale("chi think.webp", 550, 800)
+image chi1 = im.Scale("chi shock.webp", 550, 830)
+image chi2 = im.Scale("chi smug.webp", 550, 830)
+image chi3 = im.Scale("chi think.webp", 550, 830)
 image pyuu1 = im.Scale("yuu paint think.webp", 870, 1100)
 image pyuu2 = im.Scale("yuu paint draw.webp", 870, 1100)
 image pyuu3 = im.Scale("yuu paint complete.png", 870, 800)
@@ -1066,7 +1066,7 @@ label start:
         "game1708":["100-man no inochi no ue ni ore wa tatteiru","i'm standing on a million lives"],
         "game1709":["shachiku-san wa youjo yuurei ni iyasaretai.","miss shachiku and the little baby ghost"],
         "game1710":["popee the performer"]
-    }, gamebg="bg desert.png", akane=True)
+    }, gamebg="bg desert.png", akane=True) from _call_initgamenodd_7
     scene bg desert with fade
     show aka3 at right with moveinright
     aka "I don't know how you're ssstill alive after all that, usually my punishment venom is enough to make anyone mentally regress into a League player"
@@ -1104,10 +1104,10 @@ label start:
     menu:
         "Let's take a look at the Art Club!":
             scene black with fade
-            call artclub
+            call artclub from _call_artclub
         "How about your club?":
             scene black with fade
-            call scienceclub
+            call scienceclub from _call_scienceclub
         "No, thanks...":
             chi "Fun fact: 72.4\% of the average AMQ player's vocabulary consists of calling other players a crude amalgamation of their name and the word 'god'"
             chi "Allow me to demonstrate: *ahem* godyoshi here to carry us time to afk :place_of_worship:"
@@ -1247,7 +1247,8 @@ label initgame(songdict, anslist, gamebg="bg ingame.jpg", randsong = False, fort
 screen noddinput(titletext="Your answer:"):
     window:
         vbox:
-            text "[titletext]"
+            xmaximum 1300 xpos 310
+            text "\n[titletext]"
             input
 
 screen cp_button():
@@ -2358,7 +2359,7 @@ label artclub:
     return
 
 label scienceclub:
-    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","oce","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago"]
+    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","oce","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago"]
     play music "audio/bgm16.mp3" fadein 1.0 fadeout 1.0 volume 0.2
     $ renpy.notify("♪ Armitage III")
     $ renpy.pause(7, hard=True)
