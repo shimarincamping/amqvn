@@ -1062,14 +1062,6 @@ screen keyboard_help():
         text _("Toggles dialogue skipping.")
 
     hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
         label "H"
         text _("Hides the user interface.")
 
@@ -1100,29 +1092,12 @@ screen mouse_help():
         label _("Right Click")
         text _("Accesses the game menu.")
 
-    hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
-
 
 screen gamepad_help():
 
     hbox:
         label _("Right Trigger\nA/Bottom Button")
         text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
-
 
     hbox:
         label _("D-Pad, Sticks")

@@ -24,7 +24,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.1.8"
+define config.version = "0.1.9a"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
