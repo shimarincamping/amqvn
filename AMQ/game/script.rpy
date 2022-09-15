@@ -743,7 +743,7 @@ label start:
         "game1301":["mimi o sumaseba","whisper of the heart"],
         "game1302":["majo no takkyuubin","kiki's delivery service"],
         "game1303":["perfect blue"],
-        "game1304":["hadashi no gen","barefoot gen","hiroshima"],
+        "game1304":["hadashi no gen","barefoot gen"],
         "game1305":["little nemo","little nemo: adventures in slumberland"]
     }, gamebg="bg movies.jpg") from _call_initgamenodd_5
     scene bg movies with fade
@@ -1828,7 +1828,7 @@ label badteammate:
         ("game901","bt01.png", "Y"),
         ("game902","bt02.png", "Y"),
         ("game903","bt03.png", "N"),
-        ("game904","bt04.png", "Y"),
+        ("game904","bt04.png", "N"),
         ("game905","bt05.png", "N"),
         ("game906","bt06.png", "N"),
         ("game907","bt07.png", "N"),
@@ -2359,7 +2359,7 @@ label artclub:
     return
 
 label scienceclub:
-    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","oce","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago"]
+    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
     play music "audio/bgm16.mp3" fadein 1.0 fadeout 1.0 volume 0.2
     $ renpy.notify("♪ Armitage III")
     $ renpy.pause(7, hard=True)
