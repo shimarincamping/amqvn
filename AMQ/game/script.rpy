@@ -73,6 +73,7 @@ image kur2 = im.Scale("kur tehe.webp", 710, 913)
 image skur = im.Scale("kur sorceress.webp", 710, 913)
 image miy1 = im.Scale("miy base.webp", 710, 937)
 image vmiy = im.Scale("miy knight.webp", 710, 937)
+image vmiy2 = im.Scale("miy knight happy.webp", 710, 937)
 image mar1 = im.Scale("mar excite.webp", 540, 850)
 image mar2 = im.Scale("mar angy.webp", 550, 850)
 image mar3 = im.Scale("mar hmmm.webp", 550, 850)
@@ -137,11 +138,21 @@ screen countdown2:
     timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown')])
     bar value timeleft range timer_range xalign 0.5 yalign 0.1 xmaximum 1350 at alpha_dissolve 
 
+screen countdown3:
+    fixed:
+        text "{color=#d9f5ff}{b}Time left:{/b}{/color}":
+            xpos 230 ypos 420
+    timer 1 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 1), false=[Hide('countdown'), Jump(timer_jump)])
+    if timeleft <= 3:
+        text str(timeleft) xpos .25 ypos .35 color "#FF0000" size 200 at alpha_dissolve 
+    else:
+        text str(timeleft) xpos .25 ypos .35 size 200 at alpha_dissolve
+
 label start:
     $ globalpoints = 0
     narrator "Welcome to your worst nightmare"
     scene bg main
-    play music "audio/amqtheme.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/amqtheme.mp3" fadeout 1.0 fadein 1.0 volume 0.7
     $ renpy.notify('♪ No Game No Life')
     show hib1 at right
     hib "God you're bad at this game"
@@ -1145,17 +1156,21 @@ label start:
     j "O-oh ok..."
     kur "You better be prepared to face her off once she gets back from buying yakisoba pan."
     j ":skull:"
-
-    # 0.1.9b
-    # They must first defeat Valkyrie Miyu to gain the intel on SGB
-
-    # - Either progressive difficulty Youtube-style mode 
-    # OR
-    # - Board game mode
-    # OR
-    # - Impossible mode (5s 4x no dd start sample) 
-
-    # undecided tbh ^^^
+    $ proceed = False
+    while not proceed:
+        menu:
+            "Ege's Spirit" "It's recommended you save your game before fighting bosses; dying means you lose your current save data"
+            "Begin fight":
+                $ proceed = True
+            "Maybe later...":
+                kur "She'll be back any minute now..."
+    scene black
+    j "Whoa... what happened? Why'd it get so dark all of a sudden?!"
+    kur "It's starting..."
+    call kurikobattle
+    centered "I suppose I can tell you the story..."
+    centered "A long time ago... in a mystical land far, far away named \"Denmark\"..."
+    ""
 
     # [When Valkyrie Miyu is defeated, cue a short exposition "story book style" into Ege's history making AMQ -- dig up some old FB posts]
     # "It all got out of hand when he made the ticket system... boy did he not know what he was getting into"
@@ -2222,7 +2237,7 @@ label thirddream:
         "game1605":["aggretsuko: we wish you a metal christmas","aggressive retsuko: we wish you a metal christmas"],
         "game1606":["oh! super milk-chan", "the super milk chan show"],
         "game1607":["thermae romae novae"],
-        "game1608":["uchuu senkan yamato","star blazers","uchuu senkan yamato 2","star blazers: the bolar wars","uchuu senkan yamato 3","star blazers: space battleship yamato 2199","uchuu senkan yamato 2199","space battleship yamato 2199: voyage of remembrance","uchuu senkan yamato 2199: tsuioku no koukai","space battleship yamato","space cruiser: guardian of the galaxy","star blazers: the quest for iscandar","uchuu senkan yamato 2205: aratanaru tabidachi"],
+        "game1608":["uchuu senkan yamato 2199", "star blazers: space battleship yamato 2199"],
         "game1609":["wish"],
         "game1610":["winter sonata","fuyu no sonata"],
         "game1611":["iron man"],
@@ -2534,3 +2549,427 @@ screen certificate(playername, tier, points):
         text "{color=#000}{size=-10}[tier] {i}([points] pts){/i}{/size}{/color}":
             xalign 0.5
             yalign -0.92
+
+screen sectionheader(number, subtext):
+    fixed:
+        text "{color=#fff}{b}{size=+40}{u}STAGE [number]{/u}{/size}{/b}{/color}":
+            xpos 200 ypos 300
+        text "[subtext]":
+            xpos 200 ypos 420
+
+screen songnumbertext(number, total):
+    fixed:
+        text "{color=#fff}{b}{size=+30}SONG {/size}{size=+100}[number]{/size}{/b}   OF [total]{/color}":
+            xalign 0.15 ypos 250
+
+screen correctscreen(inputtext):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Correct!{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+        text "{color=#fff}{u}You answered:{/u}\n{size=-8}[inputtext]{/size}{/color}":
+            xpos 150 ypos 400
+
+screen wrongscreen(inputtext, answertext):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Nope...{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+        text "{color=#fff}{u}You answered:{/u}\n{size=-8}[inputtext]{/size}{/color}":
+            xpos 150 ypos 400
+        text "{color=#fff}{u}Correct answers:{/u}\n{size=-8}[answertext]{/size}{/color}":
+            xpos 150 ypos 500
+
+screen answerlabel(text):
+    fixed:
+        text "{color=#ffade0}{b}>>> [text] <<<{/b}{/color}":
+            xpos 210 ypos 130
+
+screen notime():
+    fixed:
+        text "{color=#fff}{size=+100}{b}Out of time...{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+
+screen gameend(winlosemsg, textcolor):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Game complete!{/b}{/size}{/color}":
+            xpos 200 ypos 200
+        text "{color=#fff}Total points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 360
+        text "{color=[textcolor]}{size=+30}{b}[winlosemsg]{/b}{/size}{/color}":
+            xpos 210 ypos 460
+
+label kurikobattle:
+    $ gamepoints = 0
+    menu:
+        "Please choose your difficulty"
+        "Forgiving (35 points)":
+            $ pointgoal = 35
+            $ multiplier = 0.33
+        "Comfy (90 points)":
+            $ pointgoal = 90
+            $ multiplier = 0.67
+        "Normal (180 points)":
+            $ pointgoal = 180
+            $ multiplier = 1.0
+        "Challenge (240 points)":
+            $ pointgoal = 240
+            $ multiplier = 1.5
+        "Veteran (300 points)":
+            $ pointgoal = 300
+            $ multiplier = 2.0
+        "Perfect (395 points)":
+            $ pointgoal = 395
+            $ multiplier = 3.0
+    narrator "--- Boss information ---\nName: Valkyrie Miyu"
+    narrator "Specialty: Brain-Damage"
+    scene bg quiz1 with fade
+    show vmiy2 at right with moveinright
+    miy "Ohayou minna~ Kitekurete arigatou~"
+    miy "It's me, sonicyellow, back with another positively subarashii~ anime openings quiz for you guys!!"
+    j "Oh nyo..."
+    miy "In any case, let's get right to it shall we~! Hope everyone's ready!"
+    show screen sectionheader(1, "Difficulty: 45-100%\nModifiers: none\n\n6 songs / +5 points each\n10 second time limit")
+    ">>> Begin Stage 1 <<<"
+    $ currentsong = 1
+    $ numofsongs = 6
+    $ songlist1 = [
+        ("game1801",["monster high: kowa-ike girls"]),
+        ("game1802",["overlord iv"]),
+        ("game1803",["chibi devi!"]),
+        ("game1804",["jojo no kimyou na bouken: diamond wa kudakenai", "jojo's bizarre adventure: diamond is unbreakable"]),
+        ("game1805",["kaguya-sama wa kokurasetai: ultra romantic", "kaguya-sama: love is war - ultra romantic"]),
+        ("game1806",["paripi koumei", "ya boy kongming!"]),
+        ("game1807",["kiseijuu: sei no kakuritsu", "parasyte: the maxim"]),
+        ("game1808",["eizouken ni wa te o dasu na!", "keep your hands off eizouken!"]),
+        ("game1809",["naruto shippuuden"]),
+        ("game1810",["mushoku tensei: isekai ittara honki dasu", "mushoku tensei: jobless reincarnation"]),
+        ("game1811",["seishun buta yarou wa bunny girl senpai no yume o minai", "puberty syndrome: abnormal experience during adolescence due to sensitivity and instability.", "rascal does not dream of bunny girl senpai"]),
+        ("game1812",["crayon shin-chan", "shin chan", "crayon shin-chan: buriburi oukoku no hihou",  "crayon shin-chan: unkokusai no yabou", "crayon shin-chan: action kamen vs haigure mao"]),
+        ("game1813",["yofukashi no uta", "call of the night"])
+    ]
+    while len(songlist1) > numofsongs:
+        $ songlist1.pop(renpy.random.randint(1, len(songlist1))-1)
+    $ renpy.random.shuffle(songlist1)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong, numofsongs)
+        $ timeleft = 10
+        $ timer_jump = "stage1_outoftime"
+        $ songaudio = songlist1[currentsong-1][0]
+        $ currentans = songlist1[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 5
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage1_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz2 with fade
+    show vmiy2 at right with moveinright
+    miy "Hai~~ hope everyone had a good warm up! Now it's time to get this quiz {i}really{/i} started!"
+    show screen sectionheader(2, "Difficulty: 32-45%\nModifiers: 4x speed, 6s sample\n\n6 songs / +10 points each\n15 second time limit")
+    ">>> Begin Stage 2 <<<"
+    $ currentsong = 1
+    $ numofsongs = 6
+    $ songlist2 = [
+        ("game1901",["kidou senshi gundam seed", "mobile suit gundam seed", "kidou senshi gundam seed special edition", "mobile suit gundam seed special edition"]),
+        ("game1902",["gaikotsu kishi-sama, tadaima isekai e odekakechuu", "skeleton knight in another world"]),
+        ("game1903",["akatsuki no yona", "yona of the dawn"]),
+        ("game1904",["hanabi-chan wa okuregachi", "hanabichan: the girl who popped out of the game world"]),
+        ("game1905",["detroit metal city", "detroit metal city: the animated series"]),
+        ("game1906",["vivy: fluorite eye's song"]),
+        ("game1907",["mahouka koukou no rettousei", "the irregular at magic high school"]),
+        ("game1908",["charlotte"]),
+        ("game1909",["ginga eiyuu densetsu", "legend of the galactic heroes"]),
+        ("game1910",["pocket monsters", "pokemon", "pokémon", "pocket monsters: advanced generation", "pokemon: advanced", "pokémon: advanced", "pokemon: battle frontier", "pokémon: battle frontier", "pocket monsters diamond & pearl", "pokemon: diamond and pearl","pokémon: diamond and pearl"]),
+        ("game1911",["love live! superstar!!"]),
+        ("game1912",["kemono friends", "kemono friends 2"]),
+        ("game1913",["heppoko jikken animation excel♥saga", "heppoko jikken animation excel saga", "excel saga"]),
+        ("game1914",["lycoris recoil"]),
+        ("game1915",["keijo!!!!!!!!", "hip whip girl"])
+    ]
+    while len(songlist2) > numofsongs:
+        $ songlist2.pop(renpy.random.randint(1, len(songlist2))-1)
+    $ renpy.random.shuffle(songlist2)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+6, numofsongs+6)
+        $ timeleft = 15
+        $ timer_jump = "stage2_outoftime"
+        $ songaudio = songlist2[currentsong-1][0]
+        $ currentans = songlist2[currentsong-1][1]
+        $ renpy.sound.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 10
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage2_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop sound fadeout 1.0
+    scene bg quiz3 with fade
+    show vmiy2 at right with moveinright
+    miy "Hmmm... maybe that was too easy for you after all... Let's change things up a little!"
+    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode\n\n6 pairs of songs / +10 points each correct answer\nTwo songs will play at the same time for you to guess")
+    ">>> Begin Stage 3 <<<"
+    $ currentsong = 1
+    $ numofsongs = 6
+    $ songlist3 = [
+        ("game2001",["aiura"],["tamagotchi!"]),
+        ("game2002",["sister princess: re pure"],["shinseiki duel masters flash", "duel masters flash"]),
+        ("game2003",["hora, mimi ga mieteru yo!"],["soreike! anpanman", "soreike! anpanman: yuureisen o yattsukero!!", "soreike! anpanman: soratobu ehon to glass no kutsu", "soreike! anpanman: tenohira o taiyou ni", "soreike! anpanman: gomira no hoshi", "soreike! anpanman: ruby no negai", "soreike! anpanman: happy no daibouken", "soreike! anpanman: baikinman no gyakushuu", "soreike! anpanman: inochi no hoshi no dolly", "soreike! anpanman: yumeneko no kuni no nyanii", "soreike! anpanman: tsumiki-jou no himitsu", "soreike! anpanman: niji no pyramid", "soreike! anpanman: kyouryuu nosshi no daibouken"]),
+        ("game2004",["lostorage conflated wixoss: missing link", "lostorage incited wixoss"],["yu-gi-oh! arc-v"]),
+        ("game2005",["made in abyss: retsujitsu no ougonkyou", "made in abyss: the golden city of the scorching sun"],["madan no ou to vanadis", "lord marksman and vanadis"]),
+        ("game2006",["visual prison"],["dramatical murder"]),
+        ("game2007",["cardfight!! vanguard overdress"],["last exile", "last exile: fam, the silver wing", "last exile: ginyoku no fam"]),
+        ("game2008",["appare-ranman!"],["initial d: fourth stage"]),
+        ("game2009",["granblue fantasy the animation season 2"],["bloodivores"]),
+        ("game2010",["arp backstage pass"],["zan sayonara zetsubou sensei", "zan sayonara zetsubou sensei bangai-chi"]),
+        ("game2011",["speed grapher"],["tsurune: kazemai koukou kyuudou-bu", "tsurune"]),
+        ("game2012",["flying witch"],["baby steps"]),
+        ("game2013",["juuni kokuki", "the twelve kingdoms"],["dragon crisis!"]),
+        ("game2014",["tenchi souzou design-bu", "heaven's design team"],["k"])
+    ]
+    while len(songlist3) > numofsongs:
+        $ songlist3.pop(renpy.random.randint(1, len(songlist3))-1)
+    $ renpy.random.shuffle(songlist3)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+12, numofsongs+12)
+        $ songaudio = songlist3[currentsong-1][0]
+        $ currentans1 = songlist3[currentsong-1][1]
+        $ currentans2 = songlist3[currentsong-1][2]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        call screen noddinput("Enter your first answer:")
+        $ rawans1 = _return.strip()
+        $ ans1 = rawans1.lower()
+        call screen noddinput("Enter your second answer:")
+        $ rawans2 = _return.strip()
+        $ ans2 = rawans2.lower()
+        $ allans = ["(Song 1) " + i for i in currentans1] + ["(Song 2) " + i for i in currentans2]
+        $ allans = "\n".join(allans)
+        hide screen songnumbertext
+        if (ans1 in currentans1 and ans2 in currentans2) or (ans1 in currentans2 and ans2 in currentans1):
+            # Both correct
+            $ gamepoints += 20
+            show screen answerlabel("FIRST ANSWER")
+            show screen correctscreen(rawans1)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen correctscreen(rawans2)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+        elif (ans1 in currentans1 and ans2 in currentans1) or (ans1 in currentans2 and ans2 in currentans2) or (ans1 in currentans1 and ans2 not in currentans2) or (ans1 in currentans2 and ans2 not in currentans1):
+            # First correct, second wrong
+            $ gamepoints += 10
+            show screen answerlabel("FIRST ANSWER")
+            show screen correctscreen(rawans1)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen wrongscreen(rawans2, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+        elif (ans2 in currentans1 and ans1 not in currentans2) or (ans2 in currentans2 and ans1 not in currentans1):
+            # First wrong, second correct
+            $ gamepoints += 10
+            show screen answerlabel("FIRST ANSWER")
+            show screen wrongscreen(rawans1, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen correctscreen(rawans2)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+        else:
+            # Both wrong
+            show screen answerlabel("FIRST ANSWER")
+            show screen wrongscreen(rawans1, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen wrongscreen(rawans2, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz4 with fade
+    show vmiy2 at right with moveinright
+    miy "You haven't seen anything yet...!"
+    show screen sectionheader(4, "Difficulty: 0-20%\nModifiers: reverse audio\n\n7 songs / +20 points each\n20 second time limit")
+    ">>> Begin Stage 4 <<<"
+    $ currentsong = 1
+    $ numofsongs = 7
+    $ songlist4 = [
+        ("game2101",["ame-iro cocoa rainy color e youkoso!", "rainy cocoa, welcome to rainy color"]),
+        ("game2102",["corpse party: tortured souls"]),
+        ("game2103",["amazing nuts!"]),
+        ("game2104",["petit eva: evangelion@school"]),
+        ("game2105",["x"]),
+        ("game2106",["aikatsu planet!"]),
+        ("game2107",["tribe cool crew"]),
+        ("game2108",["inou no aicis"]),
+        ("game2109",["toushinki g's frame", "ancient girl's frame"]),
+        ("game2110",["hero mask"]),
+        ("game2111",["morita-san wa mukuchi. 2"]),
+        ("game2112",["seikai no senki ii", "banner of the stars ii", "crest of the stars", "seikai no monshou"]),
+        ("game2113",["koukaku kidoutai arise", "ghost in the shell: arise", "ghost in the shell: arise alternative architecture", "koukaku kidoutai arise: alternative architecture"]),
+        ("game2114",["kemeko deluxe!", "kemeko dx"]),
+        ("game2115",["koharu biyori", "indian summer", "haruka nogizaka's secret", "nogizaka haruka no himitsu"]),
+        ("game2116",["nami yo kiite kure", "wave, listen to me!"]),
+        ("game2117",["kaijin kaihatsu-bu no kuroitsu-san", "miss kuroitsu from the monster development department"]),
+        ("game2118",["tamayomi", "tamayomi : the baseball girls"])
+    ]
+    while len(songlist4) > numofsongs:
+        $ songlist4.pop(renpy.random.randint(1, len(songlist4))-1)
+    $ renpy.random.shuffle(songlist4)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+18, numofsongs+18)
+        $ timeleft = 20
+        $ timer_jump = "stage4_outoftime"
+        $ songaudio = songlist4[currentsong-1][0]
+        $ currentans = songlist4[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 20
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage4_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz5 with fade
+    show vmiy2 at right with moveinright
+    miy "Well, we're almost done~ For our last segment, we have songs that our lovely viewers submitted in for us!"
+    miy "Let's see what kind of wonderful music our talented AMQ players love listening to~"
+    show screen sectionheader(5, "Difficulty: 0-20%\nModifiers: none (fan-requested songs)\n\n3 songs / +15 points each\n20 second time limit")
+    ">>> Begin Stage 5 <<<"
+    $ currentsong = 1
+    $ numofsongs = 3
+    $ songlist5 = [
+        ("game2201",["peeping life tv season 1??"]),
+        ("game2202",["gakuen handsome the animation"]),
+        ("game2203",["upotte!!"]),
+        ("game2204",["taiban!", "tiny² band story", "tiny2 band story"]),
+        ("game2205",["urashimasakatasen no nichijou", "days of urashimasakatasen"]),
+        ("game2206",["shin no nakama ja nai to yuusha no party o oidasareta node, henkyou de slow life suru koto ni shimashita", "banished from the hero's party, i decided to live a quiet life in the countryside"]),
+        ("game2207",["super mario brothers: peach-hime kyuushutsu daisakusen", "super mario brothers: great mission to rescue princess peach"]),
+        ("game2208",["baby baachan", "baby grandma"]),
+        ("game2209",["docchi mo maid", "two lovely maid (≧▽≦)", "two lovely maid"])
+    ]
+    while len(songlist5) > numofsongs:
+        $ songlist5.pop(renpy.random.randint(1, len(songlist5))-1)
+    $ renpy.random.shuffle(songlist5)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+25, numofsongs+25)
+        $ timeleft = 20
+        $ timer_jump = "stage5_outoftime"
+        $ songaudio = songlist5[currentsong-1][0]
+        $ currentans = songlist5[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 15
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage5_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    if gamepoints >= pointgoal:
+        show screen gameend("You win!","#bcff7d")
+        miy "Eeeeeh... Looks like you won! Don't forget to subscribe~"
+        $ weightedpoints = gamepoints * multiplier
+        $ globalpoints += int(round(weightedpoints))
+    else: 
+        show screen gameend("You lost...", "#ff7070")
+        miy "Looks like you made a mistake coming to my channel today~ See you next time, ok?"
+        $ MainMenu(confirm=False)()
+    hide screen gameend
+    stop music fadeout 1.0
+    scene black with fade
+    return
