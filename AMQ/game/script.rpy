@@ -2292,10 +2292,7 @@ label thirddream:
         else:
             narrator "Nope... That ain't right..."
             $ allans = " / ".join(currentans)
-            if currentques == "game1608":
-                narrator "Correct answer(s):\n{size=-12}[allans]{/size}"
-            else:
-                narrator "Correct answer(s):\n{size=-8}[allans]{/size}"
+            narrator "Correct answer(s):\n{size=-8}[allans]{/size}"
             jump dream_death
         $ currentsong += 1
     stop music fadeout 1.0
@@ -2607,11 +2604,11 @@ label kurikobattle:
     $ gamepoints = 0
     menu:
         "Please choose your difficulty"
-        "Forgiving (35 points)":
-            $ pointgoal = 35
+        "Forgiving (40 points)":
+            $ pointgoal = 40
             $ multiplier = 0.33
-        "Comfy (90 points)":
-            $ pointgoal = 90
+        "Comfy (100 points)":
+            $ pointgoal = 100
             $ multiplier = 0.67
         "Normal (180 points)":
             $ pointgoal = 180
@@ -2619,8 +2616,8 @@ label kurikobattle:
         "Challenge (240 points)":
             $ pointgoal = 240
             $ multiplier = 1.5
-        "Veteran (300 points)":
-            $ pointgoal = 300
+        "Veteran (320 points)":
+            $ pointgoal = 320
             $ multiplier = 2.0
         "Perfect (395 points)":
             $ pointgoal = 395
@@ -2751,7 +2748,7 @@ label kurikobattle:
     scene bg quiz3 with fade
     show vmiy2 at right with moveinright
     miy "Hmmm... maybe that was too easy for you after all... Let's change things up a little!"
-    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode\n\n6 pairs of songs / +10 points each correct answer\nTwo songs will play at the same time for you to guess")
+    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode\n\n6 pairs of songs / +10 points for each correct answer\nTwo songs will play at the same time for you to guess")
     ">>> Begin Stage 3 <<<"
     $ currentsong = 1
     $ numofsongs = 6
