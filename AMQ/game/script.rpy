@@ -102,6 +102,8 @@ image cringe = im.Scale("mizCringe.webp", 250, 250)
 image kommiz = im.Scale("mizKom.webp", 200, 200)
 image muscle = im.Scale("muscle.png", 250, 250)
 image cert = im.Scale("cert.jpg", 800, 565)
+image donation = im.Scale("donation.png", 437, 108)
+image qualityavatar = im.Scale("qualityavatar.png", 344, 358)
 image badsub = Movie(play="hitorigoto.webm", loop=False)
 image actualnightmare = Movie(play="cursed.webm", loop=False)
 image actualnightmareforever = Movie(play="cursed.webm", loop=True)
@@ -1167,16 +1169,108 @@ label start:
     scene black
     j "Whoa... what happened? Why'd it get so dark all of a sudden?!"
     kur "It's starting..."
-    call kurikobattle
+    call kurikobattle from _call_kurikobattle
     centered "I suppose I can tell you the story..."
-    centered "A long time ago... in a mystical land far, far away named \"Denmark\"..."
-    ""
-
-    # [When Valkyrie Miyu is defeated, cue a short exposition "story book style" into Ege's history making AMQ -- dig up some old FB posts]
-    # "It all got out of hand when he made the ticket system... boy did he not know what he was getting into"
-    # Pelzio meme of donating $999 even for a pile of garbage with anime eyes on it
-
-    # Story is presented in either English or AMQlish or Fr*nch
+    centered "A long time ago... in a mystical land far, far away{w} named \"Denmark\"..."
+    $ dial_eng = [
+        "The year was 2017... and a man named Egerod \"Rasmus\" Leth had big ideas...",
+        "What a time to be alive that was... when AnimeMusicQuiz opened its doors to the world",
+        "The good ol' days... when Rent-a-Girlfriend just released its first volume... and Yuri on Ice!!! won the Anime Awards... and there was no one to laugh at you for missing Gintama in ranked...",
+        "Wouldn't it be nice if we could turn back time to when AMQ used Dailymotion as a video source, and Jojo became a trap?",
+        "... Just playing with your pals in a random pub room, with these iconic classic avatars...",
+        "Then it all changed... when the Ticket System attacked",
+        "On that day, humanity received a grim reminder of what it means to be scammed by gacha...",
+        "And with that, came in a wave of avatars I've only ever seen 3 people max use...",
+        "Solid Gold Hibiki wasn't impressed either... What ever happened to the AMQ he came to know and love?!",
+        "... And that's when he went missing. Some say he was banned, some say he was starting to become too opinionated and toxic... some say he was both and was actually named ErVex",
+        "The secret is buried here in this grimoire, in hopes that no mortal soul will ever lay eyes upon this knowledge",
+        "... Fearing what the next big update could do to his sanity, he went into hiding...",
+        "... Deep in the AMQ source code, a place he knew he would never be willingly seen or touched ever again..."
+    ]
+    $ dial_amq = [
+        "The ear is 2017. And I has a big curios idea !",
+        "Doing that time, AMQ finaly was launched to take over every local in the world!!",
+        "Their was good thing to happen in that year, KanoKari first volume releases, Yaoi on Ice!!! won the Anime-Awards and no ranked to delay four a hour because Catbox went down again",
+        "Trough AMQ is not different! Using Daily motion as video sorce and making JoJo a trap",
+        "Even have fluffy kitstsune for all you're fluffing needs!",
+        "But then I introduce the high sort after feature of whaling for images",
+        "Papa Ege confident everyone feel in love with it at first site",
+        "Then I maked so much avatar I can justify raiisng the Drive Donasion too $ 600",
+        "But my april fool's' joke where not so happy with this change",
+        "Just like a guess account after hearing OnegaiSnyaiper, they dissapear!",
+        "Secret is buried in this book with is...",
+        "The Gold Hibiki Original and not the Purple Hibiki DVDR went into hiding...",
+        "A place his not suppose to bee... the AMQ spageti code"
+    ]
+    $ dial_wee = [
+        "Nen wa 2017 desu. Toaru otoko wa BIGGU AIDIA ga arimasu.",
+        "Sono toki, EI EMMU KYUU wa sekai ni OOPUN shimashita...",
+        "Taun iku, 'Sewa-A-Pacar' baru saja rilis; Yuri di Atas Es menangkan Penghargaan Enime, Dan tidak ada yang menawarkan Anda bila Anda gagal Gintama seketika Peringkat ber-Rank",
+        "Aujourd'hui, je fais du fromage a la ferme d'Astolfo... Mercy bowcoop",
+        "avec les avatars classique!",
+        "Zhao shang hao zhong guo xian zai wo you bing qi ling; wo hen xi huang bing qi ling dang shi xu du yu",
+        "Humani'ity rehseev'd ai grimm rema'aindahr uv whot it maens tuh be scahm'd boih gaht'chuh",
+        "J'aime la raclette, mais Solide Golde Hibikee ne aimer pas la raclette",
+        "Soshite, SORIDDO KIN-MAN fumei ni narimashita...",
+        "Oh no no no อย่างนี้ไม่ดีOh no no no อย่างนี้สงสัยไม่ดีOh no no no อย่างนี้น่ากลัว คงจะเป็นฝันร้าย",
+        "nae-ga olsu-opsul-korago i-jen kurolsu op-tago chebal kuman-harago narul tarrae-ji..",
+        "Latebat etiam... Alicubi nusquam inveniri potuit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "En el código fuente de AMQ..."
+    ]
+    menu:
+        "Please choose your language"
+        "English":
+            $ storydial = dial_eng
+        "AMQlish":
+            $ storydial = dial_amq
+        "Cringe":
+            $ storydial = dial_wee
+    $ dial1 = storydial[0]
+    $ dial2 = storydial[1]
+    $ dial3 = storydial[2]
+    $ dial4 = storydial[3]
+    $ dial5 = storydial[4]
+    $ dial6 = storydial[5]
+    $ dial7 = storydial[6]
+    $ dial8 = storydial[7]
+    $ dial9 = storydial[8]
+    $ dial10 = storydial[9]
+    $ dial11 = storydial[10]
+    $ dial12 = storydial[11]
+    $ dial13 = storydial[12]
+    play music "audio/bgm18.mp3" fadein 1.0 fadeout 1.0 volume 0.3
+    scene story1 with fade
+    $ renpy.notify('♪ Strait Jacket')
+    "[dial1]"
+    scene story2 with fade
+    "[dial2]"
+    "[dial3]"
+    scene story3 with fade
+    "[dial4]"
+    scene story4 with fade
+    "[dial5]"
+    scene story5 with fade
+    "[dial6]"
+    "[dial7]"
+    scene story6 with fade
+    "[dial8]"
+    show donation:
+        xalign -0.5 yalign 0.45
+        linear 1.0 xalign 0.0001
+    $ renpy.pause(1.5, hard=True)
+    show qualityavatar with dissolve:
+        xalign 0.3 yalign 0.61
+    "[dial9]"
+    scene story7 with fade
+    "[dial10]"
+    "[dial11]"
+    scene story8 with fade
+    "[dial12]"
+    scene story9 with fade
+    "[dial13]"
+    scene black with Fade(3, 0, 3)
+    stop music fadeout 1.0
+    
 
     python:
         rhythm_game_scores_list = []
@@ -2842,7 +2936,7 @@ label kurikobattle:
     stop music fadeout 1.0
     scene bg quiz4 with fade
     show vmiy2 at right with moveinright
-    miy "You haven't seen anything yet...!"
+    miy "This video already has 23 copyright strikes, that's a new record!"
     show screen sectionheader(4, "Difficulty: 0-20%\nModifiers: reverse audio\n\n7 songs / +20 points each\n20 second time limit")
     ">>> Begin Stage 4 <<<"
     $ currentsong = 1
@@ -2907,7 +3001,7 @@ label kurikobattle:
     show vmiy2 at right with moveinright
     miy "Well, we're almost done~ For our last segment, we have songs that our lovely viewers submitted in for us!"
     miy "Let's see what kind of wonderful music our talented AMQ players love listening to~"
-    show screen sectionheader(5, "Difficulty: 0-20%\nModifiers: none (fan-requested songs)\n\n3 songs / +15 points each\n20 second time limit")
+    show screen sectionheader(5, "Difficulty: 0-25%\nModifiers: none (fan-requested songs)\n\n3 songs / +15 points each\n20 second time limit")
     ">>> Begin Stage 5 <<<"
     $ currentsong = 1
     $ numofsongs = 3
