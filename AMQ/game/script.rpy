@@ -1176,7 +1176,7 @@ label start:
         "The year was 2017... and a man named Egerod \"Rasmus\" Leth had big ideas...",
         "What a time to be alive that was... when AnimeMusicQuiz opened its doors to the world",
         "The good ol' days... when Rent-a-Girlfriend just released its first volume... and Yuri on Ice!!! won the Anime Awards... and there was no one to laugh at you for missing Gintama in ranked...",
-        "Wouldn't it be nice if we could turn back time to when AMQ used Dailymotion as a video source, and Jojo became a trap?",
+        "Wouldn't it be nice if we could turn back time to when AMQ used Dailymotion as a video source, and Astolfo's Bizarre Adventure was real?",
         "... Just playing with your pals in a random pub room, with these iconic classic avatars...",
         "Then it all changed... when the Ticket System attacked",
         "On that day, humanity received a grim reminder of what it means to be scammed by gacha...",
@@ -1191,11 +1191,11 @@ label start:
         "The ear is 2017. And I has a big curios idea !",
         "Doing that time, AMQ finaly was launched to take over every local in the world!!",
         "Their was good thing to happen in that year, KanoKari first volume releases, Yaoi on Ice!!! won the Anime-Awards and no ranked to delay four a hour because Catbox went down again",
-        "Trough AMQ is not different! Using Daily motion as video sorce and making JoJo a trap",
-        "Even have fluffy kitstsune for all you're fluffing needs!",
-        "But then I introduce the high sort after feature of whaling for images",
+        "Trough AMQ is not different! Using Daily motion as video sorce with adds and 100percent legit Jojo?",
+        "Even have fluffy kistsune for all you're fluffing needs!",
+        "But then I introduce the high sort after feature off whaling for images",
         "Papa Ege confident everyone feel in love with it at first site",
-        "Then I maked so much avatar I can justify raiisng the Drive Donasion too $ 600",
+        "Then I maked so much avatar I can justify raiisng the Drive Donasion too 600 $",
         "But my april fool's' joke where not so happy with this change",
         "Just like a guess account after hearing OnegaiSnyaiper, they dissapear!",
         "Secret is buried in this book with is...",
@@ -1209,9 +1209,9 @@ label start:
         "Aujourd'hui, je fais du fromage a la ferme d'Astolfo... Mercy bowcoop",
         "avec les avatars classique!",
         "Zhao shang hao zhong guo xian zai wo you bing qi ling; wo hen xi huang bing qi ling dang shi xu du yu",
-        "Humani'ity rehseev'd ai grimm rema'aindahr uv whot it maens tuh be scahm'd boih gaht'chuh",
+        "Humani'y rehseev'd ai grimm rema'aindahr uv whot it maens tuh be scahm'd boih gaht'chuh",
         "J'aime la raclette, mais Solide Golde Hibikee ne aimer pas la raclette",
-        "Soshite, SORIDDO KIN-MAN fumei ni narimashita...",
+        "E então, o Hibiki de ouro maciço desapareceu...",
         "Oh no no no อย่างนี้ไม่ดีOh no no no อย่างนี้สงสัยไม่ดีOh no no no อย่างนี้น่ากลัว คงจะเป็นฝันร้าย",
         "nae-ga olsu-opsul-korago i-jen kurolsu op-tago chebal kuman-harago narul tarrae-ji..",
         "Latebat etiam... Alicubi nusquam inveniri potuit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -1949,7 +1949,8 @@ label badteammate:
         ("game913","bt13.png", "Y"),
         ("game914","bt14.png", "N"),
         ("game915","bt15.png", "Y"),
-        ("game916","bt16.png", "N")
+        ("game916","bt16.png", "N"),
+        ("game917","bt17.png", "Y")
     ]
     $ correctdial = ["how tf did you know that","bro quit sweating so hard","how much anime have you seen tf","go touch grass"]
     $ wrongdial = ["even i knew that","tf my teammates trolling","*starts reciting the entire wikipedia list of ethnic slurs*","can we kick this guy wtf who even are they"]
@@ -2465,7 +2466,7 @@ label artclub:
     return
 
 label scienceclub:
-    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
+    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","oolli","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
     play music "audio/bgm16.mp3" fadein 1.0 fadeout 1.0 volume 0.2
     $ renpy.notify("♪ Armitage III")
     $ renpy.pause(7, hard=True)
@@ -2698,23 +2699,23 @@ label kurikobattle:
     $ gamepoints = 0
     menu:
         "Please choose your difficulty"
-        "Forgiving (40 points)":
-            $ pointgoal = 40
-            $ multiplier = 0.33
-        "Comfy (100 points)":
+        "Forgiving (100 points)":
             $ pointgoal = 100
+            $ multiplier = 0.33
+        "Comfy (160 points)":
+            $ pointgoal = 160
             $ multiplier = 0.67
-        "Normal (180 points)":
-            $ pointgoal = 180
+        "Normal (220 points)":
+            $ pointgoal = 220
             $ multiplier = 1.0
-        "Challenge (240 points)":
-            $ pointgoal = 240
+        "Challenge (280 points)":
+            $ pointgoal = 280
             $ multiplier = 1.5
-        "Veteran (320 points)":
-            $ pointgoal = 320
+        "Veteran (350 points)":
+            $ pointgoal = 350
             $ multiplier = 2.0
-        "Perfect (395 points)":
-            $ pointgoal = 395
+        "Perfect (420 points)":
+            $ pointgoal = 420
             $ multiplier = 3.0
     narrator "--- Boss information ---\nName: Valkyrie Miyu"
     narrator "Specialty: Brain-Damage"
@@ -2782,10 +2783,10 @@ label kurikobattle:
     scene bg quiz2 with fade
     show vmiy2 at right with moveinright
     miy "Hai~~ hope everyone had a good warm up! Now it's time to get this quiz {i}really{/i} started!"
-    show screen sectionheader(2, "Difficulty: 32-45%\nModifiers: 4x speed, 6s sample\n\n6 songs / +10 points each\n15 second time limit")
+    show screen sectionheader(2, "Difficulty: 32-45%\nModifiers: 4x speed, 6s sample\n\n7 songs / +10 points each\n15 second time limit")
     ">>> Begin Stage 2 <<<"
     $ currentsong = 1
-    $ numofsongs = 6
+    $ numofsongs = 7
     $ songlist2 = [
         ("game1901",["kidou senshi gundam seed", "mobile suit gundam seed", "kidou senshi gundam seed special edition", "mobile suit gundam seed special edition"]),
         ("game1902",["gaikotsu kishi-sama, tadaima isekai e odekakechuu", "skeleton knight in another world"]),
@@ -2842,7 +2843,7 @@ label kurikobattle:
     scene bg quiz3 with fade
     show vmiy2 at right with moveinright
     miy "Hmmm... maybe that was too easy for you after all... Let's change things up a little!"
-    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode\n\n6 pairs of songs / +10 points for each correct answer\nTwo songs will play at the same time for you to guess")
+    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode (guess two songs at once)\n\n6 pairs of songs / +10 points for each correct answer\n15 second time limit")
     ">>> Begin Stage 3 <<<"
     $ currentsong = 1
     $ numofsongs = 6
@@ -2867,11 +2868,14 @@ label kurikobattle:
     $ renpy.random.shuffle(songlist3)
     hide screen sectionheader
     while currentsong <= numofsongs:
-        show screen songnumbertext(currentsong+12, numofsongs+12)
+        show screen songnumbertext(currentsong+13, numofsongs+13)
+        $ timeleft = 15
+        $ timer_jump = "stage3_outoftime"
         $ songaudio = songlist3[currentsong-1][0]
         $ currentans1 = songlist3[currentsong-1][1]
         $ currentans2 = songlist3[currentsong-1][2]
         $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
         call screen noddinput("Enter your first answer:")
         $ rawans1 = _return.strip()
         $ ans1 = rawans1.lower()
@@ -2880,6 +2884,7 @@ label kurikobattle:
         $ ans2 = rawans2.lower()
         $ allans = ["(Song 1) " + i for i in currentans1] + ["(Song 2) " + i for i in currentans2]
         $ allans = "\n".join(allans)
+        hide screen countdown3
         hide screen songnumbertext
         if (ans1 in currentans1 and ans2 in currentans2) or (ans1 in currentans2 and ans2 in currentans1):
             # Both correct
@@ -2932,12 +2937,20 @@ label kurikobattle:
             ">>> Click to continue <<<"
             hide screen answerlabel
             hide screen wrongscreen
+        if False:
+            label stage3_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
         $ currentsong += 1
     stop music fadeout 1.0
     scene bg quiz4 with fade
     show vmiy2 at right with moveinright
     miy "This video already has 23 copyright strikes, that's a new record!"
-    show screen sectionheader(4, "Difficulty: 0-20%\nModifiers: reverse audio\n\n7 songs / +20 points each\n20 second time limit")
+    show screen sectionheader(4, "Difficulty: 0-20%\nModifiers: reverse audio\n\n7 songs / +20 points each\n15 second time limit")
     ">>> Begin Stage 4 <<<"
     $ currentsong = 1
     $ numofsongs = 7
@@ -2966,8 +2979,8 @@ label kurikobattle:
     $ renpy.random.shuffle(songlist4)
     hide screen sectionheader
     while currentsong <= numofsongs:
-        show screen songnumbertext(currentsong+18, numofsongs+18)
-        $ timeleft = 20
+        show screen songnumbertext(currentsong+19, numofsongs+19)
+        $ timeleft = 15
         $ timer_jump = "stage4_outoftime"
         $ songaudio = songlist4[currentsong-1][0]
         $ currentans = songlist4[currentsong-1][1]
@@ -3001,10 +3014,10 @@ label kurikobattle:
     show vmiy2 at right with moveinright
     miy "Well, we're almost done~ For our last segment, we have songs that our lovely viewers submitted in for us!"
     miy "Let's see what kind of wonderful music our talented AMQ players love listening to~"
-    show screen sectionheader(5, "Difficulty: 0-25%\nModifiers: none (fan-requested songs)\n\n3 songs / +15 points each\n20 second time limit")
+    show screen sectionheader(5, "Difficulty: 0-25%\nModifiers: none (fan-requested songs)\n\n4 songs / +15 points each\n15 second time limit")
     ">>> Begin Stage 5 <<<"
     $ currentsong = 1
-    $ numofsongs = 3
+    $ numofsongs = 4
     $ songlist5 = [
         ("game2201",["peeping life tv season 1??"]),
         ("game2202",["gakuen handsome the animation"]),
@@ -3021,8 +3034,8 @@ label kurikobattle:
     $ renpy.random.shuffle(songlist5)
     hide screen sectionheader
     while currentsong <= numofsongs:
-        show screen songnumbertext(currentsong+25, numofsongs+25)
-        $ timeleft = 20
+        show screen songnumbertext(currentsong+26, numofsongs+26)
+        $ timeleft = 15
         $ timer_jump = "stage5_outoftime"
         $ songaudio = songlist5[currentsong-1][0]
         $ currentans = songlist5[currentsong-1][1]
