@@ -130,7 +130,7 @@ init python:
                 "dropdown": ["Tottoko Hamtarou", "Tottoko Hamtarou: Ham-Ham Paradi-chu! Hamtarou to Fushigi no Oni no Ehonto", "Tottoko Hamtarou: Ham-Ham Land Daibouken", "Tottoko Hamtarou Anime Dechu!"],
                 "answer": "Tottoko Hamtarou Anime Dechu!",
             },
-        ]
+        ],
     }
 
     game_settings["ch2"] = {
@@ -283,5 +283,360 @@ init python:
                 "answer": ["ore ga suki nano wa imouto dakedo imouto ja nai", "my sister, my writer"],
                 "illegal": ["imoimo"],
             },
-        ]
+        ],
+    }
+
+    game_settings["ch3"] = {
+        "gameshow": [
+            {
+                "question": "How many song segments were played?",
+                "option": ["12", "14", "16", "18"],
+                "answer": "C",
+            },
+            {
+                "question": "Which anime's opening was played as a start sample?",
+                "option": ["Usagi Drop", "Amagi Brilliant Park", "Little Witch Academia", "Stella no Mahou"],
+                "answer": "B",
+            },
+            {
+                "question": "What anime's opening was the 5th song that was played?",
+                "option": ["Umineko no Naku Koro ni", "91 Days", "pet", "Scan2Go"],
+                "answer": "A",
+            },
+            {
+                "question": "Which of the following anime did NOT have its opening play?",
+                "option": ["Shadows House", "Fate/kaleid liner Prisma☆Illya 2wei!", "Ano Hi Mita Hana no Namae o Boku-tachi wa Mada Shiranai.", "Hakata Tonkotsu Ramens"],
+                "answer": "A",
+            },
+            {
+                "question": "Which anime's opening had the longest played sample?",
+                "option": ["Amagi Brilliant Park", "Little Busters!", "Macross Dynamite 7", "Little Busters! EX"],
+                "answer": "D",
+            },
+            {
+                "question": "Which artist performed more than one song that was played?",
+                "option": ["Minami Kuribayashi", "TRUE", "Kishida Kyoudan &THE Akeboshi Rockets", "TK from Ling Tosite Sigure"],
+                "answer": "C",
+            },
+            {
+                "question": "In which position did the non-Japanese song play?",
+                "option": ["6th","8th","9th","11th"],
+                "answer": "C",
+            },
+            {
+                "question": "In which position did the instrumental song play?",
+                "option": ["12th", "13th", "14th", "15th"],
+                "answer": "C",
+            },
+            {
+                "question": "How many anime played have a number in the title?",
+                "option": ["1", "2", "3", "4"],
+                "answer": "D",
+            },
+            {
+                "question": "The opening to which anime played twice?",
+                "option": ["Hakata Tonkotsu Ramens","Kikou Shoujo wa Kizutsukanai","Ghost Hunt","The World of GOLDEN EGGS"],
+                "answer": "B",
+            },
+        ],
+        
+        "game1": [
+            {
+                "audio": "game701",
+                "dropdown": ["Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen","Kabukichou Sherlock","Mawaru Penguindrum","Bem"],
+                "answer": "Bem",
+            },
+            {
+                "audio": "game702",
+                "dropdown": ["Toaru Majutsu no Index", "Nogizaka Haruka no Himitsu", "Kannazuki no Miko", "Hayate no Gotoku!"],
+                "answer": "Nogizaka Haruka no Himitsu",
+            },
+            {
+                "audio": "game703",
+                "dropdown": ["Witch Craft Works","Maerchen Maedchen","Comet Lucifer", "Gingitsune"],
+                "answer": "Comet Lucifer",
+            },
+            {
+                "audio": "game704",
+                "dropdown": ["Tsukimonogatari","Monogatari Series Second Season", "Zoku Owarimonogatari", "Koyomimonogatari"],
+                "answer": "Koyomimonogatari",
+            },
+            {
+                "audio": "game705",
+                "dropdown": ["Soutai Sekai","Build-Divide: #000000 (Code Black)","Build-Divide: #FFFFFF (Code White)","Fight League: Gear Gadget Generators"],
+                "answer": "Soutai Sekai",
+            },
+            {
+                "audio": "game706",
+                "dropdown": ["Bokurano","Seikon no Qwaser","Rail Wars!","Suzumiya Haruhi-chan no Yuuutsu"],
+                "answer": "Suzumiya Haruhi-chan no Yuuutsu",
+            },
+            {
+                "audio": "game707",
+                "dropdown": ["Aldnoah.Zero","Re:Creators","Kidou Senshi Gundam Unicorn RE:0096","Ginga Eiyuu Densetsu: Die Neue These - Kaikou"],
+                "answer": "Kidou Senshi Gundam Unicorn RE:0096",
+            },
+            {
+                "audio": "game708",
+                "dropdown": ["Itsudatte Bokura no Koi wa 10 cm Datta.","Kono Sekai no Tanoshimikata: Secret Story Film","Suki ni Naru Sono Shunkan o: Kokuhaku Jikkou Iinkai","Heroine Tarumono! Kiraware Heroine to Naisho no Oshigoto"],
+                "answer": "Heroine Tarumono! Kiraware Heroine to Naisho no Oshigoto",
+            },
+        ],
+
+        "ritsu": [
+            {
+                "audio": "game1001",
+                "dropdown": ["Michiko to Hatchin","Great Pretender","Baccano!","Hakumei to Mikochi"],
+                "answer": "Michiko to Hatchin",
+            },
+            {
+                "audio": "game1002",
+                "dropdown": ["Maou-jou de Oyasumi","Gochuumon wa Usagi Desu ka?","Tsurezure Children","Genjitsu Shugi Yuusha no Oukoku Saikenki"],
+                "answer": "Maou-jou de Oyasumi",
+            },
+            {
+                "audio": "game1003",
+                "dropdown": ["Sakura Trick","B Gata H Kei","Kiss × Sis","Amaama to Inazuma"],
+                "answer": "Sakura Trick",
+            },
+            {
+                "audio": "game1004",
+                "dropdown": ["Momokuri","Acchi Kocchi","Last Period: Owarinaki Rasen no Monogatari","Mikakunin de Shinkoukei"],
+                "answer": "Momokuri",
+            },
+            {
+                "audio": "game1005",
+                "dropdown": ["Deatte 5-byou de Battle","Jibaku Shounen Hanako-kun","Mahou Shoujo Tokushusen Asuka","Inou-Battle wa Nichijou-kei no Naka de"],
+                "answer": "Deatte 5-byou de Battle",
+            },
+            {
+                "audio": "game1006",
+                "dropdown": ["Minami-ke: Tadaima","Mahou Sensei Negima!","Strike Witches","Love Lab"],
+                "answer": "Minami-ke: Tadaima",
+            },
+            {
+                "audio": "game1007",
+                "dropdown": ["Beastars","JoJo no Kimyou na Bouken","Megalobox","One Piece Film: Gold"],
+                "answer": "Beastars",
+            },
+            {
+                "audio": "game1008",
+                "dropdown": ["Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.","Kuma Kuma Kuma Bear","Mayo Chiki!","Ore, Twintail ni Narimasu."],
+                "answer": "Itai no wa Iya nano de Bougyoryoku ni Kyokufuri Shitai to Omoimasu.",
+            },
+            {
+                "audio": "game1009",
+                "dropdown": ["Kingdom","3D Kanojo Real Girl","Black Clover","Fairy Tail: Final Season"],
+                "answer": "Kingdom",
+            },
+            {
+                "audio": "game1010",
+                "dropdown": ["Peter Grill to Kenja no Jikan","Musaigen no Phantom World","Kaijin Kaihatsu-bu no Kuroitsu-san","Mairimashita! Iruma-kun"],
+                "answer": "Peter Grill to Kenja no Jikan",
+            },
+            {
+                "audio": "game1011",
+                "dropdown": ["Machikado Mazoku 2-choume","Tamako Market","Hibike! Euphonium","Girls und Panzer"],
+                "answer": "Machikado Mazoku 2-choume",
+            },
+            {
+                "audio": "game1012",
+                "dropdown": ["Hamatora","Hamtaro","Re:␣Hamatora","Devil Survivor 2 The Animation"],
+                "answer": "Hamatora",
+            },
+            {
+                "audio": "game1013",
+                "dropdown": [".hack//Intermezzo","xxxHOLiC","Koukaku Kidoutai","Aoi Bungaku Series"],
+                "answer": ".hack//Intermezzo",
+            },
+            {
+                "audio": "game1014",
+                "dropdown": ["Gangsta.","Dimension W","Gantz","Super Crooks"],
+                "answer": "Gangsta.",
+            },
+            {
+                "audio": "game1015",
+                "dropdown": ["Full Metal Panic? Fumoffu","Kino no Tabi: The Beautiful World","Ookami to Koushinryou II","Mushoku Tensei: Isekai Ittara Honki Dasu"],
+                "answer": "Full Metal Panic? Fumoffu",
+            },
+            {
+                "audio": "game1016",
+                "dropdown": ["Fate/Grand Order: Zettai Majuu Sensen Babylonia","Kekkai Sensen & Beyond","Yozakura Quartet: Hana no Uta","Kaze ga Tsuyoku Fuiteiru"],
+                "answer": "Fate/Grand Order: Zettai Majuu Sensen Babylonia",
+            },
+            {
+                "audio": "game1017",
+                "dropdown": ["Free!: Take Your Marks","A3! Season Spring & Summer","TsukiPro the Animation","The iDOLM@STER SideM"],
+                "answer": "Free!: Take Your Marks",
+            },
+            {
+                "audio": "game1018",
+                "dropdown": ["Dororo","Durarara!!","Dorohedoro","Ninja Hattori-kun"],
+                "answer": "Dororo",
+            },
+            {
+                "audio": "game1019",
+                "dropdown": ["Boku-tachi no Remake","BanG Dream! 2nd Season","Bermuda Triangle: Colorful Pastrale","Cardfight!! Vanguard"],
+                "answer": "Boku-tachi no Remake",
+            },
+            {
+                "audio": "game1020",
+                "dropdown": ["Osananajimi ga Zettai ni Makenai Love Come","Boku-tachi wa Benkyou ga Dekinai!","Midara na Ao-chan wa Benkyou ga Dekinai","Jaku-Chara Tomozaki-kun"],
+                "answer": "Osananajimi ga Zettai ni Makenai Love Come",
+            },
+            {
+                "audio": "game1021",
+                "dropdown": ["Ore dake Haireru Kakushi Dungeon: Kossori Kitaete Sekai Saikyou","Sono Bisque Doll wa Koi o Suru","Okaa-san Online","Gundam Build Divers Re:RISE"],
+                "answer": "Ore dake Haireru Kakushi Dungeon: Kossori Kitaete Sekai Saikyou",
+            },
+            {
+                "audio": "game1022",
+                "dropdown": ["Hanayamata","Ochikobore Fruit Tart","Futsuu no Joshikousei ga Locodol Yattemita OVA","Senryuu Shoujo"],
+                "answer": "Hanayamata",
+            },
+            {
+                "audio": "game1023",
+                "dropdown": ["Hidamari Sketch × Honeycomb","Kono Bijutsu-bu ni wa Mondai ga Aru!","GA: Geijutsuka Art Design Class","Sketchbook: Full Color's"],
+                "answer": "Hidamari Sketch × Honeycomb",
+            },
+            {
+                "audio": "game1024",
+                "dropdown": ["Koisuru Asteroid","Honzuki no Gekokujou: Shisho ni Naru Tame ni wa Shudan o Erandeiraremasen","Tsuki ga Kirei","Chain Chronicle: Haecceitas no Hikari"],
+                "answer": "Koisuru Asteroid",
+            },
+            {
+                "audio": "game1025",
+                "dropdown": ["Long Riders!","To LOVE-Ru Darkness 2nd","Wakaba*Girl","Ao no Kanata no Four Rhythm"],
+                "answer": "Long Riders!",
+            },
+            {
+                "audio": "game1026",
+                "dropdown": ["Saki Zenkoku-hen","Date A Live IV","Dakara Boku wa, H ga Dekinai.","Maken-Ki! Two"],
+                "answer": "Saki Zenkoku-hen",
+            },
+            {
+                "audio": "game1027",
+                "dropdown": ["To LOVE-Ru","Okusama ga Seitokaichou!+!","Seitokai Yakuindomo*","Choujigen Game Neptune The Animation"],
+                "answer": "To LOVE-Ru",
+            },
+            {
+                "audio": "game1028",
+                "dropdown": ["Bishounen Tanteidan","Kimi no Suizou o Tabetai","Wotaku ni Koi wa Muzukashii","Mix: Meisei Story"],
+                "answer": "Bishounen Tanteidan",
+            },
+            {
+                "audio": "game1029",
+                "dropdown": ["Hidan no Aria AA","Btooom!","Aoki Hagane no Arpeggio: Ars Nova","Conception"],
+                "answer": "Hidan no Aria AA",
+            },
+            {
+                "audio": "game1030",
+                "dropdown": ["Sentouin, Hakenshimasu!","Ueno-san wa Bukiyou","Plunderer","Busou Shoujo Machiavellism"],
+                "answer": "Sentouin, Hakenshimasu!",
+            },
+            {
+                "audio": "game1031",
+                "dropdown": ["Masamune-kun no Revenge","Hajimete no Gal","Oshiete! Galko-chan","Boku no Kanojo ga Majime Sugiru Shobitch na Ken"],
+                "answer": "Masamune-kun no Revenge",
+            },
+            {
+                "audio": "game1032",
+                "dropdown": ["Ousama Game The Animation","Rainbow: Nisha Rokubou no Shichinin","Enen no Shouboutai","EVIL OR LIVE"],
+                "answer": "Ousama Game The Animation",
+            },
+            {
+                "audio": "game1033",
+                "dropdown": ["Daiya no Ace: Second Season","Prince of Stride: Alternative","Hand Shakers","Ple Ple Pleiades: Clementine Toubou-hen"],
+                "answer": "Daiya no Ace: Second Season",
+            },
+            {
+                "audio": "game1034",
+                "dropdown": ["Hitorijime My Hero","Grand Blue Dreaming","Sasaki to Miyano","Udon no Kuni no Kin-iro Kemari"],
+                "answer": "Hitorijime My Hero",
+            },
+            {
+                "audio": "game1035",
+                "dropdown": ["Sakamichi no Apollon","Hachimitsu to Clover","3-gatsu no Lion","Dance Dance Danseur"],
+                "answer": "Sakamichi no Apollon",
+            },
+            {
+                "audio": "game1036",
+                "dropdown": ["Senyoku no Sigrdrifa","Happy Sugar Life","Fuuka","Shichisei no Subaru"],
+                "answer": "Senyoku no Sigrdrifa",
+            },
+            {
+                "audio": "game1037",
+                "dropdown": ["Working'!!","Servant × Service","Ore o Suki nano wa Omae Dake ka yo","Sore ga Seiyuu!"],
+                "answer": "Working'!!",
+            },
+            {
+                "audio": "game1038",
+                "dropdown": ["Peach Boy Riverside","Shinka no Mi: Shiranai Uchi ni Kachigumi Jinsei","Darker than Black: Ryuusei no Gemini","Vivy: Fluorite Eye's Song"],
+                "answer": "Peach Boy Riverside",
+            },
+            {
+                "audio": "game1039",
+                "dropdown": ["Shoujo☆Kageki Revue Starlight: Rondo Rondo Rondo","Lapis Re:LiGHTs","Princess Connect! Re:Dive Season 2","Oshi ga Budoukan Ittekuretara Shinu"],
+                "answer": "Shoujo☆Kageki Revue Starlight: Rondo Rondo Rondo",
+            },
+            {
+                "audio": "game1040",
+                "dropdown": ["Choujin Koukousei-tachi wa Isekai demo Yoyuu de Ikinuku Youdesu!","Kenja no Mago","Tejina Senpai","Uzaki-chan wa Asobitai!"],
+                "answer": "Choujin Koukousei-tachi wa Isekai demo Yoyuu de Ikinuku Youdesu!",
+            },
+            {
+                "audio": "game1041",
+                "dropdown": ["Leadale no Daichi nite","Saihate no Paladin","Zero kara Hajimeru Mahou no Sho","Kenja no Deshi o Nanoru Kenja"],
+                "answer": "Leadale no Daichi nite",
+            },
+            {
+                "audio": "game1042",
+                "dropdown": ["Yokohama Kaidashi Kikou","Shingetsutan Tsukihime","Tsukuyomi: Moon Phase","Abenobashi Mahou☆Shoutengai"],
+                "answer": "Yokohama Kaidashi Kikou",
+            },
+            {
+                "audio": "game1043",
+                "dropdown": ["Date A Bullet","Hajime no Ippo","Zombie-Loan","The Big O"],
+                "answer": "Date A Bullet",
+            },
+            {
+                "audio": "game1044",
+                "dropdown": ["Harukana Receive","Kami Nomi zo Shiru Sekai: 4-nin to Idol","Magical Star Kanon 100%","Kannagi"],
+                "answer": "Harukana Receive",
+            },
+            {
+                "audio": "game1045",
+                "dropdown": ["Mashiro no Oto","Tsurune: Kazemai Koukou Kyuudou-bu","Dokyuu Hentai HxEros","Dr. Stone Special Episode: Ryusui"],
+                "answer": "Mashiro no Oto",
+            },
+            {
+                "audio": "game1046",
+                "dropdown": ["Death March kara Hajimaru Isekai Kyousoukyoku","Arifureta Shokugyou de Sekai Saikyou","Assassins Pride","Girly Air Force"],
+                "answer": "Death March kara Hajimaru Isekai Kyousoukyoku",
+            },
+        ],
+
+        "ritsu2": [
+            {
+                "audio": "game1101",
+                "answer": ["wonder egg priority"],
+            },
+            {
+                "audio": "game1102",
+                "answer": ["made in abyss","made in abyss recaps"],
+            },
+            {
+                "audio": "game1103",
+                "answer": ["guilty crown"],
+            },
+            {
+                "audio": "game1104",
+                "answer": ["goblin slayer"],
+            },
+            {
+                "audio": "game1105",
+                "answer": ["date a live ii"],
+            },
+        ],
+
     }

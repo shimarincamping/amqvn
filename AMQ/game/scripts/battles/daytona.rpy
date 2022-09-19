@@ -77,7 +77,7 @@ label daytbattle:
 
         narrator "Song [curr_song] of [song_count]"
 
-        call countdown(20, None, {"xalign":0.5, "yalign":0.1, "xmaximum":1350})
+        call countdown(20.0, None, {"xalign":0.5, "yalign":0.1, "xmaximum":1350})
 
         $ renpy.music.play("audio/" + song["audio"] + ".mp3")
         

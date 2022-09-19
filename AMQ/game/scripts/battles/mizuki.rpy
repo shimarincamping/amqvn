@@ -34,7 +34,7 @@ label mizukibattle:
         $ renpy.music.play("audio/" + song["audio"] + ".mp3")
         $ dropdown = song["dropdown"]
 
-        call countdown(10, "outoftime_mizuki")
+        call countdown(10.0, "outoftime_mizuki")
 
         menu:
             "[dropdown[0]]":

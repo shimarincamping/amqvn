@@ -252,4 +252,4 @@ label ch1:
     miz "Oh yeah, right, karaoke, force of habit my bad"
     noe "Hurry weeb-kun, that Japanese isn't gonna butcher itself"
 
-    scene black with fade
+    scene black with Fade(3.0, 0.0, 3.0)

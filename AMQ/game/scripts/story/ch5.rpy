@@ -1,41 +1,4 @@
-define config.rollback_enabled = False
-define config.has_autosave = False
-
-init python:
-    import time as gettime
-    rhythm_game_songs = [
-        Song('Seishun wa Non-stop!', 'audio/sb69.mp3', 'audio/sb69.beatmap.txt'),
-        Song('Tokimeki Experience!', 'audio/bandori.mp3', 'audio/bandori.beatmap.txt'),
-        Song('Colorful Dreams! Colorful Smiles!', 'audio/lovelive.mp3', 'audio/lovelive.beatmap.txt'),
-        Song('Onegai! Cinderella', 'audio/imas.mp3', 'audio/imas.beatmap.txt'), 
-        Song('Make debut!', 'audio/umamusume.mp3', 'audio/umamusume.beatmap.txt')
-    ]
-    
-    #config.has_quicksave = False
-    #config.has_autosave = False
-init:
-    $ timer_range = 0
-    $ timer_jump = 0
-
-default persistent.rhythm_game_high_scores = {
-    song.name: (0, 0) for song in rhythm_game_songs
-}
-default selected_song = None
-
-transform alpha_dissolve:
-    alpha 0.0
-    linear 0.5 alpha 1.0
-    on hide:
-        linear 0.5 alpha 0
-
-label start:
-    $ global_points = 0
-
-    call op
-    call ch1
-    call ch2
-    call ch3
-
+label ch5:
     "..."
     "......"
     "............."
@@ -229,18 +192,3 @@ label start:
     noe "Before..."
     noe "{cps=*0.3}Before he becomes... an Inserts only player{/cps}"
     scene black with fade
-
-    # Continue here for 0.1.9 content
-
-    python:
-        rhythm_game_scores_list = []
-        for i in persistent.rhythm_game_high_scores.values():
-            rhythm_game_scores_list.append(i[0])
-        avg_rhythm_game_score = int(round((sum(rhythm_game_scores_list) / len(rhythm_game_scores_list) / 1000),0))
-        game_points += avg_rhythm_game_score * 2
-    ""
-    scene black with fade
-    centered "~ to be continued ~"
-    centered "Thanks for playing till the end!"
-    centered "Total XP: {b}[global_points]{/b}"
-    return
