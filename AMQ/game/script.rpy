@@ -586,7 +586,7 @@ label start:
     noe "I wouldn't put you through that, or anyone... So! Hope you're ready~ Here it comes!"
     scene black with fade
     call initgame({
-        "game701":["Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen","Kabukichou Sherlock","Mawaru Penguindrum","Bem"],
+        "game701":["Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen","Arakawa Under the Bridge","Mawaru Penguindrum","Bem"],
         "game702":["Toaru Majutsu no Index", "Nogizaka Haruka no Himitsu", "Kannazuki no Miko", "Hayate no Gotoku!"],
         "game703":["Witch Craft Works","Maerchen Maedchen","Comet Lucifer", "Gingitsune"],
         "game704":["Tsukimonogatari","Monogatari Series Second Season", "Zoku Owarimonogatari", "Koyomimonogatari"],
@@ -989,8 +989,6 @@ label start:
     noe "Before..."
     noe "{cps=*0.3}Before he becomes... an Inserts only player{/cps}"
     scene black with fade
-
-    # Continue here for 0.1.9 content
     centered "And so... Our four heroes went on a search for any clues leading to {b}SOLID GOLD HIBIKI{b}'s whereabouts..."
     $ renpy.notify('♪ Kuroshitsuji')
     play music "audio/bgm13.mp3" volume 0.2 fadein 1.0 fadeout 1.0
@@ -1583,7 +1581,7 @@ label daytbattle:
     }
     # God my spaghetti code makes Ege's look pristine in comparison lul
     $ illegalans = {"game601":["tensura"],"game602":["kimiuso", "kimiuso: moments"],"game603":["yorimoi"],"game604":["danmachi"],"game605":["oreimo"],"game606":["haganai"],"game607":["oregairu", "oregairu zoku", "oregairu kan"],"game608":["hamefura", "hamefura x"],"game609":["oreshura"],"game610":["sukasuka"],"game611":["shimoseka"],"game612":["isesuma"],"game613":["watamote"],"game614":["rikekoi"],"game615":["noukin"],"game616":["uchinoko"],"game617":["imocho."],"game618":["uzamaid!"],"game619":["noucome"],"game620":["jintai"],"game621":["oniai"],"game622":["rokuaka"],"game623":["koikimo"],"game624":["tadakoi"],"game625":["imoimo"]}
-    $ dial = ["I've got a toothbrush with your name on it","I deleted it (yaoi!!! on ice) and ege made me readd it","the last time i played amq was in january i think", "(real Dayt quote) did you know that Hitler was an animal lover and was actually a huge advocate for more laws protecting animals", "wtf a furry that looks decent", "Yes the idol jihen fan base is so trash", "thats why i back catbox adn not amq amq is trash catbox is god","time to ban jax for playing osu","if youre getting anythign right in 5 sec youre cheating anyway jsut not with shazam", "saro wtf", "oh my god these titles are giving me cancer","the reason quickdraw is so unplayed is because it legimitaly is a typing test"]
+    $ dial = ["I've got a toothbrush with your name on it","I deleted it (yaoi!!! on ice) and ege made me readd it","the last time i played amq was in january i think", "(real Dayt quote) did you know that Hitler was an animal lover and was actually a huge advocate for more laws protecting animals", "wtf a furry that looks decent", "Yes the idol jihen fan base is so trash", "thats why i back catbox adn not amq amq is trash catbox is god","time to ban jax for playing osu","if youre getting anythign right in 5 sec youre cheating anyway jsut not with shazam", "(also real dayt quote) with great chicken comes great pedophilia", "oh my god these titles are giving me cancer","the reason quickdraw is so unplayed is because it legimitaly is a typing test"]
     while len(songdict) > numofsongs:
         $ popped = renpy.random.randint(1, len(songdict))
         $ poppedkey = list(songdict.keys())[popped-1]
@@ -1950,7 +1948,8 @@ label badteammate:
         ("game914","bt14.png", "N"),
         ("game915","bt15.png", "Y"),
         ("game916","bt16.png", "N"),
-        ("game917","bt17.png", "Y")
+        ("game917","bt17.png", "Y"),
+        ("game918","bt18.png", "N")
     ]
     $ correctdial = ["how tf did you know that","bro quit sweating so hard","how much anime have you seen tf","go touch grass"]
     $ wrongdial = ["even i knew that","tf my teammates trolling","*starts reciting the entire wikipedia list of ethnic slurs*","can we kick this guy wtf who even are they"]
@@ -2466,7 +2465,7 @@ label artclub:
     return
 
 label scienceclub:
-    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","oolli","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
+    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","oolli","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","l2aspl3erry","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
     play music "audio/bgm16.mp3" fadein 1.0 fadeout 1.0 volume 0.2
     $ renpy.notify("♪ Armitage III")
     $ renpy.pause(7, hard=True)
@@ -2690,7 +2689,7 @@ screen gameend(winlosemsg, textcolor):
     fixed:
         text "{color=#fff}{size=+100}{b}Game complete!{/b}{/size}{/color}":
             xpos 200 ypos 200
-        text "{color=#fff}Total points: [gamepoints] / [pointgoal]{/color}":
+        text "{color=#fff}Total points: [gamepoints] / [pointgoal] {size=-9}([pointspercentage]%){/size}{/color}":
             xpos 210 ypos 360
         text "{color=[textcolor]}{size=+30}{b}[winlosemsg]{/b}{/size}{/color}":
             xpos 210 ypos 460
@@ -3065,11 +3064,13 @@ label kurikobattle:
                 hide screen notime
         $ currentsong += 1
     if gamepoints >= pointgoal:
+        $ pointspercentage = 100
         show screen gameend("You win!","#bcff7d")
         miy "Eeeeeh... Looks like you won! Don't forget to subscribe~"
         $ weightedpoints = gamepoints * multiplier
         $ globalpoints += int(round(weightedpoints))
     else: 
+        $ pointspercentage = round(gamepoints / pointgoal * 100, 2)
         show screen gameend("You lost...", "#ff7070")
         miy "Looks like you made a mistake coming to my channel today~ See you next time, ok?"
         $ MainMenu(confirm=False)()
