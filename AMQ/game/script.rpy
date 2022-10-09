@@ -47,7 +47,6 @@ label start:
     call ch3
     call ch4
     call ch5
-    call ch6
 
     python:
         rhythm_game_scores_list = []

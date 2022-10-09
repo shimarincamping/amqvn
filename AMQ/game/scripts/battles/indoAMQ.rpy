@@ -6,20 +6,9 @@ label indonesianamq:
     gm "Let's begin shall we~"
     scene bg ingame with fade
     window hide
-    call initgamenodd({
-        "indonesianamq1":["hai akko desu"],
-        "indonesianamq2":["shin chou bakumatsu shounen seiki takamaru","chou bakumatsu shounen seiki takamaru"],
-        "indonesianamq3":["seito shokun!"],
-        "indonesianamq4":["onegai! samia don","please! psammea-don","the psammead"],
-        "indonesianamq5":["tama & friends: sagase! mahou no punipuni stone"],
-        "indonesianamq6":["time patrol bon"],
-        "indonesianamq7":["hanasaka tenshi tenten-kun"],
-        "indonesianamq8":["chinzei hachirou tametomo"],
-        "indonesianamq9":["superbook","anime oyako gekijou"],
-        "indonesianamq10":["one punch man"]
-    }, indonesia=True) from _call_initgamenodd_4
-    "Total points: {b}[gamepoints] pts{/b}"
-    if gamepoints > 0:
+    call initgamenodd(game_settings["ch3"]["indonesian_amq"], indonesia=True) from _call_initgamenodd_4
+    "Total points: {b}[game_points] pts{/b}"
+    if game_points > 0:
         gm "So, how many playthroughs have you done? Two? Three? Seventeen?"
         gm "Maybe you should try the other minigames, they're actually playable somewhat..."
     else:

@@ -383,6 +383,258 @@ init python:
             },
         ],
 
+        "indonesian_amq": [
+            {
+                "audio": "indonesianamq1",
+                "answer": ["hai akko desu"],
+            },
+            {
+                "audio": "indonesianamq2",
+                "answer": ["shin chou bakumatsu shounen seiki takamaru","chou bakumatsu shounen seiki takamaru"],
+            },
+            {
+                "audio": "indonesianamq3",
+                "answer": ["seito shokun!"],
+            },
+            {
+                "audio": "indonesianamq4",
+                "answer": ["onegai! samia don","please! psammea-don","the psammead"],
+            },
+            {
+                "audio": "indonesianamq5",
+                "answer": ["tama & friends: sagase! mahou no punipuni stone"],
+            },
+            {
+                "audio": "indonesianamq6",
+                "answer": ["time patrol bon"],
+            },
+            {
+                "audio": "indonesianamq7",
+                "answer": ["hanasaka tenshi tenten-kun"],
+            },
+            {
+                "audio": "indonesianamq8",
+                "answer": ["chinzei hachirou tametomo"],
+            },
+            {
+                "audio": "indonesianamq9",
+                "answer": ["superbook","anime oyako gekijou"],
+            },
+            {
+                "audio": "indonesianamq10",
+                "indonesianamq10":["one punch man"],
+            },
+        ],
+
+        "bad_teammate": [
+            {
+                "audio": "game901",
+                "image": "bt01.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game902",
+                "image": "bt02.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game903",
+                "image": "bt03.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game904",
+                "image": "bt04.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game905",
+                "image": "bt05.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game906",
+                "image": "bt06.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game907",
+                "image": "bt07.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game908",
+                "image": "bt08.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game909",
+                "image": "bt09.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game910",
+                "image": "bt10.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game911",
+                "image": "bt11.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game912",
+                "image": "bt12.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game913",
+                "image": "bt13.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game914",
+                "image": "bt14.png",
+                "answer": "N",
+            },
+            {
+                "audio": "game915",
+                "image": "bt15.png",
+                "answer": "Y",
+            },
+            {
+                "audio": "game916",
+                "image": "bt16.png",
+                "answer": "N",
+            },
+        ],
+
+        "blind_br": {
+            "category1": {
+                "option1": {
+                    "desc": "2000s",
+                    "songs": [
+                        {
+                            "audio": "game801",
+                            "answer": ["vampire knight"],
+                        },
+                        {
+                            "audio": "game802",
+                            "answer": ["fruits basket"],
+                        },
+                    ]
+                },
+                "option2": {
+                    "desc": "2010s",
+                    "songs": [
+                        {
+                            "audio": "game803",
+                            "answer": ["chihayafuru 3"],
+                        },
+                        {
+                            "audio": "game804",
+                            "answer": ["ramen daisuki koizumi-san","ms. koizumi loves ramen noodles"],
+                        },
+                    ]
+                },
+                "option3": {
+                    "desc": "1990s",
+                    "songs": [
+                        {
+                            "audio": "game805",
+                            "answer": ["magic knight rayearth"],
+                        },
+                        {
+                            "audio": "game806",
+                            "answer": ["one piece"],
+                        },
+                    ]
+                },
+            },
+            "category2": {
+                "option1": {
+                    "desc": "Ecchi",
+                    "songs": [
+                        {
+                            "audio": "game807",
+                            "answer": ["azur lane"],
+                        },
+                        {
+                            "audio": "game808",
+                            "answer": ["shinmai maou no testament burst","the testament of sister new devil burst","shinmai maou no testament departures","the testament of sister new devil departures"],
+                        },
+                    ]
+                },
+                "option2": {
+                    "desc": "Mecha",
+                    "songs": [
+                        {
+                            "audio": "game809",
+                            "answer": ["aquarion evol","sousei no aquarion evol","aquarion logos"],
+                        },
+                        {
+                            "audio": "game810",
+                            "answer": ["macross f","macross frontier"],
+                        },
+                    ]
+                },
+                "option3": {
+                    "desc": "Sports",
+                    "songs": [
+                        {
+                            "audio": "game811",
+                            "answer": ["slow loop"],
+                        },
+                        {
+                            "audio": "game812",
+                            "answer": ["re-main"],
+                        },
+                    ]
+                },
+            },
+            "category3": {
+                "option1": {
+                    "desc": "Rebroadcast",
+                    "songs": [
+                        {
+                            "audio": "game813",
+                            "answer": ["soul eater"],
+                        },
+                        {
+                            "audio": "game814",
+                            "answer": ["code geass: hangyaku no lelouch","code geass: lelouch of the rebellion"],
+                        },
+                    ]
+                },
+                "option2": {
+                    "desc": "Movie",
+                    "songs": [
+                        {
+                            "audio": "game815",
+                            "answer": ["bubble"],
+                        },
+                        {
+                            "audio": "game816",
+                            "answer": ["josee to tora to sakana-tachi","josee, the tiger and the fish"],
+                        },
+                    ]
+                },
+                "option3": {
+                    "desc": "OVA",
+                    "songs": [
+                        {
+                            "audio": "game817",
+                            "answer": ["higurashi no naku koro ni kira","when they cry kira"],
+                        },
+                        {
+                            "audio": "game818",
+                            "answer": ["nekopara ova"],
+                        },
+                    ]
+                },
+            },
+        },
+
         "ritsu": [
             {
                 "audio": "game1001",
@@ -638,5 +890,608 @@ init python:
                 "answer": ["date a live ii"],
             },
         ],
+    }
 
+    game_settings["ch4"] = {
+        "game1": [
+            {
+                "audio": "game1201",
+                "dropdown": ["Sugar Sugar Rune","Dagashi Kashi 2","Yumeiro Pâtissière SP Professional","Pan de Peace!"],
+                "answer": "Dagashi Kashi 2",
+            },
+            {
+                "audio": "game1202",
+                "dropdown": ["Nya-men","Onigiri","Bananya","Neko Ramen"],
+                "answer": "Neko Ramen",
+            },
+            {
+                "audio": "game1203",
+                "dropdown": ["Takunomi.","Wakako-zake","Bartender","Osake wa Fuufu ni Natte kara"],
+                "answer": "Bartender",
+            },
+            {
+                "audio": "game1204",
+                "dropdown": ["Emiya-san Chi no Kyou no Gohan","Bonjour Sweet Love Patisserie","Kakuriyo no Yadomeshi","Yakitate!! Japan"],
+                "answer": "Emiya-san Chi no Kyou no Gohan",
+            },
+            {
+                "audio": "game1205",
+                "dropdown": ["Valkyrie no Shokutaku II", "Isekai Shokudou 2","Koufuku Graffiti","Shokugeki no Souma: Shin no Sara"],
+                "answer": "Isekai Shokudou 2",
+            },
+        ],
+
+        "game2": [
+            {
+                "audio": "game1301",
+                "answer": ["mimi o sumaseba","whisper of the heart"],
+            },
+            {
+                "audio": "game1302",
+                "answer": ["majo no takkyuubin","kiki's delivery service"],
+            },
+            {
+                "audio": "game1303",
+                "answer": ["perfect blue"],
+            },
+            {
+                "audio": "game1304",
+                "answer": ["hadashi no gen","barefoot gen","hiroshima"],
+            },
+            {
+                "audio": "game1305",
+                "answer": ["little nemo","little nemo: adventures in slumberland"],
+            },
+        ],
+
+        "game3": [
+            {
+                "audio": "game1401",
+                "dropdown": ["Youkai Watch", "Deltora Quest", "Future Card Buddyfight", "Ben 10: Omniverse"],
+                "answer": "Youkai Watch",
+            },
+            {
+                "audio": "game1402",
+                "dropdown": ["Kira Kira Happy Hirake! Cocotama","Kamisama Minarai: Himitsu no Cocotama", "Mono no Kami-sama Cocotama", "Wonder Pets!"],
+                "answer": "Mono no Kami-sama Cocotama",
+            },
+            {
+                "audio": "game1403",
+                "dropdown": ["Ojamajo Doremi Na-i-sho","Ojamajo Doremi Dokkaan","Motto! Ojamajo Doremi","Winx Club"],
+                "answer": "Ojamajo Doremi Na-i-sho",
+            },
+            {
+                "audio": "game1404",
+                "dropdown": ["Barbapapa","BuBu ChaCha","Bonobono","Big Time Rush"],
+                "answer": "Bonobono",
+            },
+            {
+                "audio": "game1405",
+                "dropdown": ["Kaiju Girls Season 2","Kaiju Step Wandabada","Wandaba Style","The Fairly OddParents"],
+                "answer": "Kaiju Step Wandabada",
+            },
+            {
+                "audio": "game1406",
+                "dropdown": ["Stitch! Itazura Alien no Daibouken","himitsukesshatakanotsume.jp","Hakata Mentai! Pirikarako-chan","Wow! Wow! Wubbzy!"],
+                "answer": "Hakata Mentai! Pirikarako-chan",
+            },
+            {
+                "audio": "game1407",
+                "dropdown": ["Ichigo Mashimaro", "Ichigo 100%", "Gal-gaku. II: Lucky Stars", "Strawberry Shortcake's Berry Bitty Adventures"],
+                "answer": "Gal-gaku. II: Lucky Stars",
+            },
+            {
+                "audio": "game1408",
+                "dropdown": ["Totally Spies","Star vs. the Forces of Evil","Steven Universe","Phineas and Ferb"],
+                "answer": "Jewelpet: Magical Change",
+            },
+            {
+                "audio": "game1409",
+                "dropdown": ["Kim Possible", "The Legend of Korra", "Dexter's Laboratory", "Numb Chucks"],
+                "answer": "Beyblade Burst Sparking",
+            },
+            {
+                "audio": "game1410",
+                "dropdown": ["Pickle and Peanut", "Planet Sheen", "Fanboy & Chum Chum", "My Little Pony: A New Generation"],
+                "answer": "Eiga Precure Dream Stars!",
+            },
+        ],
+
+        "game4": [
+            {
+                "audio": "game1501",
+                "answer": ["rakudai kishi no cavalry","chivalry of a failed knight","yrlavac on ihsik iadukar","thgink deliaf a fo yrlavihc"],
+            },
+            {
+                "audio": "game1502",
+                "answer": ["baka to test to shoukanjuu","baka & test: summon the beasts","uujnakuohs ot tset ot akab","stsaeb eht nommus :tset & akab"],
+            },
+            {
+                "audio": "game1503",
+                "answer": ["nanbaka", "the numbers","akabnan","srebmun eht"],
+            },
+            {
+                "audio": "game1504",
+                "answer": ["amagami ss","+ss imagama"],
+            },
+            {
+                "audio": "game1505",
+                "answer": ["2.43: seiin koukou danshi volley-bu","2.43: seiin high school boys volleyball team","ub-yellov ihsnad uokuok niies :34.2","maet llabyellov syob loohcs hgih niies :34.2"],
+            },
+        ],
+
+        "third_dream": [
+            {
+                "audio": "game1601",
+                "answer": ["animal 1"],
+            },
+            {
+                "audio": "game1602",
+                "answer": ["space runaway ideon","densetsu kyojin ideon"],
+            },
+            {
+                "audio": "game1603",
+                "answer": ["big x"],
+            },
+            {
+                "audio": "game1604",
+                "answer": ["jetter mars"],
+            },
+            {
+                "audio": "game1605",
+                "answer": ["aggretsuko: we wish you a metal christmas","aggressive retsuko: we wish you a metal christmas"],
+            },
+            {
+                "audio": "game1606",
+                "answer": ["oh! super milk-chan", "the super milk chan show"],
+            },
+            {
+                "audio": "game1607",
+                "answer": ["thermae romae novae"],
+            },
+            {
+                "audio": "game1608",
+                "answer": ["uchuu senkan yamato","star blazers","uchuu senkan yamato 2","star blazers: the bolar wars","uchuu senkan yamato 3","star blazers: space battleship yamato 2199","uchuu senkan yamato 2199","space battleship yamato 2199: voyage of remembrance","uchuu senkan yamato 2199: tsuioku no koukai","space battleship yamato","space cruiser: guardian of the galaxy","star blazers: the quest for iscandar","uchuu senkan yamato 2205: aratanaru tabidachi"],
+            },
+            {
+                "audio": "game1609",
+                "answer": ["wish"],
+            },
+            {
+                "audio": "game1610",
+                "answer": ["winter sonata","fuyu no sonata"],
+            },
+            {
+                "audio": "game1611",
+                "answer": ["iron man"],
+            },
+            {
+                "audio": "game1612",
+                "answer": ["47 todoufuken r"],
+            },
+            {
+                "audio": "game1613",
+                "answer": ["knights of sidonia: battle for planet nine", "sidonia no kishi: dai-kyuu wakusei seneki"],
+            },
+            {
+                "audio": "game1614",
+                "answer": ["super dimension century orguss", "choujikuu seiki orguss"],
+            },
+            {
+                "audio": "game1615",
+                "answer": ["skyers 5"],
+            },
+            {
+                "audio": "game1616",
+                "answer": ["tetsujin 28-go", "gigantor"],
+            },
+            {
+                "audio": "game1617",
+                "answer": ["soccer fever"],
+            },
+            {
+                "audio": "game1618",
+                "answer": ["kenzen robo daimidaler","daimidaler the sound robot","daimidaler: prince vs. penguin empire"],
+            },
+            {
+                "audio": "game1619",
+                "answer": ["chirin no suzu","ringing bell"],
+            },
+            {
+                "audio": "game1620",
+                "answer": ["keroro"],
+            },
+            {
+                "audio": "game1621",
+                "answer": ["the story of young hanada","hanada shounen-shi"],
+            },
+            {
+                "audio": "game1622",
+                "answer": ["himitsu no akko-chan"],
+            },
+            {
+                "audio": "game1623",
+                "answer": ["kemono to chat"],
+            },
+        ],
+    }
+
+
+
+    game_settings["ch5"] = {
+        "game1": [
+            {
+                "audio": "game1701",
+                "answer": ["mairimashita! iruma-kun","welcome to demon school! iruma-kun"],
+            },
+            {
+                "audio": "game1702",
+                "answer": ["bobobo-bo bo-bobo"],
+            },
+            {
+                "audio": "game1703",
+                "answer": ["bonjour sweet love patisserie"],
+            },
+            {
+                "audio": "game1704",
+                "answer": ["dragon, ie o kau.","dragon goes house-hunting"],
+            },
+            {
+                "audio": "game1705",
+                "answer": ["kono subarashii sekai ni shukufuku o! 2","konosuba: god's blessing on this wonderful world! 2"],
+            },
+            {
+                "audio": "game1706",
+                "answer": ["monster musume no iru nichijou","monster musume: everyday life with monster girls","monster musume no iru nichijou sp"],
+            },
+            {
+                "audio": "game1707",
+                "answer": ["dakara boku wa, h ga dekinai.","so i can't play h"],
+            },
+            {
+                "audio": "game1708",
+                "answer": ["100-man no inochi no ue ni ore wa tatteiru","i'm standing on a million lives"],
+            },
+            {
+                "audio": "game1709",
+                "answer": ["shachiku-san wa youjo yuurei ni iyasaretai.","miss shachiku and the little baby ghost"],
+            },
+            {
+                "audio": "game1710",
+                "answer": ["popee the performer"],
+            },
+        ],
+
+        "kuriko": [
+            "battle1" : [
+                {
+                    "audio": "game1801",
+                    "answer": ["monster high: kowa-ike girls"],
+                },
+                {
+                    "audio": "game1802",
+                    "answer": ["overlord iv"],
+                },
+                {
+                    "audio": "game1803",
+                    "answer": ["chibi devi!"],
+                },
+                {
+                    "audio": "game1804",
+                    "answer": ["jojo no kimyou na bouken: diamond wa kudakenai", "jojo's bizarre adventure: diamond is unbreakable"],
+                },
+                {
+                    "audio": "game1805",
+                    "answer": ["kaguya-sama wa kokurasetai: ultra romantic", "kaguya-sama: love is war - ultra romantic"],
+                },
+                {
+                    "audio": "game1806",
+                    "answer": ["paripi koumei", "ya boy kongming!"],
+                },
+                {
+                    "audio": "game1807",
+                    "answer": ["kiseijuu: sei no kakuritsu", "parasyte: the maxim"],
+                },
+                {
+                    "audio": "game1808",
+                    "answer": ["eizouken ni wa te o dasu na!", "keep your hands off eizouken!"],
+                },
+                {
+                    "audio": "game1809",
+                    "answer": ["naruto shippuuden"],
+                },
+                {
+                    "audio": "game1810",
+                    "answer": ["mushoku tensei: isekai ittara honki dasu", "mushoku tensei: jobless reincarnation"],
+                },
+                {
+                    "audio": "game1811",
+                    "answer": ["seishun buta yarou wa bunny girl senpai no yume o minai", "puberty syndrome: abnormal experience during adolescence due to sensitivity and instability.", "rascal does not dream of bunny girl senpai"],
+                },
+                {
+                    "audio": "game1812",
+                    "answer": ["crayon shin-chan", "shin chan", "crayon shin-chan: buriburi oukoku no hihou",  "crayon shin-chan: unkokusai no yabou", "crayon shin-chan: action kamen vs haigure mao"],
+                },
+                {
+                    "audio": "game1813",
+                    "answer": ["yofukashi no uta", "call of the night"],
+                },
+            ],
+
+            "battle2": [
+                {
+                    "audio": "game1901",
+                    "answer": ["kidou senshi gundam seed", "mobile suit gundam seed", "kidou senshi gundam seed special edition", "mobile suit gundam seed special edition"],
+                },
+                {
+                    "audio": "game1902",
+                    "answer": ["gaikotsu kishi-sama, tadaima isekai e odekakechuu", "skeleton knight in another world"],
+                },
+                {
+                    "audio": "game1903",
+                    "answer": ["akatsuki no yona", "yona of the dawn"],
+                },
+                {
+                    "audio": "game1904",
+                    "answer": ["hanabi-chan wa okuregachi", "hanabichan: the girl who popped out of the game world"],
+                },
+                {
+                    "audio": "game1905",
+                    "answer": ["detroit metal city", "detroit metal city: the animated series"],
+                },
+                {
+                    "audio": "game1906",
+                    "answer": ["vivy: fluorite eye's song"],
+                },
+                {
+                    "audio": "game1907",
+                    "answer": ["mahouka koukou no rettousei", "the irregular at magic high school"],
+                },
+                {
+                    "audio": "game1908",
+                    "answer": ["charlotte"],
+                },
+                {
+                    "audio": "game1909",
+                    "answer": ["ginga eiyuu densetsu", "legend of the galactic heroes"],
+                },
+                {
+                    "audio": "game1910",
+                    "answer": ["pocket monsters", "pokemon", "pokémon", "pocket monsters: advanced generation", "pokemon: advanced", "pokémon: advanced", "pokemon: battle frontier", "pokémon: battle frontier", "pocket monsters diamond & pearl", "pokemon: diamond and pearl","pokémon: diamond and pearl"],
+                },
+                {
+                    "audio": "game1911",
+                    "answer": ["love live! superstar!!"],
+                },
+                {
+                    "audio": "game1912",
+                    "answer": ["kemono friends", "kemono friends 2"],
+                },
+                {
+                    "audio": "game1913",
+                    "answer": ["heppoko jikken animation excel♥saga", "heppoko jikken animation excel saga", "excel saga"],
+                },
+                {
+                    "audio": "game1914",
+                    "answer": ["lycoris recoil"],
+                },
+                {
+                    "audio": "game1915",
+                    "answer": ["keijo!!!!!!!!", "hip whip girl"],
+                },
+            ],
+
+            "battle3": [
+                {
+                    "audio": "game2001",
+                    "answer": [
+                        ["aiura"],
+                        ["tamagotchi!"]
+                    ]
+                },
+                {
+                    "audio": "game2002",
+                    "answer": [
+                        ["sister princess: re pure"],
+                        ["shinseiki duel masters flash", "duel masters flash"]
+                    ]
+                },
+                {
+                    "audio": "game2003",
+                    "answer": [
+                        ["hora, mimi ga mieteru yo!"],
+                        ["soreike! anpanman", "soreike! anpanman: yuureisen o yattsukero!!", "soreike! anpanman: soratobu ehon to glass no kutsu", "soreike! anpanman: tenohira o taiyou ni", "soreike! anpanman: gomira no hoshi", "soreike! anpanman: ruby no negai", "soreike! anpanman: happy no daibouken", "soreike! anpanman: baikinman no gyakushuu", "soreike! anpanman: inochi no hoshi no dolly", "soreike! anpanman: yumeneko no kuni no nyanii", "soreike! anpanman: tsumiki-jou no himitsu", "soreike! anpanman: niji no pyramid", "soreike! anpanman: kyouryuu nosshi no daibouken"]
+                    ]
+                },
+                {
+                    "audio": "game2004",
+                    "answer": [
+                        ["lostorage conflated wixoss: missing link", "lostorage incited wixoss"],
+                        ["yu-gi-oh! arc-v"]
+                    ]
+                },
+                {
+                    "audio": "game2005",
+                    "answer": [
+                        ["made in abyss: retsujitsu no ougonkyou", "made in abyss: the golden city of the scorching sun"],
+                        ["madan no ou to vanadis", "lord marksman and vanadis"]
+                    ]
+                },
+                {
+                    "audio": "game2006",
+                    "answer": [
+                        ["visual prison"],
+                },
+                {
+                    "audio": "game2007",
+                    "answer": [
+                        ["cardfight!! vanguard overdress"],
+                        ["last exile", "last exile: fam, the silver wing", "last exile: ginyoku no fam"]
+                    ]
+                },
+                {
+                    "audio": "game2008",
+                    "answer": [
+                        ["appare-ranman!"],
+                        ["initial d: fourth stage"]
+                    ]
+                },
+                {
+                    "audio": "game2009",
+                    "answer": [
+                        ["granblue fantasy the animation season 2"],
+                        ["bloodivores"]
+                    ]
+                },
+                {
+                    "audio": "game2010",
+                    "answer": [
+                        ["arp backstage pass"],
+                        ["zan sayonara zetsubou sensei", "zan sayonara zetsubou sensei bangai-chi"]
+                    ]
+                },
+                {
+                    "audio": "game2011",
+                    "answer": [
+                        ["speed grapher"],
+                        ["tsurune: kazemai koukou kyuudou-bu", "tsurune"]
+                    ]
+                },
+                {
+                    "audio": "game2012",
+                    "answer": [
+                        ["flying witch"],
+                        ["baby steps"]
+                    ]
+                },
+                {
+                    "audio": "game2013",
+                    "answer": [
+                        ["juuni kokuki", "the twelve kingdoms"],
+                        ["dragon crisis!"]
+                    ]
+                },
+                {
+                    "audio": "game2014",
+                    "answer": [
+                        ["tenchi souzou design-bu", "heaven's design team"],
+                        ["k"]
+                    ]
+                },
+            ],
+
+            "battle4": [
+                {
+                    "audio": "game2101",
+                    "answer": ["ame-iro cocoa rainy color e youkoso!", "rainy cocoa, welcome to rainy color"]
+                },
+                {
+                    "audio": "game2102",
+                    "answer": ["corpse party: tortured souls"]
+                },
+                {
+                    "audio": "game2103",
+                    "answer": ["amazing nuts!"]
+                },
+                {
+                    "audio": "game2104",
+                    "answer": ["petit eva: evangelion@school"]
+                },
+                {
+                    "audio": "game2105",
+                    "answer": ["x"]
+                },
+                {
+                    "audio": "game2106",
+                    "answer": ["aikatsu planet!"]
+                },
+                {
+                    "audio": "game2107",
+                    "answer": ["tribe cool crew"]
+                },
+                {
+                    "audio": "game2108",
+                    "answer": ["inou no aicis"]
+                },
+                {
+                    "audio": "game2109",
+                    "answer": ["toushinki g's frame", "ancient girl's frame"]
+                },
+                {
+                    "audio": "game2110",
+                    "answer": ["hero mask"]
+                },
+                {
+                    "audio": "game2111",
+                    "answer": ["morita-san wa mukuchi. 2"]
+                },
+                {
+                    "audio": "game2112",
+                    "answer": ["seikai no senki ii", "banner of the stars ii", "crest of the stars", "seikai no monshou"]
+                },
+                {
+                    "audio": "game2113",
+                    "answer": ["koukaku kidoutai arise", "ghost in the shell: arise", "ghost in the shell: arise alternative architecture", "koukaku kidoutai arise: alternative architecture"]
+                },
+                {
+                    "audio": "game2114",
+                    "answer": ["kemeko deluxe!", "kemeko dx"]
+                },
+                {
+                    "audio": "game2115",
+                    "answer": ["koharu biyori", "indian summer", "haruka nogizaka's secret", "nogizaka haruka no himitsu"]
+                },
+                {
+                    "audio": "game2116",
+                    "answer": ["nami yo kiite kure", "wave, listen to me!"]
+                },
+                {
+                    "audio": "game2117",
+                    "answer": ["kaijin kaihatsu-bu no kuroitsu-san", "miss kuroitsu from the monster development department"]
+                },
+                {
+                    "audio": "game2118",
+                    "answer": ["tamayomi", "tamayomi : the baseball girls"]
+                },
+            ],
+
+            "battle5": [
+                {
+                    "audio": "game2201",
+                    "answer": ["peeping life tv season 1??"]
+                },
+                {
+                    "audio": "game2202",
+                    "answer": ["gakuen handsome the animation"]
+                },
+                {
+                    "audio": "game2203",
+                    "answer": ["upotte!!"]
+                },
+                {
+                    "audio": "game2204",
+                    "answer": ["taiban!", "tiny² band story", "tiny2 band story"]
+                },
+                {
+                    "audio": "game2205",
+                    "answer": ["urashimasakatasen no nichijou", "days of urashimasakatasen"]
+                },
+                {
+                    "audio": "game2206",
+                    "answer": ["shin no nakama ja nai to yuusha no party o oidasareta node, henkyou de slow life suru koto ni shimashita", "banished from the hero's party, i decided to live a quiet life in the countryside"]
+                },
+                {
+                    "audio": "game2207",
+                    "answer": ["super mario brothers: peach-hime kyuushutsu daisakusen", "super mario brothers: great mission to rescue princess peach"]
+                },
+                {
+                    "audio": "game2208",
+                    "answer": ["baby baachan", "baby grandma"]
+                },
+                {
+                    "audio": "game2209",
+                    "answer": ["docchi mo maid", "two lovely maid (≧▽≦)", "two lovely maid"]
+                },
+            ],
+        ],
     }

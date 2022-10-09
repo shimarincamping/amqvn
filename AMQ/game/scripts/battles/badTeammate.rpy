@@ -1,31 +1,21 @@
-label badteammate:
-    $ gamepoints = 0
-    $ currentsong = 1
-    $ numofsongs = 10
-    $ songlist = [
-        ("game901","bt01.png", "Y"),
-        ("game902","bt02.png", "Y"),
-        ("game903","bt03.png", "N"),
-        ("game904","bt04.png", "Y"),
-        ("game905","bt05.png", "N"),
-        ("game906","bt06.png", "N"),
-        ("game907","bt07.png", "N"),
-        ("game908","bt08.png", "Y"),
-        ("game909","bt09.png", "N"),
-        ("game910","bt10.png", "Y"),
-        ("game911","bt11.png", "Y"),
-        ("game912","bt12.png", "Y"),
-        ("game913","bt13.png", "Y"),
-        ("game914","bt14.png", "N"),
-        ("game915","bt15.png", "Y"),
-        ("game916","bt16.png", "N")
+label badteammate:    
+    $ correctdial = [
+        "how tf did you know that",
+        "bro quit sweating so hard",
+        "how much anime have you seen tf",
+        "go touch grass"
     ]
-    $ correctdial = ["how tf did you know that","bro quit sweating so hard","how much anime have you seen tf","go touch grass"]
-    $ wrongdial = ["even i knew that","tf my teammates trolling","*starts reciting the entire wikipedia list of ethnic slurs*","can we kick this guy wtf who even are they"]
-    while len(songlist) > numofsongs:
-        $ songlist.pop(renpy.random.randint(1, len(songlist))-1)
-        $ renpy.random.shuffle(songlist)
+    $ wrongdial = [
+        "even i knew that",
+        "tf my teammates trolling",
+        "*starts reciting the entire wikipedia list of ethnic slurs*",
+        "can we kick this guy wtf who even are they"
+    ]
+    
+    $ renpy.random.shuffle(song_list)
+    
     scene bg main with fade
+    
     gm "Welcome to Bad Teammate! Powered by Shinomiya Group"
     gm "Once upon a time, you accidentally joined a team lobby full of single-digit level Hibiks!"
     gm "Ignoring the shocking fact they didn't kick you out and call you racial slurs within a nanosecond of you clicking Ready..."
@@ -35,61 +25,83 @@ label badteammate:
     gm "{size=-8}(Becuase you've already tied up an unhealthy chunk of your self-worth into this meaningless memory and typing game){/size}"
     gm "Good luck out there! Let's play~"
     "Game settings: Song plays for 5 seconds, you have 5 seconds after that to respond with Yes or No"
+    
     scene bg ingame with Fade(2.0, 0.0, 2.0)
-    while currentsong <= numofsongs:
-        narrator "Song [currentsong] of [numofsongs]"
+
+    $ guess_time = 5.0
+    $ game_points = 0
+    $ curr_song = 1
+    $ song_count = 10
+    $ song_list = game_settings["ch3"]["bad_teammate"]
+    
+    while curr_song <= song_count:
+        $ song = song_list[curr_song-1]
+        $ answer = ""
+        
+        narrator "Song [curr_song] of [song_count]"
+        
         window hide
-        $ timeleft = 5
-        $ timer_range = 5
-        $ timer_jump = "btans"
-        $ songaudio = songlist[currentsong-1][0]
-        $ renpy.music.play("audio/" + songaudio + ".mp3")
-        show screen countdown
+        
+        call countdown(guess_time, "btans")
+
+        $ renpy.music.play("audio/" + song["audio"] + ".mp3")
         $ renpy.pause(5.0, hard=True)
+
         label btans:
-            $ timeleft = 5
-            $ timer_range = 5
-            $ timer_jump = "btoutoftime"
-            show screen countdown
-            $ teamans = songlist[currentsong-1][1]
-            image teamans = "[teamans]"
-            show teamans:
+            call countdown(guess_time, "btoutoftime")
+
+            $ team_answer = song["image"]
+            image team_answer = "[team_answer]"
+            
+            show team_answer:
                 xalign 0.5
                 yalign 0.6
                 xzoom 2.0 
                 yzoom 2.0
+            
             menu:
                 "Accept your teammate's answer?"
                 "Yes":
                     hide screen countdown
-                    hide teamans
-                    $ bt_currentans = "Y"
+                    hide team_answer
+                    $ accepted = "Y"
                 "No":
                     hide screen countdown
-                    hide teamans
-                    $ bt_currentans = "N"
-            if bt_currentans == songlist[currentsong-1][2]:
-                $ randdial = renpy.random.choice(correctdial)
-                $ gamepoints += 10
-                "Good job! Current score: {b}[gamepoints] points{/b} (+10)"
-                "Guest-56941" "[randdial]"
+                    hide team_answer
+                    $ accepted = "N"
+            
+            if accepted == song["answer"]:
+                $ random_dial = renpy.random.choice(correctdial)
+                $ game_points += 10
+                "Good job! Current score: {b}[game_points] points{/b} (+10)"
+                "Guest-56941" "[random_dial]"
+            
             else:
-                $ randdial = renpy.random.choice(wrongdial)
-                $ gamepoints -= 10
-                "Mmmm no... Current score: {b}[gamepoints] points{/b} (-10)"
-                "Guest-56941" "[randdial]"
-            hide teamans
+                $ random_dial = renpy.random.choice(wrongdial)
+                $ game_points -= 10
+                "Mmmm no... Current score: {b}[game_points] points{/b} (-10)"
+                "Guest-56941" "[random_dial]"
+            hide team_answer
+        
         if False:
             label btoutoftime:
-                hide teamans
-                $ gamepoints -= 5
-                "Rip too slow... Current score: {b}[gamepoints] points{/b} (-5)"
-        $ currentsong += 1
+                hide team_answer
+                $ game_points -= 5
+                "Rip too slow... Current score: {b}[game_points] points{/b} (-5)"
+        
+        $ curr_song += 1
+    
     stop music fadeout 1.0
+    
     scene bg main with fade
-    gm "Game complete! Total score: {b}[gamepoints] points{/b}"
+    
+    gm "Game complete! Total score: {b}[game_points] points{/b}"
+    
     show bt_kick at truecenter with zoomin
+    
     gm "Thank you for playing Bad Teammate!"
-    $ globalpoints += gamepoints
+    
+    $ global_points += game_points
+    
     scene black with fade
     return

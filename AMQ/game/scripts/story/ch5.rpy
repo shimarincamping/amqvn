@@ -1,194 +1,340 @@
 label ch5:
-    "..."
-    "......"
-    "............."
-    ".....................................!"
-    ""
-    "Welcome to your worst nightmare"
-    show actualnightmare
-    $ renpy.pause(11.5, hard=True)
-    scene black
-    ""
-    "???" "...So ye finally decided to rear ye ugly head on me ship ay?"
-    scene bg pirate with fade
-    show mar pirate think with moveinright:
-        yalign 0.4
-        xalign 0.5
-    play music "audio/bgm09.mp3" fadein 1.0 fadeout 1.0 volume 0.2
-    $ renpy.notify('♪ Mouretsu Pirates')
-    mar "Who do you think ye are... steeping foot in MY WATERS?"
-    hide mar pirate think
-    show mar pirate sparkle:
-        yalign 0.4
-        xalign 0.5
-    mar "Best ye speak up before I splice ye into smithereens"
-    j "W-who are you?"
-    hide mar pirate sparkle
-    show mar pirate angry:
-        yalign 0.4
-        xalign 0.5
-    mar "THE LEVEL OF DISRESPECT COMING FROM YER TRAP"
-    mar "I'm the feared Nightmare Lancer of the Tyrant's Eye - Deus Highest Death Impact of the Seventh Resilience Crest Master of Spinjitsu Houshou Fitzgerald Lalatina Marine the Swashbuckler"
-    hide mar pirate angry
-    show mar pirate sparkle:
-        yalign 0.4
-        xalign 0.5
-    mar "Now remember that ok?"
-    mar "Repeat after me!"
-    mar "Night-"
-    j "N-night..."
-    scene bg playground
+    centered "And so... Our four heroes went on a search for any clues leading to {b}SOLID GOLD HIBIKI{b}'s whereabouts..."
+    $ renpy.notify('♪ Kuroshitsuji')
+    play music "audio/bgm13.mp3" volume 0.2 fadein 1.0 fadeout 1.0
+    
+    scene searching1 with Fade(2.0, 0, 2.0)
+    
+    scene searching2 with Fade(2.0, 0, 2.0)
+    
+    scene searching3 with Fade(2.0, 0, 2.0)
+    
+    scene bg desert with Fade(2.0, 0, 2.0)
+    
+    show noe think at right with moveinright
+    noe "This thing's harder to find than a good post in #feature-ideas"
+    
+    show kom think with moveinleft
+    kom "And... this desert is... getting really hot..."
+    
+    show miz happy at left with moveinleft
+    miz "Guys, guys, look what I found~"
+    
     stop music fadeout 1.0
-    show mar excite
-    mar "-mare Lancer"
-    j "Who is this... sassy lost child?"
-    hide mar excite
-    show mar angry
-    mar "H-hey!!{w} {size=-7}At least play along for the name bit... I spent all day coming up with that...{/size}"
-    mar "And!! I'll have you know I'm 4000 years old! (so you can go ahead and use that argument online i suppose but ymmv)"
-    j "We are literally at a playground"
-    mar "Humph. Mom said it was play time ok... Just follow 'long or I'll have you walk the plank!!"
-    j "It's not nice to steal y'know...? Now give that piece of plywood back to whoever you sto-"
-    mar "I've had enough!!!! Face me in a challenge this instant or off with your head!!"
-    $ currentmonth = gettime.localtime(gettime.time())
-    $ monthstr = gettime.strftime("%B", currentmonth)
-    $ halloweendial = "Little early for Halloween don't cha think... It's only {}...".format(monthstr) if currentmonth.tm_mon < 10 else "Little late for Halloween don't cha think... It's already {}...".format(monthstr) if currentmonth.tm_mon > 10 else "Oh I guess it is October... Must be some Halloween thing..."
-    j "[halloweendial]"
-    show fortniteloli:
-        xalign 0.1
-        yalign 0.1
-        xzoom 1.3
-        yzoom 1.3
-    mar "Just join my room already!!"
+    hide noe think with moveoutleft
+    hide kom think with moveoutleft
+    hide miz happy with moveoutleft
+    kom "Whoa!! There's like an entire oasis out here"
+    miz "Yeah, it was behind that funny looking bush"
+    kom "I'm literally burning hotter than chat when Steph hears Everybody Everybody, I say we jump in"
+    noe "But... did any of you bring swimsuits even?"
+    kom "It's the fanservice episode, so of course we did for some reason god only knows"
+    miz "VN logic duh" 
+    
+    show kom mizugi at right with moveinleft
+    show noe mizugi with moveinleft
+    show miz mizugi at left with moveinleft
+    kom "Phew! I'm already feelin' much better"
+    
+    scene black
+    
+    "Eagles (real dev)" "Wait a minute we can't be giving away this scene for FREE, wtf"
+    "Eagles (real dev)" "Swimsuit specials go for at least $12.99, everyone knows that"
+    "Eagles (real dev)" "Even Ege would happily charge people to show off PNG booba, no no no"
+    
+    scene bg desert
+    
+    show kom censored at right
+    show noe censored 
+    show miz censored at left
+    noe "Now then~ Let's get this beach episode on the road!"
+    
+    play music "audio/bgm14.mp3" fadeout 1.0 fadein 1.0 volume 0.2
+    $ renpy.notify('♪ Non Non Biyori Vacation')
+    
+    "Noel, Komugi, Mizuki" "Yayyy!!!!"
+    hide miz censored with moveoutleft
+    hide noe censored with moveoutleft
+    hide kom censored with moveoutleft
+    
+    stop music
+    
+    "???" "Who there dare enter my swamp?!"
+    
+    show aka mad with moveinleft
+    miz "Whoa whoa whoa whoa I'm not ready for my tentacle scene debut yet"
+    aka "Shut it, Mizuki"
+    noe "Wait, you two know each other?"
+    miz "N-no....?"
+    kom "Everyone knows nobody remembers half of the avatars after Marine anyway"
+    aka "..."
+    aka "{size=-8}Just for that I'm making it hell for you later. Have fun with that.{/size}"
+    aka "{size=-1}C{/size}{size=-3}'m{/size}{size=-4}on{/size}{size=-5}...{/size}{size=-7} We{/size}{size=-8} we{/size}{size=-9}nt {/size}{size=-10}to m{/size}{size=-12}iddl{/size}{size=-13}e s{/size}{size=-15}cho{/size}{size=-16}ol to{/size}{size=-18}gether...{/size}{w}\n{b}AHEM-{/b}"
+
+    show aka base 
+    aka "something something you trespassed on my territory yadda yadda beat me at AMQ now"
+    noe "God these segues into AMQ battles are really starting to feel forced"
+    aka "Hey, you chossse to play this bad game"
+    miz "At least it's still a better experience than playing FTF"
+    kom "So what happens if we lose, we die or...?"
+
+    show aka sparkle
+    aka "Aha no grrl, it's just something, like, far worse, or something... I'm just, like, quirky like that"
+
+    show aka base
+    aka "But before that, just making sure, your name isn't {b}Spear{/b} is it?"
+    
+    menu:
+        aka "But before that, just making sure, your name isn't {b}Spear{/b} is it?{fast}"
+        "Who?":
+            $ currentmonth = gettime.localtime(gettime.time())
+            $ punishment = "padoru" if currentmonth.tm_mon == 12 else "normal"
+            aka "Ok good..."
+        "Maybe...":
+            $ punishment = "mii"
+            aka "Kinda cringe but alright..."
+    
+    aka "Prepare to wish you were never born"
+    
     scene black with fade
-    call initgame({
-        "game1401":["Youkai Watch", "Deltora Quest", "Future Card Buddyfight", "Ben 10: Omniverse"],
-        "game1402":["Kira Kira Happy Hirake! Cocotama","Kamisama Minarai: Himitsu no Cocotama", "Mono no Kami-sama Cocotama", "Wonder Pets!"],
-        "game1403":["Ojamajo Doremi Na-i-sho","Ojamajo Doremi Dokkaan","Motto! Ojamajo Doremi","Winx Club"],
-        "game1404":["Barbapapa","BuBu ChaCha","Bonobono","Big Time Rush"],
-        "game1405":["Kaiju Girls Season 2","Kaiju Step Wandabada","Wandaba Style","The Fairly OddParents"],
-        "game1406":["Stitch! Itazura Alien no Daibouken","himitsukesshatakanotsume.jp","Hakata Mentai! Pirikarako-chan","Wow! Wow! Wubbzy!"],
-        "game1407":["Ichigo Mashimaro", "Ichigo 100%", "Gal-gaku. II: Lucky Stars", "Strawberry Shortcake's Berry Bitty Adventures"],
-        "game1408":["Totally Spies","Star vs. the Forces of Evil","Steven Universe","Phineas and Ferb"],
-        "game1409":["Kim Possible", "The Legend of Korra", "Dexter's Laboratory", "Numb Chucks"],
-        "game1410":["Pickle and Peanut", "Planet Sheen", "Fanboy & Chum Chum", "My Little Pony: A New Generation"]
-    },[
-        "Youkai Watch", "Mono no Kami-sama Cocotama", "Ojamajo Doremi Na-i-sho", "Bonobono", "Kaiju Step Wandabada", "Hakata Mentai! Pirikarako-chan", "Gal-gaku. II: Lucky Stars", "Jewelpet: Magical Change", "Beyblade Burst Sparking", "Eiga Precure Dream Stars!"
-    ], gamebg="bg playground.jpg", randsong = True,fortniteloli=True) from _call_initgame_4
-    ""
+    
+    call initgamenodd(game_settings["ch5"]["game1"], gamebg="bg desert.png", akane=True) from _call_initgamenodd_7
+    
+    scene bg desert with fade
+    
+    show aka mad at right with moveinright
+    aka "I don't know how you're ssstill alive after all that, usually my punishment venom is enough to make anyone mentally regress into a League player"
+    "???" "Oh god, where did it run off to, Hikari's gonna kill me if he finds ou-"
+    
+    show chi shock at left with moveinleft
+    chi "There you are!!"
+    chi "I've been... looking... EVERYWHERE... No one must know about this experimen-"
+    "She notices you and your party of idiots wearing light beam censors"
+
+    show chi smug at left
+    chi "a"
+    chi "Oh my god! It's really you!! I can't believe I finally get to meet you, you're practically the talk of the town!!"
+    chi "You're that AMQ booli aren't you?! You're my personal hero aaaaa!!!"
+    j "Omg really?"
+    chi "lol no"
+    chi "Also you really shouldn't be sneaking into high schools, someone's gonna get the wrong idea"
+    chi "I'm Chika by the way, president of the science club"
+    j "Did, you just say, school?"
+    j "Who builds a school... in a desert... in the middle of nowhere"
+    chi "The highway's to your left"
+    j "oh... :monkey:"
+    noe "Hey! hey! Remember our mission!"
+    j "R-right!! We came all the way out here to see if anyone has any leads to where {b}the illusive SOLID GOLD HIBIKI{/b} might be"
+
+    show chi think at left
+    chi "Hmmm... well personally no, but I know just the {s}chuuni{/s} expert who might in the {b}Occult Research Club{/b}..."
+    chi "By the way, did you know the average AMQ player loses 8 braincells every time they hear a Lucky Star karaoke ending? Fascinating stuff."
+    kom "Are we really gonna go with her? She looks like she has a few screws loose herself..."
+    miz "Hey, hey. A lead is a lead. Even if it comes from Ms. Knockoff Rio Futaba"
+    
+    scene black with fade
+    
+    "You make your way into the school building..."
+    
+    scene bg corridor with fade
+    
+    show chi smug at right with moveinright
+    chi "... We're almost there, is there any club you'd like to check out before we get there?"
+    
+    menu:
+        "Let's take a look at the Art Club!":
+            scene black with fade
+            call artclub from _call_artclub
+        "How about your club?":
+            scene black with fade
+            call scienceclub from _call_scienceclub
+        "No, thanks...":
+            chi "Fun fact: 72.4\% of the average AMQ player's vocabulary consists of calling other players a crude amalgamation of their name and the word 'god'"
+            chi "Allow me to demonstrate: *ahem* godyoshi here to carry us time to afk :place_of_worship:"
+    
+    scene bg corridor
+    
+    show chi smug at right
+    chi "Well then, let's get going now!"
+    chi "Also did you know that based on my research, 100\% of all AMQ players talk to themselves less than LOLwarZ?"
+    
+    scene bg occult with fade
+    play sound "audio/bgm17.mp3" fadeout 1.0 fadein 1.0 volume 0.3
+    $ renpy.notify('♪ Magatsu Wahrheit (Off-Music)')
+    
+    show skur with dissolve
+    show cauldron with dissolve:
+        xalign 0.5 yalign 0.99
+    kur "... three parts mandrake root... two sheets of scorpion skin... five drops ginseng extract... and finally... one bottle of teazri's tears..."
+    kur "I've done it..."
+    kur "With this elixir, I'll be the most powerful being known to humanity!"
+    
+    play sound "audio/knock.mp3"
+    $ renpy.pause(2, hard=True)
+    
+    j "Yo is this the occult research cl-"
+    j "Holy- what the fuck is that smell?"
+    kur "AMQ juice."
+    j "AMQ what?"
+    kur "Juice... y'know the drinking kind"
+    j "No... how about no..."
     "..."
-    "......."
-    "...................!"
-    play sound "audio/alarm.mp3" 
-    $ renpy.pause(3.0, hard=True)
-    "So... bright..."
-    scene bg bedroom2 with fade
-    play music "audio/bgm11.mp3" volume 0.2 fadein 1.0 fadeout 1.0
-    $ renpy.notify('♪ Comic Girls')
-    "Just as the early morning sunlight filled the room through the windows beside me, I opened my eyes..."
-    "Carried by a gentle breeze, a cherry blossom petal made its way onto the palm of my hand..."
-    "Spring..."
-    "Despite having lived here my entire life, never before had I seen the small town of Toyosato blanketed in a fluttering ocean of pink"
-    "Like a scene from a movie... the Tokyo from 5 Centimeters per Second comes to mind..."
-    "And in that sort of cliché sense, starting today, I would finally become a high school student."
-    "With that, I closed the door behind me, and made my way to the entrance ceremony."
-    play sound "audio/door.mp3"
+    kur "Oh? The {b}SOLID GOLD HIBIKI{/b}, you say?"
+    kur "Why yes, I did stumble upon that name in one of my grimoires..."
+    kur "But the lock is guarded by a terrifying curse... and an equally terrifying troll...!!!! *evil laughter*"
+    
+    show miy knight at right with moveinright
+    miy "Hey, uh, I'm gonna go buy lunch from the school store, you need anything?"
+    kur "Oh, speak of the devil, there she is right now"
+    
+    hide miy knight with moveoutright
+    j "Haven't I... seen you two before?"
+    kur "{size=-15}no no you havent and if you have you will pretend like you havent.{/size}\n"
+    j "O-oh ok..."
+    kur "You better be prepared to face her off once she gets back from buying yakisoba pan."
+    j ":skull:"
+
+    $ proceed = False
+    while not proceed:
+        menu:
+            "Ege's Spirit" "It's recommended you save your game before fighting bosses; dying means you lose your current save data"
+            "Begin fight":
+                $ proceed = True
+            "Maybe later...":
+                kur "She'll be back any minute now..."
+    
+    scene black
+    
+    j "Whoa... what happened? Why'd it get so dark all of a sudden?!"
+    kur "It's starting..."
+    
+    call kurikobattle from _call_kurikobattle
+    
+    centered "I suppose I can tell you the story..."
+    centered "A long time ago... in a mystical land far, far away{w} named \"Denmark\"..."
+    
+    $ dial_eng = [
+        "The year was 2017... and a man named Egerod \"Rasmus\" Leth had big ideas...",
+        "What a time to be alive that was... when AnimeMusicQuiz opened its doors to the world",
+        "The good ol' days... when Rent-a-Girlfriend just released its first volume... and Yuri on Ice!!! won the Anime Awards... and there was no one to laugh at you for missing Gintama in ranked...",
+        "Wouldn't it be nice if we could turn back time to when AMQ used Dailymotion as a video source, and Astolfo's Bizarre Adventure was real?",
+        "... Just playing with your pals in a random pub room, with these iconic classic avatars...",
+        "Then it all changed... when the Ticket System attacked",
+        "On that day, humanity received a grim reminder of what it means to be scammed by gacha...",
+        "And with that, came in a wave of avatars I've only ever seen 3 people max use...",
+        "Solid Gold Hibiki wasn't impressed either... What ever happened to the AMQ he came to know and love?!",
+        "... And that's when he went missing. Some say he was banned, some say he was starting to become too opinionated and toxic... some say he was both and was actually named ErVex",
+        "The secret is buried here in this grimoire, in hopes that no mortal soul will ever lay eyes upon this knowledge",
+        "... Fearing what the next big update could do to his sanity, he went into hiding...",
+        "... Deep in the AMQ source code, a place he knew he would never be willingly seen or touched ever again..."
+    ]
+    
+    $ dial_amq = [
+        "The ear is 2017. And I has a big curios idea !",
+        "Doing that time, AMQ finaly was launched to take over every local in the world!!",
+        "Their was good thing to happen in that year, KanoKari first volume releases, Yaoi on Ice!!! won the Anime-Awards and no ranked to delay four a hour because Catbox went down again",
+        "Trough AMQ is not different! Using Daily motion as video sorce with adds and 100percent legit Jojo?",
+        "Even have fluffy kistsune for all you're fluffing needs!",
+        "But then I introduce the high sort after feature off whaling for images",
+        "Papa Ege confident everyone feel in love with it at first site",
+        "Then I maked so much avatar I can justify raiisng the Drive Donasion too 600 $",
+        "But my april fool's' joke where not so happy with this change",
+        "Just like a guess account after hearing OnegaiSnyaiper, they dissapear!",
+        "Secret is buried in this book with is...",
+        "The Gold Hibiki Original and not the Purple Hibiki DVDR went into hiding...",
+        "A place his not suppose to bee... the AMQ spageti code"
+    ]
+    
+    $ dial_wee = [
+        "Nen wa 2017 desu. Toaru otoko wa BIGGU AIDIA ga arimasu.",
+        "Sono toki, EI EMMU KYUU wa sekai ni OOPUN shimashita...",
+        "Taun iku, 'Sewa-A-Pacar' baru saja rilis; Yuri di Atas Es menangkan Penghargaan Enime, Dan tidak ada yang menawarkan Anda bila Anda gagal Gintama seketika Peringkat ber-Rank",
+        "Aujourd'hui, je fais du fromage a la ferme d'Astolfo... Mercy bowcoop",
+        "avec les avatars classique!",
+        "Zhao shang hao zhong guo xian zai wo you bing qi ling; wo hen xi huang bing qi ling dang shi xu du yu",
+        "Humani'y rehseev'd ai grimm rema'aindahr uv whot it maens tuh be scahm'd boih gaht'chuh",
+        "J'aime la raclette, mais Solide Golde Hibikee ne aimer pas la raclette",
+        "E então, o Hibiki de ouro maciço desapareceu...",
+        "Oh no no no อย่างนี้ไม่ดีOh no no no อย่างนี้สงสัยไม่ดีOh no no no อย่างนี้น่ากลัว คงจะเป็นฝันร้าย",
+        "nae-ga olsu-opsul-korago i-jen kurolsu op-tago chebal kuman-harago narul tarrae-ji..",
+        "Latebat etiam... Alicubi nusquam inveniri potuit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "En el código fuente de AMQ..."
+    ]
+    
+    menu:
+        "Please choose your language"
+        "English":
+            $ storydial = dial_eng
+        "AMQlish":
+            $ storydial = dial_amq
+        "Cringe":
+            $ storydial = dial_wee
+    
+    $ dial1 = storydial[0]
+    $ dial2 = storydial[1]
+    $ dial3 = storydial[2]
+    $ dial4 = storydial[3]
+    $ dial5 = storydial[4]
+    $ dial6 = storydial[5]
+    $ dial7 = storydial[6]
+    $ dial8 = storydial[7]
+    $ dial9 = storydial[8]
+    $ dial10 = storydial[9]
+    $ dial11 = storydial[10]
+    $ dial12 = storydial[11]
+    $ dial13 = storydial[12]
+    
+    play music "audio/bgm18.mp3" fadein 1.0 fadeout 1.0 volume 0.3
+    
+    scene story1 with fade
+    $ renpy.notify('♪ Strait Jacket')
+    
+    "[dial1]"
+    
+    scene story2 with fade
+    
+    "[dial2]"
+    "[dial3]"
+    
+    scene story3 with fade
+    
+    "[dial4]"
+    
+    scene story4 with fade
+    
+    "[dial5]"
+    
+    scene story5 with fade
+    
+    "[dial6]"
+    "[dial7]"
+    
+    scene story6 with fade
+    
+    "[dial8]"
+    
+    show donation:
+        xalign -0.5 yalign 0.45
+        linear 1.0 xalign 0.0001
+    
+    $ renpy.pause(1.5, hard=True)
+    
+    show qualityavatar with dissolve:
+        xalign 0.3 yalign 0.61
+    "[dial9]"
+    
+    scene story7 with fade
+    
+    "[dial10]"
+    "[dial11]"
+    
+    scene story8 with fade
+    
+    "[dial12]"
+    
+    scene story9 with fade
+    
+    "[dial13]"
+    
+    scene black with Fade(3, 0, 3)
     stop music fadeout 1.0
-    $ renpy.pause(0.6, hard=True)
-    scene black with fade
-    $ renpy.movie_cutscene("newbeginning.webm")
-    play sound "audio/bell.mp3"
-    scene bg musicroom with Fade(3.0, 0.0, 3.0)
-    "It was on that day, however, that I met them..."
-    "Looking for a club to join, I climbed the stairs up to the music room..."
-    scene bg musicroom2 with fade
-    show kon_ritsu with moveinright:
-        xalign 0.9
-        yalign 1.0
-    rit "Ah! You're the freshman aren't ya? I see you brought your guitar, do you play?"
-    show kon_mio with moveinleft
-    "Mio" "We're just about to practice too, why don't you stay for a bit"
-    show kon_mugi with moveinleft:
-        xalign 0.1
-        yalign 1.15
-    "Mugi" "And perhaps stay for some tea as well~"
-    "You" "Ehhhh.... I don't know that many songs though, compared to you guys I'm a total beginner!"
-    rit "Relax~ We mostly play anime openings around here, so there's gotta be at least some you recognise..."
-    rit "How's about you sit through our practice today, then you can decide if you wanna join us"
-    "Mugi" "Oh~ Tea's ready!"
-    rit "Well, we'll get started {i}eventually...{/i}"
-    scene bg perform with fade
-    rit "Well then, after 12 entire cakes and the entire Asian continent's worth of tea gone, let's get started!"
-    call initgamenodd({
-        "game1501":["rakudai kishi no cavalry","chivalry of a failed knight","yrlavac on ihsik iadukar","thgink deliaf a fo yrlavihc"],
-        "game1502":["baka to test to shoukanjuu","baka & test: summon the beasts","uujnakuohs ot tset ot akab","stsaeb eht nommus :tset & akab"],
-        "game1503":["nanbaka", "the numbers","akabnan","srebmun eht"],
-        "game1504":["amagami ss+","+ss imagama"],
-        "game1505":["2.43: seiin koukou danshi volley-bu","2.43: seiin high school boys volleyball team","ub-yellov ihsnad uokuok niies :34.2","maet llabyellov syob loohcs hgih niies :34.2"]
-    },gamebg="bg perform.jpg", keion=True) from _call_initgamenodd_6
-    centered "You begin to feel lightheaded..."
-    play sound "audio/drop.mp3"
-    ""
-    "..."
-    "........."
-    "..................?!"
-    call thirddream from _call_thirddream
-    scene bg ruins with fade
-    show hik scholar at right with moveinright
-    hik "Congrats! For getting every song right you've managed to finish 7th in today's Ranked Death Match!"
-    hik "{s}Though half of those songs were namedrops anyway{/s}"
-    j "So that means I've done it? I've beat everyone? I've saved my clan?"
-    hik "lol no that was just todays game you have to come back here every day without fail for the next month and pray your connection never dies"
-    hik "also only the top 3 get rewarded anyway soo"
-    hik "but hey at least you're not dead"
-    j "I'm starting to wish I... {cps=*0.5}was{/cps}{cps=*0.25}...{/cps}"
-    scene black 
-    $ renpy.pause(0.3, hard=True)
-    scene bg ruins
-    $ renpy.pause(0.3, hard=True)
-    scene black with fade
-    scene black 
-    $ renpy.pause(0.3, hard=True)
-    scene bg ruins
-    $ renpy.pause(0.3, hard=True)
-    scene black with fade
-    scene black 
-    $ renpy.pause(0.3, hard=True)
-    scene bg ruins
-    $ renpy.pause(0.3, hard=True)
-    scene black
-    play sound "audio/drop.mp3"
-    ""
-    centered "The ringing grows louder..."
-    "..."
-    "......."
-    "..............?"
-    scene bg movies with Fade(2.0, 0.0, 2.0)
-    "Club Leader" "Alright minna-san, welcome to the biweekly Ouran High School Anime Society groupwatch!"
-    "Club Leader" "Today we'll be watching, by popular demand, the latest episode (#1122) of Crayon Shin-chan!"
-    play sound "audio/legalanime.mp3" volume 0.5
-    "Club Member #1" "I've got my popcorn ready"
-    "Club Member #2" "You gonna join us, Jin?"
-    "Club Member #3" "We better start soon... Jin looks so bored he might just actually start watching Love Live unironically"
-    j "You know of all the nightmares so far this is probably the scariest..."
-    scene black
-    centered "Oi...."
-    centered "He's really out cold huh..."
-    centered "I guess it can't be helped then..."
-    scene bg bedroom 
-    show noe think at right
-    show kom think at left
-    "..."
-    noe "Oh, there you are!"
-    kom "We thought you were a goner..."
-    noe "I know I said to get some good rest but I didn't mean to sleep in till noon..."
-    kom "And you were sweating and mumbling to yourself the whole time too... What happened?"
-    "..."
-    noe "Eh...?! Another nightmare?"
-    kom "The spirit of the {b}SOLID GOLD HIBIKI{/b} must be getting stronger..."
-    noe "This is bad... If this gets any worse... it's gonna... *gasp*"
-    kom "No... it can't be..."
-    noe "We have to save him..."
-    noe "Before..."
-    noe "{cps=*0.3}Before he becomes... an Inserts only player{/cps}"
-    scene black with fade
