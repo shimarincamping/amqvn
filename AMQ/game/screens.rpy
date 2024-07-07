@@ -609,7 +609,7 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("                                                                                        ~ Ren'Py [renpy.version_only] ~")
 
 
 style about_label is gui_label
@@ -821,15 +821,6 @@ screen preferences():
                             if config.sample_sound:
                                 textbutton _("Test") action Play("sound", config.sample_sound)
 
-
-                    if config.has_voice:
-                        label _("Voice Volume")
-
-                        hbox:
-                            bar value Preference("voice volume")
-
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
 
                     if config.has_music or config.has_sound or config.has_voice:
                         null height gui.pref_spacing
@@ -1062,14 +1053,6 @@ screen keyboard_help():
         text _("Toggles dialogue skipping.")
 
     hbox:
-        label _("Page Up")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Page Down")
-        text _("Rolls forward to later dialogue.")
-
-    hbox:
         label "H"
         text _("Hides the user interface.")
 
@@ -1079,7 +1062,7 @@ screen keyboard_help():
 
     hbox:
         label "V"
-        text _("Toggles assistive {a=https://www.renpy.org/l/voicing}self-voicing{/a}.")
+        text _("Toggles assistive self-voicing.")
 
     hbox:
         label "Shift+A"
@@ -1100,29 +1083,12 @@ screen mouse_help():
         label _("Right Click")
         text _("Accesses the game menu.")
 
-    hbox:
-        label _("Mouse Wheel Up\nClick Rollback Side")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Mouse Wheel Down")
-        text _("Rolls forward to later dialogue.")
-
 
 screen gamepad_help():
 
     hbox:
         label _("Right Trigger\nA/Bottom Button")
         text _("Advances dialogue and activates the interface.")
-
-    hbox:
-        label _("Left Trigger\nLeft Shoulder")
-        text _("Rolls back to earlier dialogue.")
-
-    hbox:
-        label _("Right Shoulder")
-        text _("Rolls forward to later dialogue.")
-
 
     hbox:
         label _("D-Pad, Sticks")

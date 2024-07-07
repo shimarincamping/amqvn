@@ -24,7 +24,7 @@ define gui.show_name = True
 
 ## The version of the game.
 
-define config.version = "0.1.8"
+define config.version = "0.1.9c"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -43,8 +43,7 @@ Egerod big fan
 
 
 
-
-""")
+Stuck? The {a=https://egerod.itch.io/amq}game's website{/a} has a handy-dandy guide full of answers for ya!""")
 
 
 ## A short name for the game used for executables and directories in the built

@@ -14,6 +14,10 @@ define kur = Character("Kuriko")
 define miy = Character("Miyu")
 define mar = Character("Marine")
 define hik = Character("Hikari")
+define aka = Character("Akane")
+define chi = Character("Chika")
+define wen = Character("Wenbeez")
+define yum = Character("Yumemi")
 define dayt = Character("Daytona")
 define gsyuk = Character("Regis Philbin")
 define gm = Character("Game Master")
@@ -26,7 +30,11 @@ image kom1 = im.Scale("kom base.webp", 550, 800)
 image kom2 = im.Scale("kom pout.webp", 550, 800)
 image kom3 = im.Scale("kom think.webp", 550, 800)
 image kom4 = im.Scale("kom cursed.png", 550, 800)
+image kom5 = im.Scale("kom peace.webp", 550, 800)
+image kom6 = im.Scale("kom dead.png", 550, 800)
 image skom = im.Scale("kom shrine.webp", 745, 950)
+image mkom = im.Scale("kom mizugi.webp", 550, 800)
+image mckom = im.Scale("kom censored.png", 550, 800)
 image ghib1 = im.Scale("cursed.png", 550, 550)
 image noe1 = im.Scale("noe appears.webp", 550, 800)
 image noe2 = im.Scale("noe sparkle.webp", 550, 800)
@@ -37,12 +45,16 @@ image anoe1 = im.Scale("noe appears arcade.webp", 550, 800)
 image anoe2 = im.Scale("noe sparkle arcade.webp", 550, 800)
 image anoe3 = im.Scale("noe think arcade.webp", 550, 800)
 image bnoe1 = im.Scale("noe brawler.webp", 550, 800)
+image mnoe = im.Scale("noe mizugi.webp", 550, 800)
+image mcnoe = im.Scale("noe censored.png", 535, 800)
 image yuk1 = im.Scale("yuk pumped.webp", 550, 800)
 image yuk2 = im.Scale("yuk yahoi.webp", 550, 800)
 image yuk3 = im.Scale("yuk fire.webp", 550, 800)
 image gsyuk = im.Scale("yuk gameshow.png", 550, 800)
 image miz1 = im.Scale("miz happy.webp", 550, 800)
 image smiz = im.Scale("miz shrine.webp", 550, 800)
+image mmiz = im.Scale("miz mizugi.webp", 550, 800)
+image mcmiz = im.Scale("miz censored.png", 585, 810)
 image smizangry = im.Scale("miz shrineattack.webp", 550, 800)
 image shi1 = im.Scale("shi tehe.webp", 550, 800)
 image shi2 = im.Scale("shi sing.webp", 550, 800)
@@ -58,7 +70,10 @@ image rit8 = im.Scale("rit dead2.webp", 550, 800)
 image hon1 = im.Scale("hon smile.webp", 640, 925)
 image kur1 = im.Scale("kur attack.webp", 710, 913)
 image kur2 = im.Scale("kur tehe.webp", 710, 913)
+image skur = im.Scale("kur sorceress.webp", 710, 913)
 image miy1 = im.Scale("miy base.webp", 710, 937)
+image vmiy = im.Scale("miy knight.webp", 710, 937)
+image vmiy2 = im.Scale("miy knight happy.webp", 710, 937)
 image mar1 = im.Scale("mar excite.webp", 540, 850)
 image mar2 = im.Scale("mar angy.webp", 550, 850)
 image mar3 = im.Scale("mar hmmm.webp", 550, 850)
@@ -66,6 +81,18 @@ image pmar1 = im.Scale("mar pirate think.webp", 900, 1150)
 image pmar2 = im.Scale("mar pirate sparkle.webp", 900, 1150)
 image pmar3 = im.Scale("mar pirate angy.webp", 900, 1150)
 image shik1 = im.Scale("hik scholar.webp", 590, 800)
+image aka1 = im.Scale("aka appears.webp", 744, 960)
+image aka2 = im.Scale("aka sparkle.webp", 744, 960)
+image aka3 = im.Scale("aka mad.webp", 744, 960)
+image chi1 = im.Scale("chi shock.webp", 550, 830)
+image chi2 = im.Scale("chi smug.webp", 550, 830)
+image chi3 = im.Scale("chi think.webp", 550, 830)
+image pyuu1 = im.Scale("yuu paint think.webp", 870, 1100)
+image pyuu2 = im.Scale("yuu paint draw.webp", 870, 1100)
+image pyuu3 = im.Scale("yuu paint complete.png", 870, 800)
+image yum1 = im.Scale("yum sleep.webp", 550, 820)
+image yum2 = im.Scale("yum waking.webp", 550, 820)
+image yum3 = im.Scale("yum base.webp", 550, 820)
 image dayt = im.Scale("dayt.png", 700, 700)
 image bg dead = im.Scale("bg dead.jpg", 1920, 1080)
 image mic1 = "mic.png"
@@ -74,8 +101,13 @@ image senko = im.Scale("komStare.webp", 250, 250)
 image cringe = im.Scale("mizCringe.webp", 250, 250)
 image kommiz = im.Scale("mizKom.webp", 200, 200)
 image muscle = im.Scale("muscle.png", 250, 250)
+image cert = im.Scale("cert.jpg", 800, 565)
+image donation = im.Scale("donation.png", 437, 108)
+image qualityavatar = im.Scale("qualityavatar.png", 344, 358)
 image badsub = Movie(play="hitorigoto.webm", loop=False)
 image actualnightmare = Movie(play="cursed.webm", loop=False)
+image actualnightmareforever = Movie(play="cursed.webm", loop=True)
+image mii = Movie(play="mii.webm", loop=True)
 
 init python: 
     import time as gettime
@@ -108,11 +140,22 @@ screen countdown2:
     timer 0.01 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 0.01), false=[Hide('countdown')])
     bar value timeleft range timer_range xalign 0.5 yalign 0.1 xmaximum 1350 at alpha_dissolve 
 
+screen countdown3:
+    fixed:
+        text "{color=#d9f5ff}{b}Time left:{/b}{/color}":
+            xpos 230 ypos 420
+    timer 1 repeat True action If(timeleft > 0, true=SetVariable('timeleft', timeleft - 1), false=[Hide('countdown'), Jump(timer_jump)])
+    if timeleft <= 3:
+        text str(timeleft) xpos .25 ypos .35 color "#FF0000" size 200 at alpha_dissolve 
+    else:
+        text str(timeleft) xpos .25 ypos .35 size 200 at alpha_dissolve
+
 label start:
     $ globalpoints = 0
+    $ speedrun_start_time = gettime.time()
     narrator "Welcome to your worst nightmare"
     scene bg main
-    play music "audio/amqtheme.mp3" fadeout 1.0 fadein 1.0
+    play music "audio/amqtheme.mp3" fadeout 1.0 fadein 1.0 volume 0.7
     $ renpy.notify('♪ No Game No Life')
     show hib1 at right
     hib "God you're bad at this game"
@@ -544,7 +587,7 @@ label start:
     noe "I wouldn't put you through that, or anyone... So! Hope you're ready~ Here it comes!"
     scene black with fade
     call initgame({
-        "game701":["Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen","Kabukichou Sherlock","Mawaru Penguindrum","Bem"],
+        "game701":["Shouwa Genroku Rakugo Shinjuu: Sukeroku Futatabi-hen","Arakawa Under the Bridge","Mawaru Penguindrum","Bem"],
         "game702":["Toaru Majutsu no Index", "Nogizaka Haruka no Himitsu", "Kannazuki no Miko", "Hayate no Gotoku!"],
         "game703":["Witch Craft Works","Maerchen Maedchen","Comet Lucifer", "Gingitsune"],
         "game704":["Tsukimonogatari","Monogatari Series Second Season", "Zoku Owarimonogatari", "Koyomimonogatari"],
@@ -714,7 +757,7 @@ label start:
         "game1301":["mimi o sumaseba","whisper of the heart"],
         "game1302":["majo no takkyuubin","kiki's delivery service"],
         "game1303":["perfect blue"],
-        "game1304":["hadashi no gen","barefoot gen","hiroshima"],
+        "game1304":["hadashi no gen","barefoot gen"],
         "game1305":["little nemo","little nemo: adventures in slumberland"]
     }, gamebg="bg movies.jpg") from _call_initgamenodd_5
     scene bg movies with fade
@@ -947,8 +990,288 @@ label start:
     noe "Before..."
     noe "{cps=*0.3}Before he becomes... an Inserts only player{/cps}"
     scene black with fade
-
-    # Continue here for 0.1.9 content
+    centered "And so... Our four heroes went on a search for any clues leading to {b}SOLID GOLD HIBIKI{b}'s whereabouts..."
+    $ renpy.notify('♪ Kuroshitsuji')
+    play music "audio/bgm13.mp3" volume 0.2 fadein 1.0 fadeout 1.0
+    scene searching1 with Fade(2.0, 0, 2.0)
+    scene searching2 with Fade(2.0, 0, 2.0)
+    scene searching3 with Fade(2.0, 0, 2.0)
+    scene bg desert with Fade(2.0, 0, 2.0)
+    show noe3 at right with moveinright
+    noe "This thing's harder to find than a good post in #feature-ideas"
+    show kom3 with moveinleft
+    kom "And... this desert is... getting really hot..."
+    show miz1 at left with moveinleft
+    miz "Guys, guys, look what I found~"
+    stop music fadeout 1.0
+    hide noe3 with moveoutleft
+    hide kom3 with moveoutleft
+    hide miz1 with moveoutleft
+    kom "Whoa!! There's like an entire oasis out here"
+    miz "Yeah, it was behind that funny looking bush"
+    kom "I'm literally burning hotter than chat when Steph hears Everybody Everybody, I say we jump in"
+    noe "But... did any of you bring swimsuits even?"
+    kom "It's the fanservice episode, so of course we did for some reason god only knows"
+    miz "VN logic duh" 
+    show mkom at right with moveinleft
+    show mnoe with moveinleft
+    show mmiz at left with moveinleft
+    kom "Phew! I'm already feelin' much better"
+    scene black
+    "Eagles (real dev)" "Wait a minute we can't be giving away this scene for FREE, wtf"
+    "Eagles (real dev)" "Swimsuit specials go for at least $12.99, everyone knows that"
+    "Eagles (real dev)" "Even Ege would happily charge people to show off PNG booba, no no no"
+    scene bg desert
+    show mckom at right
+    show mcnoe 
+    show mcmiz at left
+    noe "Now then~ Let's get this beach episode on the road!"
+    play music "audio/bgm14.mp3" fadeout 1.0 fadein 1.0 volume 0.2
+    $ renpy.notify('♪ Non Non Biyori Vacation')
+    "Noel, Komugi, Mizuki" "Yayyy!!!!"
+    hide mcmiz with moveoutleft
+    hide mcnoe with moveoutleft
+    hide mckom with moveoutleft
+    stop music
+    "???" "Who there dare enter my swamp?!"
+    show aka3 with moveinleft
+    miz "Whoa whoa whoa whoa I'm not ready for my tentacle scene debut yet"
+    aka "Shut it, Mizuki"
+    noe "Wait, you two know each other?"
+    miz "N-no....?"
+    kom "Everyone knows nobody remembers half of the avatars after Marine anyway"
+    aka "..."
+    aka "{size=-8}Just for that I'm making it hell for you later. Have fun with that.{/size}"
+    aka "{size=-1}C{/size}{size=-3}'m{/size}{size=-4}on{/size}{size=-5}...{/size}{size=-7} We{/size}{size=-8} we{/size}{size=-9}nt {/size}{size=-10}to m{/size}{size=-12}iddl{/size}{size=-13}e s{/size}{size=-15}cho{/size}{size=-16}ol to{/size}{size=-18}gether...{/size}{w}\n{b}AHEM-{/b}"
+    hide aka3
+    show aka1 
+    aka "something something you trespassed on my territory yadda yadda beat me at AMQ now"
+    noe "God these segues into AMQ battles are really starting to feel forced"
+    aka "Hey, you chossse to play this bad game"
+    miz "At least it's still a better experience than playing FTF"
+    kom "So what happens if we lose, we die or...?"
+    hide aka1
+    show aka2
+    aka "Aha no grrl, it's just something, like, far worse, or something... I'm just, like, quirky like that"
+    hide aka2
+    show aka1
+    aka "But before that, just making sure, your name isn't {b}Spear{/b} is it?"
+    menu:
+        aka "But before that, just making sure, your name isn't {b}Spear{/b} is it?{fast}"
+        "Who?":
+            $ currentmonth = gettime.localtime(gettime.time())
+            $ punishment = "padoru" if currentmonth.tm_mon == 12 else "normal"
+            aka "Ok good..."
+        "Maybe...":
+            $ punishment = "mii"
+            aka "Kinda cringe but alright..."
+    aka "Prepare to wish you were never born"
+    scene black with fade
+    call initgamenodd({
+        "game1701":["mairimashita! iruma-kun","welcome to demon school! iruma-kun"],
+        "game1702":["bobobo-bo bo-bobo"],
+        "game1703":["bonjour sweet love patisserie"],
+        "game1704":["dragon, ie o kau.","dragon goes house-hunting"],
+        "game1705":["kono subarashii sekai ni shukufuku o! 2","konosuba: god's blessing on this wonderful world! 2"],
+        "game1706":["monster musume no iru nichijou","monster musume: everyday life with monster girls","monster musume no iru nichijou sp"],
+        "game1707":["dakara boku wa, h ga dekinai.","so i can't play h"],
+        "game1708":["100-man no inochi no ue ni ore wa tatteiru","i'm standing on a million lives"],
+        "game1709":["shachiku-san wa youjo yuurei ni iyasaretai.","miss shachiku and the little baby ghost"],
+        "game1710":["popee the performer"]
+    }, gamebg="bg desert.png", akane=True) from _call_initgamenodd_7
+    scene bg desert with fade
+    show aka3 at right with moveinright
+    aka "I don't know how you're ssstill alive after all that, usually my punishment venom is enough to make anyone mentally regress into a League player"
+    "???" "Oh god, where did it run off to, Hikari's gonna kill me if he finds ou-"
+    show chi1 at left with moveinleft
+    chi "There you are!!"
+    chi "I've been... looking... EVERYWHERE... No one must know about this experimen-"
+    "She notices you and your party of idiots wearing light beam censors"
+    hide chi1
+    show chi2 at left
+    chi "a"
+    chi "Oh my god! It's really you!! I can't believe I finally get to meet you, you're practically the talk of the town!!"
+    chi "You're that AMQ booli aren't you?! You're my personal hero aaaaa!!!"
+    j "Omg really?"
+    chi "lol no"
+    chi "Also you really shouldn't be sneaking into high schools, someone's gonna get the wrong idea"
+    chi "I'm Chika by the way, president of the science club"
+    j "Did, you just say, school?"
+    j "Who builds a school... in a desert... in the middle of nowhere"
+    chi "The highway's to your left"
+    j "oh... :monkey:"
+    noe "Hey! hey! Remember our mission!"
+    j "R-right!! We came all the way out here to see if anyone has any leads to where {b}the illusive SOLID GOLD HIBIKI{/b} might be"
+    hide chi2
+    show chi3 at left
+    chi "Hmmm... well personally no, but I know just the {s}chuuni{/s} expert who might in the {b}Occult Research Club{/b}..."
+    chi "By the way, did you know the average AMQ player loses 8 braincells every time they hear a Lucky Star karaoke ending? Fascinating stuff."
+    kom "Are we really gonna go with her? She looks like she has a few screws loose herself..."
+    miz "Hey, hey. A lead is a lead. Even if it comes from Ms. Knockoff Rio Futaba"
+    scene black with fade
+    "You make your way into the school building..."
+    scene bg corridor with fade
+    show chi2 at right with moveinright
+    chi "... We're almost there, is there any club you'd like to check out before we get there?"
+    menu:
+        "Let's take a look at the Art Club!":
+            scene black with fade
+            call artclub from _call_artclub
+        "How about your club?":
+            scene black with fade
+            call scienceclub from _call_scienceclub
+        "No, thanks...":
+            chi "Fun fact: 72.4\% of the average AMQ player's vocabulary consists of calling other players a crude amalgamation of their name and the word 'god'"
+            chi "Allow me to demonstrate: *ahem* godyoshi here to carry us time to afk :place_of_worship:"
+    scene bg corridor
+    show chi2 at right
+    chi "Well then, let's get going now!"
+    chi "Also did you know that based on my research, 100\% of all AMQ players talk to themselves less than LOLwarZ?"
+    scene bg occult with fade
+    play sound "audio/bgm17.mp3" fadeout 1.0 fadein 1.0 volume 0.3
+    $ renpy.notify('♪ Magatsu Wahrheit (Off-Music)')
+    show skur with dissolve
+    show cauldron with dissolve:
+        xalign 0.5 yalign 0.99
+    kur "... three parts mandrake root... two sheets of scorpion skin... five drops ginseng extract... and finally... one bottle of teazri's tears..."
+    kur "I've done it..."
+    kur "With this elixir, I'll be the most powerful being known to humanity!"
+    play sound "audio/knock.mp3"
+    $ renpy.pause(2, hard=True)
+    j "Yo is this the occult research cl-"
+    j "Holy- what the fuck is that smell?"
+    kur "AMQ juice."
+    j "AMQ what?"
+    kur "Juice... y'know the drinking kind"
+    j "No... how about no..."
+    "..."
+    kur "Oh? The {b}SOLID GOLD HIBIKI{/b}, you say?"
+    kur "Why yes, I did stumble upon that name in one of my grimoires..."
+    kur "But the lock is guarded by a terrifying curse... and an equally terrifying troll...!!!! *evil laughter*"
+    show vmiy at right with moveinright
+    miy "Hey, uh, I'm gonna go buy lunch from the school store, you need anything?"
+    kur "Oh, speak of the devil, there she is right now"
+    hide vmiy with moveoutright
+    j "Haven't I... seen you two before?"
+    kur "{size=-15}no no you havent and if you have you will pretend like you havent.{/size}\n"
+    j "O-oh ok..."
+    kur "You better be prepared to face her off once she gets back from buying yakisoba pan."
+    j ":skull:"
+    $ proceed = False
+    while not proceed:
+        menu:
+            "Ege's Spirit" "It's recommended you save your game before fighting bosses; dying means you lose your current save data"
+            "Begin fight":
+                $ proceed = True
+            "Maybe later...":
+                kur "She'll be back any minute now..."
+    scene black
+    j "Whoa... what happened? Why'd it get so dark all of a sudden?!"
+    kur "It's starting..."
+    call kurikobattle from _call_kurikobattle
+    centered "I suppose I can tell you the story..."
+    centered "A long time ago... in a mystical land far, far away{w} named \"Denmark\"..."
+    $ dial_eng = [
+        "The year was 2017... and a man named Egerod \"Rasmus\" Leth had big ideas...",
+        "What a time to be alive that was... when AnimeMusicQuiz opened its doors to the world",
+        "The good ol' days... when Rent-a-Girlfriend just released its first volume... and Yuri on Ice!!! won the Anime Awards... and there was no one to laugh at you for missing Gintama in ranked...",
+        "Wouldn't it be nice if we could turn back time to when AMQ used Dailymotion as a video source, and Astolfo's Bizarre Adventure was real?",
+        "... Just playing with your pals in a random pub room, with these iconic classic avatars...",
+        "Then it all changed... when the Ticket System attacked",
+        "On that day, humanity received a grim reminder of what it means to be scammed by gacha...",
+        "And with that, came in a wave of avatars I've only ever seen 3 people max use...",
+        "Solid Gold Hibiki wasn't impressed either... What ever happened to the AMQ he came to know and love?!",
+        "... And that's when he went missing. Some say he was banned, some say he was starting to become too opinionated and toxic... some say he was both and was actually named ErVex",
+        "The secret is buried here in this grimoire, in hopes that no mortal soul will ever lay eyes upon this knowledge",
+        "... Fearing what the next big update could do to his sanity, he went into hiding...",
+        "... Deep in the AMQ source code, a place he knew he would never be willingly seen or touched ever again..."
+    ]
+    $ dial_amq = [
+        "The ear is 2017. And I has a big curios idea !",
+        "Doing that time, AMQ finaly was launched to take over every local in the world!!",
+        "Their was good thing to happen in that year, KanoKari first volume releases, Yaoi on Ice!!! won the Anime-Awards and no ranked to delay four a hour because Catbox went down again",
+        "Trough AMQ is not different! Using Daily motion as video sorce with adds and 100percent legit Jojo?",
+        "Even have fluffy kistsune for all you're fluffing needs!",
+        "But then I introduce the high sort after feature off whaling for images",
+        "Papa Ege confident everyone feel in love with it at first site",
+        "Then I maked so much avatar I can justify raiisng the Drive Donasion too 600 $",
+        "But my april fool's' joke where not so happy with this change",
+        "Just like a guess account after hearing OnegaiSnyaiper, they dissapear!",
+        "Secret is buried in this book with is...",
+        "The Gold Hibiki Original and not the Purple Hibiki DVDR went into hiding...",
+        "A place his not suppose to bee... the AMQ spageti code"
+    ]
+    $ dial_wee = [
+        "Nen wa 2017 desu. Toaru otoko wa BIGGU AIDIA ga arimasu.",
+        "Sono toki, EI EMMU KYUU wa sekai ni OOPUN shimashita...",
+        "Taun iku, 'Sewa-A-Pacar' baru saja rilis; Yuri di Atas Es menangkan Penghargaan Enime, Dan tidak ada yang menawarkan Anda bila Anda gagal Gintama seketika Peringkat ber-Rank",
+        "Aujourd'hui, je fais du fromage a la ferme d'Astolfo... Mercy bowcoop",
+        "avec les avatars classique!",
+        "Zhao shang hao zhong guo xian zai wo you bing qi ling; wo hen xi huang bing qi ling dang shi xu du yu",
+        "Humani'y rehseev'd ai grimm rema'aindahr uv whot it maens tuh be scahm'd boih gaht'chuh",
+        "J'aime la raclette, mais Solide Golde Hibikee ne aimer pas la raclette",
+        "E então, o Hibiki de ouro maciço desapareceu...",
+        "Oh no no no อย่างนี้ไม่ดีOh no no no อย่างนี้สงสัยไม่ดีOh no no no อย่างนี้น่ากลัว คงจะเป็นฝันร้าย",
+        "nae-ga olsu-opsul-korago i-jen kurolsu op-tago chebal kuman-harago narul tarrae-ji..",
+        "Latebat etiam... Alicubi nusquam inveniri potuit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "En el código fuente de AMQ..."
+    ]
+    menu:
+        "Please choose your language"
+        "English":
+            $ storydial = dial_eng
+        "AMQlish":
+            $ storydial = dial_amq
+        "Cringe":
+            $ storydial = dial_wee
+    $ dial1 = storydial[0]
+    $ dial2 = storydial[1]
+    $ dial3 = storydial[2]
+    $ dial4 = storydial[3]
+    $ dial5 = storydial[4]
+    $ dial6 = storydial[5]
+    $ dial7 = storydial[6]
+    $ dial8 = storydial[7]
+    $ dial9 = storydial[8]
+    $ dial10 = storydial[9]
+    $ dial11 = storydial[10]
+    $ dial12 = storydial[11]
+    $ dial13 = storydial[12]
+    play music "audio/bgm18.mp3" fadein 1.0 fadeout 1.0 volume 0.3
+    scene story1 with fade
+    $ renpy.notify('♪ Strait Jacket')
+    "[dial1]"
+    scene story2 with fade
+    "[dial2]"
+    "[dial3]"
+    scene story3 with fade
+    "[dial4]"
+    scene story4 with fade
+    "[dial5]"
+    scene story5 with fade
+    "[dial6]"
+    "[dial7]"
+    scene story6 with fade
+    "[dial8]"
+    show donation:
+        xalign -0.5 yalign 0.45
+        linear 1.0 xalign 0.0001
+    $ renpy.pause(1.5, hard=True)
+    show qualityavatar with dissolve:
+        xalign 0.3 yalign 0.61
+    "[dial9]"
+    scene story7 with fade
+    "[dial10]"
+    "[dial11]"
+    scene story8 with fade
+    "[dial12]"
+    scene story9 with fade
+    "[dial13]"
+    scene black with Fade(3, 0, 3)
+    stop music fadeout 1.0
+    $ speedrun_end_time = gettime.time()
+    $ speedrun_time_raw = speedrun_end_time - speedrun_start_time
+    $ speedrun_time_formatted = str(int(speedrun_time_raw // 3600)) + "h " + str(int(speedrun_time_raw % 3600 // 60)) + "m " + str(round(speedrun_time_raw % 60, 4)) + "s"
 
     python:
         rhythm_game_scores_list = []
@@ -961,6 +1284,7 @@ label start:
     centered "~ to be continued ~"
     centered "Thanks for playing till the end!"
     centered "Total XP: {b}[globalpoints]{/b}"
+    centered "Total time: {b}[speedrun_time_formatted]{/b}"
     return
 
 label initgame(songdict, anslist, gamebg="bg ingame.jpg", randsong = False, fortniteloli=False):
@@ -1031,17 +1355,18 @@ label initgame(songdict, anslist, gamebg="bg ingame.jpg", randsong = False, fort
 
 #["Option 2", "Option 3", "Option 1"]
 
-screen noddinput():
+screen noddinput(titletext="Your answer:"):
     window:
         vbox:
-            text "Your answer:"
+            xmaximum 1300 xpos 310
+            text "\n[titletext]"
             input
 
 screen cp_button():
     fixed:
         imagebutton idle "cp_button.png" focus_mask True xpos 1580 ypos 35 action Call("cp_button") hovered [Play("sound","audio/click.mp3")] alt "cp"
 
-label initgamenodd(songdict, gamebg="bg ingame.jpg", randsong=False, indonesia=False, keion=False):
+label initgamenodd(songdict, gamebg="bg ingame.jpg", randsong=False, indonesia=False, keion=False, akane=False):
     image gamebg = "[gamebg]"
     scene gamebg
     $ gamepoints = 0
@@ -1068,12 +1393,43 @@ label initgamenodd(songdict, gamebg="bg ingame.jpg", randsong=False, indonesia=F
             narrator "Nope... Current score: [gamepoints]"
             $ allans = " / ".join((list(songdict.items()))[currentsong-1][1])
             narrator "Correct answer(s):\n[allans]"
+            stop music fadeout 1.0
+            if akane and currentsong >= 5:
+                $ quick_menu = False
+                show aka1 at right with moveinright
+                aka "As promised~ Here'sss your punishment :3"
+                aka "And yes, this is technically allowed under the 1949 Geneva Conventions"
+                $ timeleft = 30
+                $ timer_range = 30
+                show screen countdown2
+                if punishment == "padoru":
+                    scene padowo with fade
+                    play music "audio/padowo.mp3"
+                    $ renpy.pause(30, hard=True)
+                    stop music fadeout 1.0 
+                    scene bg desert
+                elif punishment == "normal":
+                    show actualnightmareforever
+                    $ renpy.pause(30, hard=True)
+                    hide actualnightmareforever
+                elif punishment == "mii":
+                    show mii 
+                    $ renpy.pause(30, hard=True)
+                    hide mii
+                hide aka1 with moveoutright
+                $ quick_menu = True
+                hide screen countdown2
         if indonesia:
             hide indonesianamq
         if keion and currentsong == 1:
             "You" "Wait... why did that song sound so weird...?"
             rit "Mm? We were just playing like we normally do, as part of the {b}Reverse Music Club{/b}"
             rit "We've still got 4 songs to go, so enjoy the show!"
+        if akane and currentsong == 4:
+            show aka3 at right with moveinright
+            aka "Hmph... Looks like you're still alive"
+            aka "This is for what Mizuki sssaid earlier... miyPout *unmusics your amq*"
+            hide aka3 with moveoutright
         $ currentsong += 1
     $ globalpoints += gamepoints
     stop music fadeout 1.0
@@ -1229,7 +1585,7 @@ label daytbattle:
     }
     # God my spaghetti code makes Ege's look pristine in comparison lul
     $ illegalans = {"game601":["tensura"],"game602":["kimiuso", "kimiuso: moments"],"game603":["yorimoi"],"game604":["danmachi"],"game605":["oreimo"],"game606":["haganai"],"game607":["oregairu", "oregairu zoku", "oregairu kan"],"game608":["hamefura", "hamefura x"],"game609":["oreshura"],"game610":["sukasuka"],"game611":["shimoseka"],"game612":["isesuma"],"game613":["watamote"],"game614":["rikekoi"],"game615":["noukin"],"game616":["uchinoko"],"game617":["imocho."],"game618":["uzamaid!"],"game619":["noucome"],"game620":["jintai"],"game621":["oniai"],"game622":["rokuaka"],"game623":["koikimo"],"game624":["tadakoi"],"game625":["imoimo"]}
-    $ dial = ["I've got a toothbrush with your name on it","I deleted it (yaoi!!! on ice) and ege made me readd it","the last time i played amq was in january i think", "(real Dayt quote) did you know that Hitler was an animal lover and was actually a huge advocate for more laws protecting animals", "wtf a furry that looks decent", "Yes the idol jihen fan base is so trash", "thats why i back catbox adn not amq amq is trash catbox is god","time to ban jax for playing osu","if youre getting anythign right in 5 sec youre cheating anyway jsut not with shazam", "saro wtf", "oh my god these titles are giving me cancer","the reason quickdraw is so unplayed is because it legimitaly is a typing test"]
+    $ dial = ["I've got a toothbrush with your name on it","I deleted it (yaoi!!! on ice) and ege made me readd it","the last time i played amq was in january i think", "(real Dayt quote) did you know that Hitler was an animal lover and was actually a huge advocate for more laws protecting animals", "wtf a furry that looks decent", "Yes the idol jihen fan base is so trash", "thats why i back catbox adn not amq amq is trash catbox is god","time to ban jax for playing osu","if youre getting anythign right in 5 sec youre cheating anyway jsut not with shazam", "(also real dayt quote) with great chicken comes great pedophilia", "oh my god these titles are giving me cancer","the reason quickdraw is so unplayed is because it legimitaly is a typing test"]
     while len(songdict) > numofsongs:
         $ popped = renpy.random.randint(1, len(songdict))
         $ poppedkey = list(songdict.keys())[popped-1]
@@ -1327,7 +1683,7 @@ label gameshow:
         "Which artist performed more than one song that was played?":["Minami Kuribayashi", "TRUE", "Kishida Kyoudan &THE Akeboshi Rockets", "TK from Ling Tosite Sigure"],
         "In which position did the non-Japanese song play?":["6th","8th","9th","11th"],
         "In which position did the instrumental song play?":["12th", "13th", "14th", "15th"],
-        "How many anime played have a number in the title?":["1", "2", "3", "4"],
+        "How many anime that played have a number in the title?":["1", "2", "3", "4"],
         "The opening to which anime played twice?":["Hakata Tonkotsu Ramens","Kikou Shoujo wa Kizutsukanai","Ghost Hunt","The World of GOLDEN EGGS"],
     }
     $ answers = ["C","B","A","A","D","C","C","C","D","B"]
@@ -1583,7 +1939,7 @@ label badteammate:
         ("game901","bt01.png", "Y"),
         ("game902","bt02.png", "Y"),
         ("game903","bt03.png", "N"),
-        ("game904","bt04.png", "Y"),
+        ("game904","bt04.png", "N"),
         ("game905","bt05.png", "N"),
         ("game906","bt06.png", "N"),
         ("game907","bt07.png", "N"),
@@ -1595,7 +1951,9 @@ label badteammate:
         ("game913","bt13.png", "Y"),
         ("game914","bt14.png", "N"),
         ("game915","bt15.png", "Y"),
-        ("game916","bt16.png", "N")
+        ("game916","bt16.png", "N"),
+        ("game917","bt17.png", "Y"),
+        ("game918","bt18.png", "N")
     ]
     $ correctdial = ["how tf did you know that","bro quit sweating so hard","how much anime have you seen tf","go touch grass"]
     $ wrongdial = ["even i knew that","tf my teammates trolling","*starts reciting the entire wikipedia list of ethnic slurs*","can we kick this guy wtf who even are they"]
@@ -1954,6 +2312,7 @@ label thirddream:
             show shik1 at right with moveinright
             hik "Welp... Looks like you didn't have what it takes after all..."
             hik "You missed a free and now you're out of Box 1"
+            hik "127 people got that right too, boy is this going to be a meme"
             hik "No amount of Shazamming can help you now... Goodbye."
             scene dreamdeathscreen with Fade(2.0, 0.0, 2.0)
             ""
@@ -1976,7 +2335,7 @@ label thirddream:
         "game1605":["aggretsuko: we wish you a metal christmas","aggressive retsuko: we wish you a metal christmas"],
         "game1606":["oh! super milk-chan", "the super milk chan show"],
         "game1607":["thermae romae novae"],
-        "game1608":["uchuu senkan yamato","star blazers","uchuu senkan yamato 2","star blazers: the bolar wars","uchuu senkan yamato 3","star blazers: space battleship yamato 2199","uchuu senkan yamato 2199","space battleship yamato 2199: voyage of remembrance","uchuu senkan yamato 2199: tsuioku no koukai","space battleship yamato","space cruiser: guardian of the galaxy","star blazers: the quest for iscandar","uchuu senkan yamato 2205: aratanaru tabidachi"],
+        "game1608":["uchuu senkan yamato 2199", "star blazers: space battleship yamato 2199"],
         "game1609":["wish"],
         "game1610":["winter sonata","fuyu no sonata"],
         "game1611":["iron man"],
@@ -1984,7 +2343,7 @@ label thirddream:
         "game1613":["knights of sidonia: battle for planet nine", "sidonia no kishi: dai-kyuu wakusei seneki"],
         "game1614":["super dimension century orguss", "choujikuu seiki orguss"],
         "game1615":["skyers 5"],
-        "game1616":["tetsujin 28-go", "gigantor"],
+        "game1616":["tetsujin 28-gou", "gigantor"],
         "game1617":["soccer fever"],
         "game1618":["kenzen robo daimidaler","daimidaler the sound robot","daimidaler: prince vs. penguin empire"],
         "game1619":["chirin no suzu","ringing bell"],
@@ -2031,10 +2390,7 @@ label thirddream:
         else:
             narrator "Nope... That ain't right..."
             $ allans = " / ".join(currentans)
-            if currentques == "game1608":
-                narrator "Correct answer(s):\n{size=-12}[allans]{/size}"
-            else:
-                narrator "Correct answer(s):\n{size=-8}[allans]{/size}"
+            narrator "Correct answer(s):\n{size=-8}[allans]{/size}"
             jump dream_death
         $ currentsong += 1
     stop music fadeout 1.0
@@ -2054,4 +2410,675 @@ label cp_button:
         noe "This song sounds like {b}[currentansstr]{/b}!"
     hide bnoe1 with moveoutleft
     show screen cp_button
+    return
+
+label artclub:
+    scene bg artclub with fade
+    show pyuu1 at right 
+    wen "Dapper capybara girl? Dragon girl?? CATGIRL NOEL?!"
+    wen "why?! how?! who keeps nominating all this shit"
+    wen "And of course Pelzio just dropped another $500..."
+    play sound "audio/knock.mp3"
+    $ renpy.pause(2.5, hard=True)
+    wen "Come in!"
+    show kom1 at left with moveinleft 
+    kom "We're here to check out the art club~"
+    hide pyuu1
+    show pyuu2 at right
+    wen "Wait... I think... you'd be the perfect model for these commissions, they all look just like you {size=-8}but worse{/size}"
+    wen "Go ahead, strike a pose!"
+    hide kom1
+    show kom5 at left
+    kom "L-like this?"
+    wen "Great!! Now stay still will ya? Compleeeetely still, for like the next 5 hours"
+    j "Uhh, are you the club president?"
+    wen "Oh yes yes! Welcome to the Eiemkyuu High Art Appreciation Club! Let me show you some of our club's wonderful creations..."
+    scene bg caulk with fade
+    play music "audio/bgm15.mp3" fadein 1.0 fadeout 1.0 volume 0.2
+    $ renpy.notify("♪ Piano no Mori")
+    show artclub01 at truecenter with dissolve
+    wen "To start, here we have someone who actually managed to make Hibiki look good"
+    hide artclub01
+    show artclub02 at truecenter with dissolve
+    wen "As you can see our art club is filled to the brim with talented young individuals, some even better than me, the prez himself"
+    hide artclub02
+    show artclub03 at truecenter with dissolve
+    wen "Finesse at its finest, I tell ya"
+    hide artclub03
+    show artclub04 at truecenter with dissolve
+    wen "Some of these even went on to win prizes! We here are really proud of our club members"
+    hide artclub04
+    show artclub05 at truecenter with dissolve
+    wen "Ok we don't talk about that one"
+    hide artclub05
+    show artclub06 at truecenter with dissolve
+    wen "And that concludes our tour!"
+    hide artclub06
+    scene bg artclub with fade
+    show pyuu2 at right
+    show kom6 at left
+    kom "I can't... feel my legs..."
+    wen "Almost done!!"
+    wen "Aaaand..."
+    hide pyuu2
+    show pyuu3 at right
+    wen "My next masterpiece is complete! Easiest paycheck of my life"
+    wen "Thanks guys for stopping by~ <3"
+    scene black with fade
+    stop music fadeout 1.0
+    return
+
+label scienceclub:
+    $ megaboolis = ["anticol","jinaxel","stephweeb","kaen","yolowolf75","chiya","mikeloyarzabal","yukinaminato","krovi","kriceless","breloomdv","nishin","adamkus","afkriceless","akasami","booli","egerod","daytona","oh95","cerchupy","aki2365","paperyoshi10","vidya","munyamunya","nyamu","goko8765","hooman","hoomanity001","pun_","punnie","oolli","eagles","eaglescommander","orfey","oce","buniijin","realbuni","rockmangod","onlyrunesoldier","slaycgirls","ooreiko","ggwpmineas","maelstrom","gelnar","qwecocacola","miyuki_","kami_maikeru","minori_hasegawa","mikan_tsumiki","kukuru","shamii","l2aspl3erry","shigurefuyutsuki","minomone","penguinbear","sorashirotenshi","kanabesatou","kunminer123","v1sio","srueyaf","watashiii","quitw","monmusuplayer49","shuuka","shadowpandax","nazemeiyue","sakurafujima","hejsan","moosepi","maikalover233","melodieelodie","xigu","straycatgirl","cure_straycat","gaaw","moegi","channina","izumisakai","eryth","padre_jesus","weavedheart","tkn","tomokarin","hdnc","kawada6","shag","onlyecchi","chemist","xkazehaya","truexc","hekidevi","teazri","carlos1218","thaleko","bamboo","blissfulyoshi","kiin","jube","jubeforce","hachiman215","xia","pal90","jungwheein","neutral","onlymainatsume","dounich","uhhuhher","yoshiopeninger","onlylittlebuster","likejaxirl","harleyboyy","poolnoodle","aryagamis","keizan","goroshigenosimp","koroshiya","donkey","chrislefko","mental_out","memorieslast","erza_asiaversal","kinman","noerusuu","nazemeiyue","animerod","kiishua","xtsusaku","theyingster","anotoki","oscara","justheroic","piggygaming","notervex","moraryy","milesedgeworth","mileskomeiji","fuwa_san","typoking","typonoob","cirnox9","hainiryuun","spear","sewim","chiisanatamago","nijate","probius","probebaka","pelzio","segu","seguri","corvette","slowlii","akaze","bluethree","finox","tsuni","erzakuran","turkeydano","uimoetard","ufokoira"]
+    play music "audio/bgm16.mp3" fadein 1.0 fadeout 1.0 volume 0.2
+    $ renpy.notify("♪ Armitage III")
+    $ renpy.pause(7, hard=True)
+    scene bg sciclub with fade
+    show chi2 at left with moveinleft
+    chi "And this, is my glorious lab! My life's work, if you will"
+    noe "Whoa!! Look at all these powerful computers, what do you even do with all of them?"
+    chi "{size=-10}watch anime and play browser games{/size}"
+    hide chi2
+    show chi3 at left
+    chi "Well, anyway, as a matter of fact, we're running a study on AMQ boolis right now, so I hope you don't mind helping out, Jin"
+    chi "That being said, where's my lab assistant gone off to..."
+    chi "{b}Oi! Yumemi!{/b}"
+    show yum1:
+        xalign 1.5 yalign 0.99
+        linear 4.0 xalign 0.99
+    yum "zzzzz"
+    yum "wake me up when non-made up songs..."
+    hide yum1
+    show yum2 at right
+    yum "e...eh?"
+    hide yum2
+    show yum3 at right
+    yum "oh right... today's the experiment thingy..."
+    chi "Wouldya mind carrying out the survey this time?"
+    yum "oh sure sure..."
+    hide chi3 with moveoutleft
+    hide yum3
+    show yum3:
+        xalign 0.99 yalign 0.99
+        linear 1.0 xalign 0.5
+    yum "h-hi there... tired of being called an amq booli all the time?"
+    yum "we've devised this foolproof test to figure out just how booli you are...!"
+    yum "it wont take long... how about you have a seat... over... there..."
+    hide yum3
+    show yum1
+    j "{cps=8}.....{/cps}"
+    hide yum1
+    show yum2
+    yum "s-so heres your first question!!"
+    $ boolipoints = 0
+    menu:
+        "I prefer typing out longer titles"
+        "True":
+            yum "likes to flex... thats 5 booli points for you..."
+        "False":
+            yum "so you like using 3-letter shortcuts instead huh, interesting..."
+    $ boolipoints += 5
+    menu:
+        "I enjoy training seasonals every 3 months"
+        "True":
+            yum "can't be too careful huh, just in case someone actually watched hanabi-chan"
+        "False":
+            yum "real boolis dont even need to train... as expected..."
+    $ boolipoints += 5
+    menu: 
+        "I watch anime"
+        "True":
+            yum "bet its all random 80s ovas anyway.... yup booli"
+        "False":
+            yum "thats definitely what a booli would say, even with a 500+ anime list"
+    $ boolipoints += 5
+    menu:
+        "Which statement do you think describes you best?"
+        "I get the compulsion to say \"I want a gay horse\" when Nyaruko plays":
+            yum "good song tbh, still booli tho"
+        "I can tell the difference between Mami Kawada, KOTOKO, and Maon Kurosaki":
+            yum "\"LOL THEY SOUND COMPLETELY DIFFERENT WTF\" cope."
+        "I've solo pointed in ranked with a random Doraemon movie insert":
+            yum "hi chiya"
+        "In regular team lobbies, I use S/A script and not actually answer the songs":
+            yum "ah yes, everyone absolutely must see that you know all the people who sang carnival phantasm"
+    $ boolipoints += 15
+    menu:
+        "Which room are you most likely to join?"
+        "1T5L 7sec":
+            yum "so you can show off your ungodly ptw... mhm booli"
+        "twitch.tv/HekiDevi":
+            yum "bullying streamers... smh"
+        "chill S/A for monkey":
+            yum "2 of the 4 words in that room name are lies"
+        "random OPs 18-25":
+            yum "hi minomone"
+    $ boolipoints += 15
+    menu:
+        "Which anime's opening are you most likely to instalock?"
+        "IDOLiSH7 Second Beat!":
+            yum "knowing male idol, def booli"
+        "True Tears":
+            yum "knowing oofonius, def booli"
+        "Anyamal Tantei Kiruminzoo":
+            yum "knowing memes, def booli"
+        "Black Clover":
+            yum "knowing shounen, def booli"
+    $ boolipoints += 15
+    menu:
+        "How many alts do you have, that begin with the phrase Only________"
+        "0":
+            yum "sounds like a lie, something a booli would do..."
+            $ boolipoints += 3
+        "1-3":
+            yum "say hi to onlyrunesoldier for me"
+            $ boolipoints += 5
+        ">3":
+            yum "slow down over there, youre gonna overtake bunijin for number of alts"
+            $ boolipoints += 10
+    yum "ok next question..."
+    call screen noddinput(titletext="What is the combined level of all your accounts?")
+    $ ans = _return.strip()
+    python:
+        try:
+            ans = abs(int(ans))
+            boolipoints += (ans // 10)
+            validans = True
+        except:
+            boolipoints += 40
+            validans = False
+    if validans:
+        yum "how many hours did that take jeez..."
+    else:
+        yum "hmmm i cant really read your handwriting so im gonna assume youre level 400 at least"
+    call screen noddinput(titletext="What is your favorite anime genre?")
+    $ ans = _return.lower().strip()
+    $ boolipoints += 30 if ans == "mecha" else 0
+    yum "we're almost done heree i promise~"
+    call screen noddinput(titletext="How many points did you get on Dayt's 2016-2021 Sporcle Quiz? {a=https://www.sporcle.com/games/The_Daytona_500/recent-anime-openings-quiz-2016-2021}Click here{/a} to open in browser.")
+    $ ans = _return.strip()
+    python: 
+        try:
+            ans = abs(int(ans))
+            boolipoints += (ans // 5)
+        except:
+            boolipoints += 20
+    yum "aaaand finally...!"
+    call screen noddinput(titletext="What is your AMQ username?")
+    $ ans = _return.strip()
+    $ username = "Guest-56941" if (not ans) else ans
+    if username.lower() in megaboolis:
+        "{b}Warning! Megabooli username detected!{/b}"
+        $ boolipoints += 150
+    else:
+        "{b}Warning! Booli username detected!{/b}"
+        $ boolipoints += 20
+    $ status = "MEGA BOOLI" if boolipoints >= 200 else "BIG BOOLI"
+    yum "well~ thanks for taking part in our little experiment~"
+    yum "i'm happy to report the results are in!"
+    yum "here you go~ <3"
+    if len(username) > 20:
+        $ username = username[0:21] + "..."
+    $ boolipoints = 9999 if boolipoints > 10000 else boolipoints
+    show cert at truecenter
+    show screen certificate(username, status, boolipoints)
+    yum "bye, [username]~ come again some day~"
+    hide screen certificate
+    hide cert 
+    hide yum2
+    show yum1
+    j "..."
+    scene black with Fade(3.0, 0, 3.0)
+    stop music fadeout 1.0
+    return
+
+screen certificate(playername, tier, points):
+    vbox:
+        xsize 800
+        ysize 200
+        xalign 0.5
+        yalign 0.57
+
+        text "{color=#000}{b}[playername]{/b}{/color}":
+            xalign 0.5
+        text "{color=#000}{size=-10}[tier] {i}([points] pts){/i}{/size}{/color}":
+            xalign 0.5
+            yalign -0.92
+
+screen sectionheader(number, subtext):
+    fixed:
+        text "{color=#fff}{b}{size=+40}{u}STAGE [number]{/u}{/size}{/b}{/color}":
+            xpos 200 ypos 300
+        text "[subtext]":
+            xpos 200 ypos 420
+
+screen songnumbertext(number, total):
+    fixed:
+        text "{color=#fff}{b}{size=+30}SONG {/size}{size=+100}[number]{/size}{/b}   OF [total]{/color}":
+            xalign 0.15 ypos 250
+
+screen correctscreen(inputtext):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Correct!{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+        text "{color=#fff}{u}You answered:{/u}\n{size=-8}[inputtext]{/size}{/color}":
+            xpos 150 ypos 400
+
+screen wrongscreen(inputtext, answertext):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Nope...{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+        text "{color=#fff}{u}You answered:{/u}\n{size=-8}[inputtext]{/size}{/color}":
+            xpos 150 ypos 400
+        text "{color=#fff}{u}Correct answers:{/u}\n{size=-8}[answertext]{/size}{/color}":
+            xpos 150 ypos 500
+
+screen answerlabel(text):
+    fixed:
+        text "{color=#ffade0}{b}>>> [text] <<<{/b}{/color}":
+            xpos 210 ypos 130
+
+screen notime():
+    fixed:
+        text "{color=#fff}{size=+100}{b}Out of time...{/b}{/size}{/color}":
+            xpos 200 ypos 150
+        text "{color=#fff}Current points: [gamepoints] / [pointgoal]{/color}":
+            xpos 210 ypos 310
+
+screen gameend(winlosemsg, textcolor):
+    fixed:
+        text "{color=#fff}{size=+100}{b}Game complete!{/b}{/size}{/color}":
+            xpos 200 ypos 200
+        text "{color=#fff}Total points: [gamepoints] / [pointgoal] {size=-9}([pointspercentage]%){/size}{/color}":
+            xpos 210 ypos 360
+        text "{color=[textcolor]}{size=+30}{b}[winlosemsg]{/b}{/size}{/color}":
+            xpos 210 ypos 460
+
+label kurikobattle:
+    $ gamepoints = 0
+    menu:
+        "Please choose your difficulty"
+        "Forgiving (100 points)":
+            $ pointgoal = 100
+            $ multiplier = 0.33
+        "Comfy (160 points)":
+            $ pointgoal = 160
+            $ multiplier = 0.67
+        "Normal (220 points)":
+            $ pointgoal = 220
+            $ multiplier = 1.0
+        "Challenge (280 points)":
+            $ pointgoal = 280
+            $ multiplier = 1.5
+        "Veteran (350 points)":
+            $ pointgoal = 350
+            $ multiplier = 2.0
+        "Perfect (420 points)":
+            $ pointgoal = 420
+            $ multiplier = 3.0
+    narrator "--- Boss information ---\nName: Valkyrie Miyu"
+    narrator "Specialty: Brain-Damage"
+    scene bg quiz1 with fade
+    show vmiy2 at right with moveinright
+    miy "Ohayou minna~ Kitekurete arigatou~"
+    miy "It's me, sonicyellow, back with another positively subarashii~ anime openings quiz for you guys!!"
+    j "Oh nyo..."
+    miy "In any case, let's get right to it shall we~! Hope everyone's ready!"
+    show screen sectionheader(1, "Difficulty: 45-100%\nModifiers: none\n\n6 songs / +5 points each\n10 second time limit")
+    ">>> Begin Stage 1 <<<"
+    $ currentsong = 1
+    $ numofsongs = 6
+    $ songlist1 = [
+        ("game1801",["monster high: kowa-ike girls"]),
+        ("game1802",["overlord iv"]),
+        ("game1803",["chibi devi!"]),
+        ("game1804",["jojo no kimyou na bouken: diamond wa kudakenai", "jojo's bizarre adventure: diamond is unbreakable"]),
+        ("game1805",["kaguya-sama wa kokurasetai: ultra romantic", "kaguya-sama: love is war - ultra romantic"]),
+        ("game1806",["paripi koumei", "ya boy kongming!"]),
+        ("game1807",["kiseijuu: sei no kakuritsu", "parasyte: the maxim"]),
+        ("game1808",["eizouken ni wa te o dasu na!", "keep your hands off eizouken!"]),
+        ("game1809",["naruto shippuuden"]),
+        ("game1810",["mushoku tensei: isekai ittara honki dasu", "mushoku tensei: jobless reincarnation"]),
+        ("game1811",["seishun buta yarou wa bunny girl senpai no yume o minai", "puberty syndrome: abnormal experience during adolescence due to sensitivity and instability.", "rascal does not dream of bunny girl senpai"]),
+        ("game1812",["crayon shin-chan", "shin chan", "crayon shin-chan: buriburi oukoku no hihou",  "crayon shin-chan: unkokusai no yabou", "crayon shin-chan: action kamen vs haigure mao"]),
+        ("game1813",["yofukashi no uta", "call of the night"])
+    ]
+    while len(songlist1) > numofsongs:
+        $ songlist1.pop(renpy.random.randint(1, len(songlist1))-1)
+    $ renpy.random.shuffle(songlist1)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong, numofsongs)
+        $ timeleft = 10
+        $ timer_jump = "stage1_outoftime"
+        $ songaudio = songlist1[currentsong-1][0]
+        $ currentans = songlist1[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 5
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage1_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz2 with fade
+    show vmiy2 at right with moveinright
+    miy "Hai~~ hope everyone had a good warm up! Now it's time to get this quiz {i}really{/i} started!"
+    show screen sectionheader(2, "Difficulty: 32-45%\nModifiers: 4x speed, 6s sample\n\n7 songs / +10 points each\n15 second time limit")
+    ">>> Begin Stage 2 <<<"
+    $ currentsong = 1
+    $ numofsongs = 7
+    $ songlist2 = [
+        ("game1901",["kidou senshi gundam seed", "mobile suit gundam seed", "kidou senshi gundam seed special edition", "mobile suit gundam seed special edition"]),
+        ("game1902",["gaikotsu kishi-sama, tadaima isekai e odekakechuu", "skeleton knight in another world"]),
+        ("game1903",["akatsuki no yona", "yona of the dawn"]),
+        ("game1904",["hanabi-chan wa okuregachi", "hanabichan: the girl who popped out of the game world"]),
+        ("game1905",["detroit metal city", "detroit metal city: the animated series"]),
+        ("game1906",["vivy: fluorite eye's song"]),
+        ("game1907",["mahouka koukou no rettousei", "the irregular at magic high school"]),
+        ("game1908",["charlotte"]),
+        ("game1909",["ginga eiyuu densetsu", "legend of the galactic heroes"]),
+        ("game1910",["pocket monsters", "pokemon", "pokémon", "pocket monsters: advanced generation", "pokemon: advanced", "pokémon: advanced", "pokemon: battle frontier", "pokémon: battle frontier", "pocket monsters diamond & pearl", "pokemon: diamond and pearl","pokémon: diamond and pearl"]),
+        ("game1911",["love live! superstar!!"]),
+        ("game1912",["kemono friends", "kemono friends 2"]),
+        ("game1913",["heppoko jikken animation excel♥saga", "heppoko jikken animation excel saga", "excel saga"]),
+        ("game1914",["lycoris recoil"]),
+        ("game1915",["keijo!!!!!!!!"])
+    ]
+    while len(songlist2) > numofsongs:
+        $ songlist2.pop(renpy.random.randint(1, len(songlist2))-1)
+    $ renpy.random.shuffle(songlist2)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+6, numofsongs+6)
+        $ timeleft = 15
+        $ timer_jump = "stage2_outoftime"
+        $ songaudio = songlist2[currentsong-1][0]
+        $ currentans = songlist2[currentsong-1][1]
+        $ renpy.sound.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 10
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage2_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop sound fadeout 1.0
+    scene bg quiz3 with fade
+    show vmiy2 at right with moveinright
+    miy "Hmmm... maybe that was too easy for you after all... Let's change things up a little!"
+    show screen sectionheader(3, "Difficulty: 20-32%\nModifiers: double-layered gamemode (guess two songs at once)\n\n6 pairs of songs / +10 points for each correct answer\n15 second time limit")
+    ">>> Begin Stage 3 <<<"
+    $ currentsong = 1
+    $ numofsongs = 6
+    $ songlist3 = [
+        ("game2001",["aiura"],["tamagotchi!"]),
+        ("game2002",["sister princess: re pure"],["shinseiki duel masters flash", "duel masters flash"]),
+        ("game2003",["hora, mimi ga mieteru yo!"],["soreike! anpanman", "soreike! anpanman: yuureisen o yattsukero!!", "soreike! anpanman: soratobu ehon to glass no kutsu", "soreike! anpanman: tenohira o taiyou ni", "soreike! anpanman: gomira no hoshi", "soreike! anpanman: ruby no negai", "soreike! anpanman: happy no daibouken", "soreike! anpanman: baikinman no gyakushuu", "soreike! anpanman: inochi no hoshi no dolly", "soreike! anpanman: yumeneko no kuni no nyanii", "soreike! anpanman: tsumiki-jou no himitsu", "soreike! anpanman: niji no pyramid", "soreike! anpanman: kyouryuu nosshi no daibouken"]),
+        ("game2004",["lostorage conflated wixoss: missing link", "lostorage incited wixoss"],["yu-gi-oh! arc-v"]),
+        ("game2005",["made in abyss: retsujitsu no ougonkyou", "made in abyss: the golden city of the scorching sun"],["madan no ou to vanadis", "lord marksman and vanadis"]),
+        ("game2006",["visual prison"],["dramatical murder"]),
+        ("game2007",["cardfight!! vanguard overdress"],["last exile", "last exile: fam, the silver wing", "last exile: ginyoku no fam"]),
+        ("game2008",["appare-ranman!"],["initial d: fourth stage"]),
+        ("game2009",["granblue fantasy the animation season 2"],["bloodivores"]),
+        ("game2010",["arp backstage pass"],["zan sayonara zetsubou sensei", "zan sayonara zetsubou sensei bangai-chi"]),
+        ("game2011",["speed grapher"],["tsurune: kazemai koukou kyuudou-bu", "tsurune"]),
+        ("game2012",["flying witch"],["baby steps"]),
+        ("game2013",["juuni kokuki", "the twelve kingdoms"],["dragon crisis!"]),
+        ("game2014",["tenchi souzou design-bu", "heaven's design team"],["k"])
+    ]
+    while len(songlist3) > numofsongs:
+        $ songlist3.pop(renpy.random.randint(1, len(songlist3))-1)
+    $ renpy.random.shuffle(songlist3)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+13, numofsongs+13)
+        $ timeleft = 15
+        $ timer_jump = "stage3_outoftime"
+        $ songaudio = songlist3[currentsong-1][0]
+        $ currentans1 = songlist3[currentsong-1][1]
+        $ currentans2 = songlist3[currentsong-1][2]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput("Enter your first answer:")
+        $ rawans1 = _return.strip()
+        $ ans1 = rawans1.lower()
+        call screen noddinput("Enter your second answer:")
+        $ rawans2 = _return.strip()
+        $ ans2 = rawans2.lower()
+        $ allans = ["(Song 1) " + i for i in currentans1] + ["(Song 2) " + i for i in currentans2]
+        $ allans = "\n".join(allans)
+        hide screen countdown3
+        hide screen songnumbertext
+        if (ans1 in currentans1 and ans2 in currentans2) or (ans1 in currentans2 and ans2 in currentans1):
+            # Both correct
+            $ gamepoints += 20
+            show screen answerlabel("FIRST ANSWER")
+            show screen correctscreen(rawans1)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen correctscreen(rawans2)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+        elif (ans1 in currentans1 and ans2 in currentans1) or (ans1 in currentans2 and ans2 in currentans2) or (ans1 in currentans1 and ans2 not in currentans2) or (ans1 in currentans2 and ans2 not in currentans1):
+            # First correct, second wrong
+            $ gamepoints += 10
+            show screen answerlabel("FIRST ANSWER")
+            show screen correctscreen(rawans1)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen wrongscreen(rawans2, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+        elif (ans2 in currentans1 and ans1 not in currentans2) or (ans2 in currentans2 and ans1 not in currentans1):
+            # First wrong, second correct
+            $ gamepoints += 10
+            show screen answerlabel("FIRST ANSWER")
+            show screen wrongscreen(rawans1, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen correctscreen(rawans2)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen correctscreen
+        else:
+            # Both wrong
+            show screen answerlabel("FIRST ANSWER")
+            show screen wrongscreen(rawans1, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+            show screen answerlabel("SECOND ANSWER")
+            show screen wrongscreen(rawans2, allans)
+            ">>> Click to continue <<<"
+            hide screen answerlabel
+            hide screen wrongscreen
+        if False:
+            label stage3_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz4 with fade
+    show vmiy2 at right with moveinright
+    miy "This video already has 23 copyright strikes, that's a new record!"
+    show screen sectionheader(4, "Difficulty: 0-20%\nModifiers: reverse audio\n\n7 songs / +20 points each\n15 second time limit")
+    ">>> Begin Stage 4 <<<"
+    $ currentsong = 1
+    $ numofsongs = 7
+    $ songlist4 = [
+        ("game2101",["ame-iro cocoa rainy color e youkoso!", "rainy cocoa, welcome to rainy color"]),
+        ("game2102",["corpse party: tortured souls"]),
+        ("game2103",["amazing nuts!"]),
+        ("game2104",["petit eva: evangelion@school"]),
+        ("game2105",["x"]),
+        ("game2106",["aikatsu planet!"]),
+        ("game2107",["tribe cool crew"]),
+        ("game2108",["inou no aicis"]),
+        ("game2109",["toushinki g's frame", "ancient girl's frame"]),
+        ("game2110",["hero mask"]),
+        ("game2111",["morita-san wa mukuchi. 2"]),
+        ("game2112",["seikai no senki ii", "banner of the stars ii", "crest of the stars", "seikai no monshou"]),
+        ("game2113",["koukaku kidoutai arise", "ghost in the shell: arise", "ghost in the shell: arise alternative architecture", "koukaku kidoutai arise: alternative architecture"]),
+        ("game2114",["kemeko deluxe!", "kemeko dx"]),
+        ("game2115",["koharu biyori", "indian summer", "haruka nogizaka's secret", "nogizaka haruka no himitsu"]),
+        ("game2116",["nami yo kiite kure", "wave, listen to me!"]),
+        ("game2117",["kaijin kaihatsu-bu no kuroitsu-san", "miss kuroitsu from the monster development department"]),
+        ("game2118",["tamayomi", "tamayomi : the baseball girls"])
+    ]
+    while len(songlist4) > numofsongs:
+        $ songlist4.pop(renpy.random.randint(1, len(songlist4))-1)
+    $ renpy.random.shuffle(songlist4)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+19, numofsongs+19)
+        $ timeleft = 15
+        $ timer_jump = "stage4_outoftime"
+        $ songaudio = songlist4[currentsong-1][0]
+        $ currentans = songlist4[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 20
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage4_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    stop music fadeout 1.0
+    scene bg quiz5 with fade
+    show vmiy2 at right with moveinright
+    miy "Well, we're almost done~ For our last segment, we have songs that our lovely viewers submitted in for us!"
+    miy "Let's see what kind of wonderful music our talented AMQ players love listening to~"
+    show screen sectionheader(5, "Difficulty: 0-25%\nModifiers: none (fan-requested songs)\n\n4 songs / +15 points each\n15 second time limit")
+    ">>> Begin Stage 5 <<<"
+    $ currentsong = 1
+    $ numofsongs = 4
+    $ songlist5 = [
+        ("game2201",["peeping life tv season 1??"]),
+        ("game2202",["gakuen handsome the animation"]),
+        ("game2203",["upotte!!"]),
+        ("game2204",["taiban!", "tiny² band story", "tiny2 band story"]),
+        ("game2205",["urashimasakatasen no nichijou", "days of urashimasakatasen"]),
+        ("game2206",["shin no nakama ja nai to yuusha no party o oidasareta node, henkyou de slow life suru koto ni shimashita", "banished from the hero's party, i decided to live a quiet life in the countryside"]),
+        ("game2207",["super mario brothers: peach-hime kyuushutsu daisakusen", "super mario brothers: great mission to rescue princess peach"]),
+        ("game2208",["baby baachan", "baby grandma"]),
+        ("game2209",["docchi mo maid", "two lovely maid (≧▽≦)", "two lovely maid"])
+    ]
+    while len(songlist5) > numofsongs:
+        $ songlist5.pop(renpy.random.randint(1, len(songlist5))-1)
+    $ renpy.random.shuffle(songlist5)
+    hide screen sectionheader
+    while currentsong <= numofsongs:
+        show screen songnumbertext(currentsong+26, numofsongs+26)
+        $ timeleft = 15
+        $ timer_jump = "stage5_outoftime"
+        $ songaudio = songlist5[currentsong-1][0]
+        $ currentans = songlist5[currentsong-1][1]
+        $ renpy.music.play("audio/" + songaudio + ".mp3")
+        show screen countdown3
+        call screen noddinput
+        $ ans = _return.lower().strip()
+        hide screen countdown3
+        hide screen songnumbertext
+        if ans in currentans:
+            $ gamepoints += 15
+            show screen correctscreen(_return)
+            ">>> Click to continue <<<"
+            hide screen correctscreen
+        else:
+            $ allans = "\n".join(currentans)
+            show screen wrongscreen(_return, allans)
+            ">>> Click to continue <<<"
+            hide screen wrongscreen
+        if False:
+            label stage5_outoftime:
+                hide screen countdown3
+                hide screen songnumbertext
+                hide screen countdown3
+                show screen notime
+                ">>> Click to continue <<<"
+                hide screen notime
+        $ currentsong += 1
+    if gamepoints >= pointgoal:
+        $ pointspercentage = 100
+        show screen gameend("You win!","#bcff7d")
+        miy "Eeeeeh... Looks like you won! Don't forget to subscribe~"
+        $ weightedpoints = gamepoints * multiplier
+        $ globalpoints += int(round(weightedpoints))
+    else: 
+        $ pointspercentage = round(gamepoints / pointgoal * 100, 2)
+        show screen gameend("You lost...", "#ff7070")
+        miy "Looks like you made a mistake coming to my channel today~ See you next time, ok?"
+        $ MainMenu(confirm=False)()
+    hide screen gameend
+    stop music fadeout 1.0
+    scene black with fade
     return
